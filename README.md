@@ -9,4 +9,5 @@ note there is an existing addon which didn't seem to work for me on osx: https:/
 
 OF forum post:  http://forum.openframeworks.cc/t/using-cef-with-of/18094/14
 
+note: I still don't have a great sense of how the embedded application inside of an application works for CEF  OSX.  here I've grabbed one of the helper apps from the simple example and thrown it into the application as a build phase.   
 
