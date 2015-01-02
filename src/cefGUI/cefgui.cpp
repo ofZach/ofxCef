@@ -1,4 +1,7 @@
 #include "cefgui.h"
+#include "ofMain.h"
+#include "ofAppGLFWWindow.h"
+	#include <Cocoa/Cocoa.h>
 
 
 
@@ -8,7 +11,9 @@ Cefgui* initCefgui(int argc, char** argv)
   //CefExecuteProcess(args, 0, NULL);
 
   CefSettings settings;
-
+  //  settings.log_severity = LOGSEVERITY_VERBOSE;
+    //settings.multi_threaded_message_loop = true;
+    
   // TODO make cross platform
   CefString(&settings.locales_dir_path) = "cef/linux/lib/locales";
 
@@ -21,10 +26,18 @@ Cefgui::Cefgui()
 {
   CefWindowInfo windowInfo;
   CefBrowserSettings settings;
-
-  windowInfo.SetAsOffScreen(0);
-  windowInfo.SetTransparentPainting(true);
-
+ 
+    
+    NSWindow * cocoaWindow =  (NSWindow *) ((ofAppGLFWWindow *) ofGetWindowPtr())->getCocoaWindow();
+    NSView * view =  [ cocoaWindow contentView];
+    
+    
+    windowInfo.SetAsWindowless(view, true);
+    
+    //windowInfo.SetAsChild(view, 0, 0, 1000, 1000);
+    
+    
+    
   renderHandler = new RenderHandler();
 
   client = new BrowserClient(renderHandler);
@@ -91,5 +104,5 @@ void Cefgui::executeJS(const char* command)
   // TODO limit frequency of texture updating
   CefRect rect;
   renderHandler->GetViewRect(browser, rect);
-  browser->GetHost()->Invalidate(rect, PET_VIEW);
+ // browser->GetHost()->Invalidate(rect, PET_VIEW);
 }
