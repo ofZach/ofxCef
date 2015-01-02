@@ -29,8 +29,6 @@
 		FD2BA1FD1A56C3530046DB39 /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2BA1FB1A56C3530046DB39 /* Chromium Embedded Framework.framework */; };
 		FD2BA2001A56C3D50046DB39 /* libcef_dll_wrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2BA1FF1A56C3D50046DB39 /* libcef_dll_wrapper.a */; };
 		FD2BA20E1A56E1840046DB39 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2BA20D1A56E1840046DB39 /* Cocoa.framework */; };
-		FD2BA22D1A56E1840046DB39 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2BA22C1A56E1840046DB39 /* XCTest.framework */; };
-		FD2BA22E1A56E1840046DB39 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2BA20D1A56E1840046DB39 /* Cocoa.framework */; };
 		FD2BA24E1A56E2120046DB39 /* process_helper_mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD2BA2061A56E14E0046DB39 /* process_helper_mac.cpp */; };
 		FD2BA24F1A56E2860046DB39 /* libcef_dll_wrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2BA1FF1A56C3D50046DB39 /* libcef_dll_wrapper.a */; };
 		FD2BA2531A56E7A80046DB39 /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2BA1FB1A56C3530046DB39 /* Chromium Embedded Framework.framework */; };
@@ -54,13 +52,6 @@
 			remoteGlobalIDString = E4B27C1410CBEB8E00536013;
 			remoteInfo = openFrameworks;
 		};
-		FD2BA22F1A56E1840046DB39 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E4B69B4C0A3A1720003C02F2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FD2BA20A1A56E1840046DB39;
-			remoteInfo = cefHelper;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -73,15 +64,6 @@
 				BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FD2BA2421A56E1DD0046DB39 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
 		};
 		FD598D441A21798300AC729F /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -117,7 +99,6 @@
 		E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		E7E077E715D3B6510020DFD4 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		E7F985F515E0DE99003869B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
-		FD14E5791A54BDBF001D4309 /* cefWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = cefWork.app; path = /Users/zachlieberman/Documents/projects/OF/of_v0.8.4_osx_release/apps/myApps/cefWork/bin/cefWork.app; sourceTree = "<absolute>"; };
 		FD2BA1491A56C32E0046DB39 /* cef_atomic_ref_count.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_atomic_ref_count.h; sourceTree = "<group>"; };
 		FD2BA14A1A56C32E0046DB39 /* cef_atomicops.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_atomicops.h; sourceTree = "<group>"; };
 		FD2BA14B1A56C32E0046DB39 /* cef_basictypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_basictypes.h; sourceTree = "<group>"; };
@@ -295,8 +276,7 @@
 		FD2BA2121A56E1840046DB39 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FD2BA22C1A56E1840046DB39 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		FD2BA2501A56E2860046DB39 /* cefHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cefHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD4AF9151A56EFF60054EB33 /* cefHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = cefHelperTests.xctest; path = /Users/zachlieberman/Documents/projects/OF/of_v0.8.4_osx_release/apps/myApps/cefWork/bin/cefHelperTests.xctest; sourceTree = "<absolute>"; };
-		FD4AF9161A56EFF60054EB33 /* helper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = helper; path = /Users/zachlieberman/Documents/projects/OF/of_v0.8.4_osx_release/apps/myApps/cefWork/bin/helper; sourceTree = "<absolute>"; };
+		FD4AF9181A5709530054EB33 /* cefWorkDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cefWorkDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCDFCF11A2146860092A247 /* browser_client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = browser_client.cpp; sourceTree = "<group>"; };
 		FDCDFCF21A2146860092A247 /* browser_client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = browser_client.h; sourceTree = "<group>"; };
 		FDCDFCF31A2146860092A247 /* cefgui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = cefgui.cpp; sourceTree = "<group>"; };
@@ -338,22 +318,6 @@
 				FD2BA2531A56E7A80046DB39 /* Chromium Embedded Framework.framework in Frameworks */,
 				FD2BA20E1A56E1840046DB39 /* Cocoa.framework in Frameworks */,
 				FD2BA24F1A56E2860046DB39 /* libcef_dll_wrapper.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FD2BA2281A56E1840046DB39 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FD2BA22E1A56E1840046DB39 /* Cocoa.framework in Frameworks */,
-				FD2BA22D1A56E1840046DB39 /* XCTest.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FD2BA2411A56E1DD0046DB39 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +388,7 @@
 				E45BE5980E8CC70C009D7055 /* frameworks */,
 				FD2BA20C1A56E1840046DB39 /* Frameworks */,
 				FD2BA2501A56E2860046DB39 /* cefHelper.app */,
+				FD4AF9181A5709530054EB33 /* cefWorkDebug.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -739,7 +704,7 @@
 			);
 			name = cefWork;
 			productName = myOFApp;
-			productReference = FD14E5791A54BDBF001D4309 /* cefWork.app */;
+			productReference = FD4AF9181A5709530054EB33 /* cefWorkDebug.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FD2BA20A1A56E1840046DB39 /* cefHelper */ = {
@@ -759,41 +724,6 @@
 			productReference = FD2BA2501A56E2860046DB39 /* cefHelper.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FD2BA22A1A56E1840046DB39 /* cefHelperTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FD2BA23C1A56E1840046DB39 /* Build configuration list for PBXNativeTarget "cefHelperTests" */;
-			buildPhases = (
-				FD2BA2271A56E1840046DB39 /* Sources */,
-				FD2BA2281A56E1840046DB39 /* Frameworks */,
-				FD2BA2291A56E1840046DB39 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FD2BA2301A56E1840046DB39 /* PBXTargetDependency */,
-			);
-			name = cefHelperTests;
-			productName = cefHelperTests;
-			productReference = FD4AF9151A56EFF60054EB33 /* cefHelperTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		FD2BA2431A56E1DD0046DB39 /* helper */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FD2BA24B1A56E1DD0046DB39 /* Build configuration list for PBXNativeTarget "helper" */;
-			buildPhases = (
-				FD2BA2401A56E1DD0046DB39 /* Sources */,
-				FD2BA2411A56E1DD0046DB39 /* Frameworks */,
-				FD2BA2421A56E1DD0046DB39 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = helper;
-			productName = helper;
-			productReference = FD4AF9161A56EFF60054EB33 /* helper */;
-			productType = "com.apple.product-type.tool";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -801,11 +731,6 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0460;
-				TargetAttributes = {
-					FD2BA22A1A56E1840046DB39 = {
-						TestTargetID = E4B69B5A0A3A1756003C02F2;
-					};
-				};
 			};
 			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "cefWork" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -832,8 +757,6 @@
 			targets = (
 				E4B69B5A0A3A1756003C02F2 /* cefWork */,
 				FD2BA20A1A56E1840046DB39 /* cefHelper */,
-				FD2BA22A1A56E1840046DB39 /* cefHelperTests */,
-				FD2BA2431A56E1DD0046DB39 /* helper */,
 			);
 		};
 /* End PBXProject section */
@@ -850,13 +773,6 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		FD2BA2091A56E1840046DB39 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FD2BA2291A56E1840046DB39 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -943,20 +859,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD2BA2271A56E1840046DB39 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FD2BA2401A56E1DD0046DB39 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -964,11 +866,6 @@
 			isa = PBXTargetDependency;
 			name = openFrameworks;
 			targetProxy = E4EEB9AB138B136A00A80321 /* PBXContainerItemProxy */;
-		};
-		FD2BA2301A56E1840046DB39 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FD2BA20A1A56E1840046DB39 /* cefHelper */;
-			targetProxy = FD2BA22F1A56E1840046DB39 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1326,160 +1223,6 @@
 			};
 			name = Release;
 		};
-		FD2BA23D1A56E1840046DB39 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/cefWorkDebug.app/Contents/MacOS/cefWorkDebug";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "cefHelper/cefHelper-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "cefHelperTests/cefHelperTests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		FD2BA23E1A56E1840046DB39 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/cefWorkDebug.app/Contents/MacOS/cefWorkDebug";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "cefHelper/cefHelper-Prefix.pch";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "cefHelperTests/cefHelperTests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-		FD2BA24C1A56E1DD0046DB39 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		FD2BA24D1A56E1DD0046DB39 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1506,24 +1249,6 @@
 			buildConfigurations = (
 				FD2BA23A1A56E1840046DB39 /* Debug */,
 				FD2BA23B1A56E1840046DB39 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FD2BA23C1A56E1840046DB39 /* Build configuration list for PBXNativeTarget "cefHelperTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FD2BA23D1A56E1840046DB39 /* Debug */,
-				FD2BA23E1A56E1840046DB39 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FD2BA24B1A56E1DD0046DB39 /* Build configuration list for PBXNativeTarget "helper" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FD2BA24C1A56E1DD0046DB39 /* Debug */,
-				FD2BA24D1A56E1DD0046DB39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
