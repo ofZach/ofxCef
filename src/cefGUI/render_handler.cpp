@@ -86,7 +86,7 @@ void RenderHandler::OnPaint(CefRefPtr<CefBrowser> browser,
                             int width,
                             int height){
 
-    
+    cout << "OnPaint" << endl;
     tex.loadData((unsigned char*) buffer, width, height, GL_BGRA_EXT);
 
 }
