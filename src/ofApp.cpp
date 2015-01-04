@@ -1,73 +1,139 @@
-#include "ofApp.h"
 
+#include "ofApp.h"
+#include "ofAppGLFWWindow.h"
+
+
+
+
+void mouseScroll(GLFWwindow* window, double x, double y){
+    
+    ((ofApp *)ofGetAppPtr())->cefgui->mouseWheel(x*10, y*10);
+}
 
 //--------------------------------------------------------------
 void ofApp::setup(){
 
+    
+    
     int argc = 0;
     char** argv;
     
     
+    // add scrolling callback
+    glfwSetScrollCallback( ((ofAppGLFWWindow *) ofGetWindowPtr())->getGLFWWindow(), mouseScroll);
+
+    
     cefgui = initCefgui(argc, argv);
-    cefgui->reshape(1000, 1000);
-    cefgui->load("http://mrdoob.com/#/151/translucent_network");
+    cefgui->reshape(ofGetWidth(), ofGetHeight());
     
     ofSetVerticalSync(false);
+    
+    ofDrawBitmapMode mode;
+    
+    ofSetDrawBitmapMode(OF_BITMAPMODE_MODEL );
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
 
-    //CefRunMessageLoop();
     
+    CefDoMessageLoopWork();
+    
+    if (ofGetFrameNum() == 1){
+        cefgui->load("www.google.com");
+    }
+    //cout <<  cefgui->browser->GetMainFrame()->
     
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-    //cout << ofGetFrameRate() << endl;
-    cefgui->draw();
-    cefgui->renderHandler->tex.draw(0,0);
+//    cefgui->renderHandler->render();
     
-    //cefgui->draw();
+    ofMesh temp;
+    temp.setMode(OF_PRIMITIVE_TRIANGLE_STRIP);
+    temp.addVertex( ofPoint(0,0) );
+    temp.addTexCoord( ofPoint(0,0) );
+    temp.addVertex( ofPoint(ofGetWidth(),0) );
+    temp.addTexCoord( ofPoint(1,0) );
+    temp.addVertex( ofPoint(0,ofGetHeight()) );
+    temp.addTexCoord( ofPoint(0,1) );
+    temp.addVertex( ofPoint(ofGetWidth(),ofGetHeight()) );
+    temp.addTexCoord( ofPoint(1,1) );
+    ofPushMatrix();
+    
+    glEnable(GL_TEXTURE_2D);
+    glBindTexture(GL_TEXTURE_2D, cefgui->renderHandler->texture_id_);
+    temp.draw();
+    ofPopMatrix();
+    glBindTexture(GL_TEXTURE_2D, 0);
+
+    
+    ofPushMatrix();
+    ofTranslate(ofPoint(ofGetMouseX(), ofGetMouseY()));
+    ofScale(2,2);
+    ofDrawBitmapStringHighlight("openframeworks !! up arrow to load new url", 0,0);
+    ofPopMatrix();
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-    cefgui->keyPress(key);
+    cefgui->keyPressed(key);
+    
+    if (key == OF_KEY_UP){
+        string message = ofSystemTextBoxDialog("url to load");
+        if (message.length() > 0){
+            cefgui->load(message.c_str());
+        }
+    }
 }
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
-
+    if (cefgui!= NULL){
+        cefgui->keyReleased(key);
+    }
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseMoved(int x, int y ){
-    cefgui->mouseMove(x, y);
-    
+    if (cefgui!= NULL){
+        cefgui->mouseMove(x, y);
+    }
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
-   
-    
+    if (cefgui!= NULL){
+        cefgui->mouseMove(x, y);
+    }
 }
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
- cefgui->mouseClick(x, y);
+    if (cefgui!= NULL){
+        cefgui->mousePressed(x, y);
+        cefgui->mouseMove(x, y);
+    }
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
-
+    if (cefgui!= NULL){
+        cefgui->mouseReleased(x, y);
+        cefgui->mouseMove(x, y);
+    }
 }
 
 //--------------------------------------------------------------
 void ofApp::windowResized(int w, int h){
-
+    if (cefgui!= NULL){
+    cefgui->reshape(w,h);
+    cefgui->renderHandler->init();
+    cefgui->browser->Reload();
+    }
+    // this is failing
 }
 
 //--------------------------------------------------------------
