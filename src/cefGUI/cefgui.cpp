@@ -88,7 +88,7 @@ Cefgui::Cefgui()
     
     
     windowInfo.SetAsWindowless(view, true);
-    
+    windowInfo.transparent_painting_enabled = 1;
     //windowInfo.SetAsChild(view, 0, 0, 1000, 1000);
     
     
@@ -185,17 +185,17 @@ void Cefgui::mouseReleased(int x, int y)
 void Cefgui::keyPressed(int key)
 {
   CefKeyEvent event;
-  event.native_key_code = GetMacKeyCodeFromChar(key);
+    event.native_key_code = key; //GetMacKeyCodeFromChar(key);
     event.character = (char)key;
     event.unmodified_character  =  event.character=  event.native_key_code;
-    event.type = KEYEVENT_KEYDOWN;
+    event.type = KEYEVENT_CHAR;
   browser->GetHost()->SendKeyEvent(event);
 }
 
 void Cefgui::keyReleased(int key)
 {
     CefKeyEvent event;
-    event.native_key_code = GetMacKeyCodeFromChar(key);
+    event.native_key_code = key; //GetMacKeyCodeFromChar(key);
     event.type = KEYEVENT_KEYUP;
     event.unmodified_character  =  event.character=  event.native_key_code;
     

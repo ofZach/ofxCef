@@ -4,7 +4,6 @@
 
 
 
-
 void mouseScroll(GLFWwindow* window, double x, double y){
     
     ((ofApp *)ofGetAppPtr())->cefgui->mouseWheel(x*10, y*10);
@@ -13,6 +12,7 @@ void mouseScroll(GLFWwindow* window, double x, double y){
 //--------------------------------------------------------------
 void ofApp::setup(){
 
+    
     
     
     int argc = 0;
@@ -40,7 +40,7 @@ void ofApp::update(){
     CefDoMessageLoopWork();
     
     if (ofGetFrameNum() == 1){
-        cefgui->load("www.google.com");
+        cefgui->load("http://mrdoob.com/#/137/voxels_liquid");
     }
     //cout <<  cefgui->browser->GetMainFrame()->
     
@@ -49,7 +49,14 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 
+    ofBackground(255,0,255);
 //    cefgui->renderHandler->render();
+    
+        // Alpha blending style. Texture values have premultiplied alpha.
+        glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
+        // Enable alpha blending.
+        glEnable(GL_BLEND);
+    
     
     ofMesh temp;
     temp.setMode(OF_PRIMITIVE_TRIANGLE_STRIP);
@@ -69,6 +76,8 @@ void ofApp::draw(){
     ofPopMatrix();
     glBindTexture(GL_TEXTURE_2D, 0);
 
+    
+    ofEnableAlphaBlending();
     
     ofPushMatrix();
     ofTranslate(ofPoint(ofGetMouseX(), ofGetMouseY()));
