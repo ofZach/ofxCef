@@ -29,12 +29,12 @@
 		FD2BA1FD1A56C3530046DB39 /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2BA1FB1A56C3530046DB39 /* Chromium Embedded Framework.framework */; };
 		FD2BA2001A56C3D50046DB39 /* libcef_dll_wrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2BA1FF1A56C3D50046DB39 /* libcef_dll_wrapper.a */; };
 		FD2BA20E1A56E1840046DB39 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2BA20D1A56E1840046DB39 /* Cocoa.framework */; };
-		FD2BA24E1A56E2120046DB39 /* process_helper_mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD2BA2061A56E14E0046DB39 /* process_helper_mac.cpp */; };
 		FD2BA24F1A56E2860046DB39 /* libcef_dll_wrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2BA1FF1A56C3D50046DB39 /* libcef_dll_wrapper.a */; };
 		FD2BA2531A56E7A80046DB39 /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2BA1FB1A56C3530046DB39 /* Chromium Embedded Framework.framework */; };
 		FDCDFCF71A2146860092A247 /* browser_client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDCDFCF11A2146860092A247 /* browser_client.cpp */; };
 		FDCDFCF81A2146860092A247 /* cefgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDCDFCF31A2146860092A247 /* cefgui.cpp */; };
 		FDCDFCF91A2146860092A247 /* render_handler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDCDFCF51A2146860092A247 /* render_handler.cpp */; };
+		FDDF83671A59B12A00DC5669 /* process_helper_mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDDF83661A59B12A00DC5669 /* process_helper_mac.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -269,7 +269,6 @@
 		FD2BA1F41A56C32E0046DB39 /* cef_zip_archive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_zip_archive.h; sourceTree = "<group>"; };
 		FD2BA1FB1A56C3530046DB39 /* Chromium Embedded Framework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Chromium Embedded Framework.framework"; sourceTree = "<group>"; };
 		FD2BA1FF1A56C3D50046DB39 /* libcef_dll_wrapper.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcef_dll_wrapper.a; sourceTree = "<group>"; };
-		FD2BA2061A56E14E0046DB39 /* process_helper_mac.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = process_helper_mac.cpp; path = ../../../../../../../../../Desktop/process_helper_mac.cpp; sourceTree = "<group>"; };
 		FD2BA20D1A56E1840046DB39 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		FD2BA2101A56E1840046DB39 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		FD2BA2111A56E1840046DB39 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -283,6 +282,7 @@
 		FDCDFCF41A2146860092A247 /* cefgui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cefgui.h; sourceTree = "<group>"; };
 		FDCDFCF51A2146860092A247 /* render_handler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = render_handler.cpp; sourceTree = "<group>"; };
 		FDCDFCF61A2146860092A247 /* render_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = render_handler.h; sourceTree = "<group>"; };
+		FDDF83661A59B12A00DC5669 /* process_helper_mac.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = process_helper_mac.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -670,7 +670,7 @@
 		FDCDFCF01A2146860092A247 /* cefGUI */ = {
 			isa = PBXGroup;
 			children = (
-				FD2BA2061A56E14E0046DB39 /* process_helper_mac.cpp */,
+				FDDF83661A59B12A00DC5669 /* process_helper_mac.cpp */,
 				FDCDFCF11A2146860092A247 /* browser_client.cpp */,
 				FDCDFCF21A2146860092A247 /* browser_client.h */,
 				FDCDFCF31A2146860092A247 /* cefgui.cpp */,
@@ -870,7 +870,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD2BA24E1A56E2120046DB39 /* process_helper_mac.cpp in Sources */,
+				FDDF83671A59B12A00DC5669 /* process_helper_mac.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
