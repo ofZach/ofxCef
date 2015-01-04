@@ -19,9 +19,13 @@ class Cefgui {
     void reshape(int, int);
 
     void mouseMove(int, int);
-    void mouseClick(int, int);
-    void keyPress(int);
-
+    void mousePressed(int, int);
+    void mouseReleased(int, int);
+    void mouseWheel(int, int);
+    void keyPressed(int);
+    void keyReleased(int);
+    
+    
     void executeJS(const char*);
 
  // private:

@@ -88,7 +88,7 @@ struct CefWindowInfoTraits {
     target->hidden = src->hidden;
     target->parent_view = src->parent_view;
     target->windowless_rendering_enabled = src->windowless_rendering_enabled;
-    target->transparent_painting_enabled = src->transparent_painting_enabled;
+      target->transparent_painting_enabled = true;// src->transparent_painting_enabled;
     target->view = src->view;
   }
 };
@@ -128,6 +128,7 @@ class CefWindowInfo : public CefStructBase<CefWindowInfoTraits> {
   // CefSettings.windowless_rendering_enabled value must be set to true.
   ///
   void SetAsWindowless(CefWindowHandle parent, bool transparent) {
+
     windowless_rendering_enabled = true;
     parent_view = parent;
     transparent_painting_enabled = transparent;
