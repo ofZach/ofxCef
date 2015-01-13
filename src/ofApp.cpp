@@ -123,7 +123,7 @@ void ofApp::mouseDragged(int x, int y, int button){
 void ofApp::mousePressed(int x, int y, int button){
     if (cefgui!= NULL){
         cefgui->mousePressed(x, y);
-        cefgui->mouseMove(x, y);
+        //cefgui->mouseMove(x, y);
     }
 }
 
@@ -131,7 +131,7 @@ void ofApp::mousePressed(int x, int y, int button){
 void ofApp::mouseReleased(int x, int y, int button){
     if (cefgui!= NULL){
         cefgui->mouseReleased(x, y);
-        cefgui->mouseMove(x, y);
+        //cefgui->mouseMove(x, y);
     }
 }
 
