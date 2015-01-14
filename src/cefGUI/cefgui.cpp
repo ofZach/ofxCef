@@ -1,7 +1,9 @@
 #include "cefgui.h"
 #include "ofMain.h"
 #include "ofAppGLFWWindow.h"
-	#include <Cocoa/Cocoa.h>
+#include <Cocoa/Cocoa.h>
+#include "ClientApp.h"
+
 
 
 Cefgui* initCefgui(int argc, char** argv)
@@ -11,9 +13,12 @@ Cefgui* initCefgui(int argc, char** argv)
 
   CefSettings settings;
   settings.background_color = 0xFFFF00FF;
+  settings.single_process = true;
   
-  CefInitialize(args, settings, 0, NULL);
+  CefRefPtr<ClientApp> app(new ClientApp);
 
+  CefInitialize(args, settings, app.get(), NULL);
+  
   return new Cefgui();
 }
 

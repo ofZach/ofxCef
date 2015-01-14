@@ -24,6 +24,7 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
         
+        void gotMessageFromJS(string strMessage);
     
     void exit(){
         delete cefgui;

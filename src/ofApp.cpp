@@ -35,15 +35,12 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-
-    
     CefDoMessageLoopWork();
-    
+
     if (ofGetFrameNum() == 1){
-        cefgui->load("http://mrdoob.com/#/137/voxels_liquid");
+        string path = "file://" + ofToDataPath("html/index.html", true);
+        cefgui->load(path.c_str());
     }
-    //cout <<  cefgui->browser->GetMainFrame()->
-    
 }
 
 //--------------------------------------------------------------
@@ -84,6 +81,12 @@ void ofApp::draw(){
     ofScale(2,2);
     ofDrawBitmapStringHighlight("openframeworks !! up arrow to load new url", 0,0);
     ofPopMatrix();
+}
+
+//--------------------------------------------------------------
+void ofApp::gotMessageFromJS(string strMessage)
+{
+    cout << strMessage << endl;
 }
 
 //--------------------------------------------------------------

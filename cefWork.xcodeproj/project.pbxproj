@@ -26,6 +26,8 @@
 		E7E077E515D3B63C0020DFD4 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */; };
 		E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E715D3B6510020DFD4 /* QTKit.framework */; };
 		E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F985F515E0DE99003869B5 /* Accelerate.framework */; };
+		F30E9DF31A66BB340083FFD2 /* ClientApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F30E9DEF1A66BB340083FFD2 /* ClientApp.cpp */; };
+		F30E9DF41A66BB340083FFD2 /* ClientV8ExtensionHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F30E9DF11A66BB340083FFD2 /* ClientV8ExtensionHandler.cpp */; };
 		FD2BA1FD1A56C3530046DB39 /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2BA1FB1A56C3530046DB39 /* Chromium Embedded Framework.framework */; };
 		FD2BA2001A56C3D50046DB39 /* libcef_dll_wrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2BA1FF1A56C3D50046DB39 /* libcef_dll_wrapper.a */; };
 		FD2BA20E1A56E1840046DB39 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2BA20D1A56E1840046DB39 /* Cocoa.framework */; };
@@ -99,6 +101,10 @@
 		E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		E7E077E715D3B6510020DFD4 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		E7F985F515E0DE99003869B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
+		F30E9DEF1A66BB340083FFD2 /* ClientApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClientApp.cpp; sourceTree = "<group>"; };
+		F30E9DF01A66BB340083FFD2 /* ClientApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientApp.h; sourceTree = "<group>"; };
+		F30E9DF11A66BB340083FFD2 /* ClientV8ExtensionHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClientV8ExtensionHandler.cpp; sourceTree = "<group>"; };
+		F30E9DF21A66BB340083FFD2 /* ClientV8ExtensionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientV8ExtensionHandler.h; sourceTree = "<group>"; };
 		FD2BA1491A56C32E0046DB39 /* cef_atomic_ref_count.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_atomic_ref_count.h; sourceTree = "<group>"; };
 		FD2BA14A1A56C32E0046DB39 /* cef_atomicops.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_atomicops.h; sourceTree = "<group>"; };
 		FD2BA14B1A56C32E0046DB39 /* cef_basictypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_basictypes.h; sourceTree = "<group>"; };
@@ -670,6 +676,10 @@
 		FDCDFCF01A2146860092A247 /* cefGUI */ = {
 			isa = PBXGroup;
 			children = (
+				F30E9DEF1A66BB340083FFD2 /* ClientApp.cpp */,
+				F30E9DF01A66BB340083FFD2 /* ClientApp.h */,
+				F30E9DF11A66BB340083FFD2 /* ClientV8ExtensionHandler.cpp */,
+				F30E9DF21A66BB340083FFD2 /* ClientV8ExtensionHandler.h */,
 				FDDF83661A59B12A00DC5669 /* process_helper_mac.cpp */,
 				FDCDFCF11A2146860092A247 /* browser_client.cpp */,
 				FDCDFCF21A2146860092A247 /* browser_client.h */,
@@ -858,8 +868,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F30E9DF41A66BB340083FFD2 /* ClientV8ExtensionHandler.cpp in Sources */,
 				FDCDFCF91A2146860092A247 /* render_handler.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				F30E9DF31A66BB340083FFD2 /* ClientApp.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 				FDCDFCF81A2146860092A247 /* cefgui.cpp in Sources */,
 				FDCDFCF71A2146860092A247 /* browser_client.cpp in Sources */,
