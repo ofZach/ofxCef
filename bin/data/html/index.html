@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <title>cefWork HTM/JS</title>
-    <style>
-        #target {
-            color: red;
-            margin: 5px;
-            cursor: pointer;
-        }
-        #target:hover {
-            background: yellow;
-        }
-    </style>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/app.js"></script>
-</head>
-<body>
-    <div id="container">
-        <div id="text">Press this button to send data to OF</div>
-        <div id="target">
-          Click here
+  <head>
+    <meta charset="utf-8">
+    <title>ofxCEFClient</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Loading Bootstrap -->
+    <link href="dist/css/vendor/bootstrap.min.css" rel="stylesheet">
+    <!-- Loading Flat UI -->
+    <link href="dist/css/vendor/flat-ui.css" rel="stylesheet">
+    <link href="dist/css/application.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h8>Communication between OF and JS (both ways)</h6>
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon input-sm">Data from OF</span>
+              <input type="text" class="form-control input-sm" id="fromOF" value="" placeholder="">
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon input-sm">Send data to OF</span>
+              <input type="text" class="form-control input-sm" id="toOF" value="" placeholder="">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+    <script src="dist/js/vendor/jquery.min.js"></script>
+    <script src="dist/js/vendor/flat-ui.min.js"></script>
+    <script src="dist/js/application.js"></script>
+  </body>
 </html>
