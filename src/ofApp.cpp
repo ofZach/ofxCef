@@ -80,11 +80,11 @@ void ofApp::draw(){
     
     ofEnableAlphaBlending();
     
-    ofPushMatrix();
-    ofTranslate(ofPoint(ofGetMouseX(), ofGetMouseY()));
-    ofScale(2,2);
-    ofDrawBitmapStringHighlight("openframeworks !! up arrow to load new url", 0,0);
-    ofPopMatrix();
+//    ofPushMatrix();
+//    ofTranslate(ofPoint(ofGetMouseX(), ofGetMouseY()));
+//    ofScale(2,2);
+//    ofDrawBitmapStringHighlight("openframeworks !! up arrow to load new url", 0,0);
+//    ofPopMatrix();
 }
 
 //--------------------------------------------------------------
