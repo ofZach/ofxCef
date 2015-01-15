@@ -90,9 +90,7 @@ void ofApp::gotMessageFromJS(string strMessage)
 }
 
 //--------------------------------------------------------------
-void ofApp::keyPressed(int key){
-    cefgui->keyPressed(key);
-    
+void ofApp::keyPressed(int key){    
     if (key == OF_KEY_UP){
         string message = ofSystemTextBoxDialog("url to load");
         if (message.length() > 0){
@@ -103,9 +101,7 @@ void ofApp::keyPressed(int key){
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
-    if (cefgui!= NULL){
-        cefgui->keyReleased(key);
-    }
+
 }
 
 //--------------------------------------------------------------

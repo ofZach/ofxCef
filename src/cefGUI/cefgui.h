@@ -22,10 +22,10 @@ class Cefgui {
     void mousePressed(int, int);
     void mouseReleased(int, int);
     void mouseWheel(int, int);
-    void keyPressed(int);
-    void keyReleased(int);
+    void keyPressed(ofKeyEventArgs &e);
+    void keyReleased(ofKeyEventArgs &e);
     
-    
+    void enableEvents();
     void executeJS(const char*);
 
  // private:

@@ -42,6 +42,15 @@ Cefgui::Cefgui()
 
   client = new BrowserClient(renderHandler);
   browser = CefBrowserHost::CreateBrowserSync(windowInfo, client.get(), "", settings, 0);
+    
+    enableEvents();
+
+}
+
+void Cefgui::enableEvents()
+{
+    ofAddListener(ofEvents().keyPressed, this, &Cefgui::keyPressed);
+    ofAddListener(ofEvents().keyReleased, this, &Cefgui::keyReleased);
 }
 
 void Cefgui::load(const char* url)
@@ -127,24 +136,48 @@ void Cefgui::mouseReleased(int x, int y)
 
 }
 
-void Cefgui::keyPressed(int key)
+void Cefgui::keyPressed(ofKeyEventArgs &e)
 {
-  CefKeyEvent event;
-    event.native_key_code = key;
-    event.character = (char)key;
-    event.unmodified_character  =  event.character=  event.native_key_code;
-    event.type = KEYEVENT_CHAR;
-  browser->GetHost()->SendKeyEvent(event);
-}
-
-void Cefgui::keyReleased(int key)
-{
+    cout << "KEY:: " << e.key << " - KEYCODE:: " <<  e.keycode << " - SCANCODE::" << e.scancode << endl;
+    
     CefKeyEvent event;
-    event.native_key_code = key; 
-    event.type = KEYEVENT_KEYUP;
-    event.unmodified_character  =  event.character=  event.native_key_code;
+    
+    if (e.key == OF_KEY_LEFT || e.key == OF_KEY_UP
+        || e.key == OF_KEY_RIGHT || e.key == OF_KEY_DOWN
+        || e.key == OF_KEY_BACKSPACE || e.key == OF_KEY_DEL) {
+        
+        event.native_key_code = e.scancode;
+        event.type = KEYEVENT_KEYDOWN;
+        
+    } else {
+        event.native_key_code = e.scancode;
+        event.character = (char)e.key;
+        event.type = KEYEVENT_CHAR;
+        
+    }
     
     browser->GetHost()->SendKeyEvent(event);
+}
+
+void Cefgui::keyReleased(ofKeyEventArgs &e)
+{
+    CefKeyEvent event;
+    
+    if (e.key == OF_KEY_LEFT || e.key == OF_KEY_UP
+        || e.key == OF_KEY_RIGHT || e.key == OF_KEY_DOWN
+        || e.key == OF_KEY_BACKSPACE || e.key == OF_KEY_DEL) {
+        
+        // Hack - Need to do this otherwise we loose an event.
+        event.native_key_code = e.scancode;
+        event.character = (char)e.key;
+        event.type = KEYEVENT_CHAR;
+        browser->GetHost()->SendKeyEvent(event);
+        
+    } else {
+        event.native_key_code = e.scancode;
+        event.type = KEYEVENT_KEYUP;
+        browser->GetHost()->SendKeyEvent(event);
+    }
 }
 
 
