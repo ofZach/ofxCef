@@ -90,7 +90,7 @@ void ofApp::draw(){
 //--------------------------------------------------------------
 void ofApp::gotMessageFromJS(string strMessage)
 {
-    cout << strMessage << endl;
+    cout << "Got a message from JS: " << strMessage << endl;
 }
 
 //--------------------------------------------------------------
