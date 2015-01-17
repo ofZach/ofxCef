@@ -19,7 +19,6 @@
 #ifndef __CEF3SimpleSample__ClientV8ExtensionHandler__
 #define __CEF3SimpleSample__ClientV8ExtensionHandler__
 
-#include "ofMain.h"
 #include "include/cef_app.h"
 
 struct ClientV8ExtensionHandler : public CefV8Handler {

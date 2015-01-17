@@ -17,7 +17,7 @@
 ************************************************************************************************/
 
 #include "ClientV8ExtensionHandler.h"
-#include "ofApp.h"
+//#include "ofApp.h"
 
 ClientV8ExtensionHandler::ClientV8ExtensionHandler(CefRefPtr<CefApp> app)
 {
@@ -29,12 +29,15 @@ bool ClientV8ExtensionHandler::Execute(const CefString &name, CefRefPtr<CefV8Val
     if (name == "sendDataToOF") {
         if (arguments.size() == 1 && arguments[0]->IsString()) {
             CefString valStr = arguments[0]->GetStringValue();
+            
+            printf("Got a message from JS!");
 
-            ofApp* ofHostApp = (ofApp*)ofGetAppPtr();
-            ofHostApp->gotMessageFromJS(valStr.ToString());
-            return true;
-        }
+//            ofApp* ofHostApp = (ofApp*)ofGetAppPtr();
+//            ofHostApp->gotMessageFromJS(valStr.ToString());
+//            return true;
+
+         }
     }
-    
+
     return false;
 }

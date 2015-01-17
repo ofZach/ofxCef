@@ -27,6 +27,8 @@ ClientApp::ClientApp()
 
 void ClientApp::OnWebKitInitialized()
 {
+    printf("OnWebKitInitialized \n");
+    
     std::string app_code =
         "var app;"
         "if (!app)"

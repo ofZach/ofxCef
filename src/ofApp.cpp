@@ -41,7 +41,7 @@ void ofApp::update(){
         string path = "file://" + ofToDataPath("html/index.html", true);
         cefgui->load(path.c_str());
     }
-    else if (ofGetFrameNum() == 100) {
+    else if (ofGetFrameNum() == 300) {
         string command = "sendMessageToJS('This is OF talking to you! (sent on frame number 100)')";
         cefgui->executeJS((const char*) command.c_str());
     }

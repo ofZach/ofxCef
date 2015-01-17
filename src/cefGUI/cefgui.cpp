@@ -13,7 +13,7 @@ Cefgui* initCefgui(int argc, char** argv)
 
   CefSettings settings;
   settings.background_color = 0xFFFF00FF;
-  settings.single_process = true;
+  //settings.single_process = true;
   
   CefRefPtr<ClientApp> app(new ClientApp);
 

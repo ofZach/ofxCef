@@ -28,6 +28,8 @@
 		E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F985F515E0DE99003869B5 /* Accelerate.framework */; };
 		F30E9DF31A66BB340083FFD2 /* ClientApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F30E9DEF1A66BB340083FFD2 /* ClientApp.cpp */; };
 		F30E9DF41A66BB340083FFD2 /* ClientV8ExtensionHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F30E9DF11A66BB340083FFD2 /* ClientV8ExtensionHandler.cpp */; };
+		F355AE5B1A69F27D0085F627 /* ClientApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F30E9DEF1A66BB340083FFD2 /* ClientApp.cpp */; };
+		F355AE5C1A69F2910085F627 /* ClientV8ExtensionHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F30E9DF11A66BB340083FFD2 /* ClientV8ExtensionHandler.cpp */; };
 		FD2BA1FD1A56C3530046DB39 /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2BA1FB1A56C3530046DB39 /* Chromium Embedded Framework.framework */; };
 		FD2BA2001A56C3D50046DB39 /* libcef_dll_wrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2BA1FF1A56C3D50046DB39 /* libcef_dll_wrapper.a */; };
 		FD2BA20E1A56E1840046DB39 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2BA20D1A56E1840046DB39 /* Cocoa.framework */; };
@@ -882,6 +884,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F355AE5C1A69F2910085F627 /* ClientV8ExtensionHandler.cpp in Sources */,
+				F355AE5B1A69F27D0085F627 /* ClientApp.cpp in Sources */,
 				FDDF83671A59B12A00DC5669 /* process_helper_mac.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
