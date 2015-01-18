@@ -2,39 +2,40 @@
 #include "ofApp.h"
 #include "ofAppGLFWWindow.h"
 
-
-
-void mouseScroll(GLFWwindow* window, double x, double y){
+//--------------------------------------------------------------
+void mouseScroll(GLFWwindow* window, double x, double y)
+{
     
     ((ofApp *)ofGetAppPtr())->cefgui->mouseWheel(x*10, y*10);
 }
 
 //--------------------------------------------------------------
-void ofApp::setup(){
-
-    
-    
-    
+//--------------------------------------------------------------
+void ofApp::setup()
+{
     int argc = 0;
     char** argv;
-    
     
     // add scrolling callback
     glfwSetScrollCallback( ((ofAppGLFWWindow *) ofGetWindowPtr())->getGLFWWindow(), mouseScroll);
 
-    
     cefgui = initCefgui(argc, argv);
     cefgui->reshape(ofGetWidth(), ofGetHeight());
     
     ofSetVerticalSync(false);
-    
     ofDrawBitmapMode mode;
-    
     ofSetDrawBitmapMode(OF_BITMAPMODE_MODEL );
 }
 
 //--------------------------------------------------------------
-void ofApp::update(){
+void ofApp::exit()
+{
+    delete cefgui;
+}
+
+//--------------------------------------------------------------
+void ofApp::update()
+{
     CefDoMessageLoopWork();
     //CefRunMessageLoop();
 
@@ -54,7 +55,8 @@ void ofApp::update(){
 }
 
 //--------------------------------------------------------------
-void ofApp::draw(){
+void ofApp::draw()
+{
 
     ofBackground(255,0,255);
 //    cefgui->renderHandler->render();
@@ -100,7 +102,8 @@ void ofApp::gotMessageFromJS(string strMessage)
 }
 
 //--------------------------------------------------------------
-void ofApp::keyPressed(int key){    
+void ofApp::keyPressed(int key)
+{
     if (key == OF_KEY_UP){
         string message = ofSystemTextBoxDialog("url to load");
         if (message.length() > 0){
@@ -110,56 +113,63 @@ void ofApp::keyPressed(int key){
 }
 
 //--------------------------------------------------------------
-void ofApp::keyReleased(int key){
+void ofApp::keyReleased(int key)
+{
 
 }
 
 //--------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y ){
+void ofApp::mouseMoved(int x, int y )
+{
     if (cefgui!= NULL){
         cefgui->mouseMove(x, y);
     }
 }
 
 //--------------------------------------------------------------
-void ofApp::mouseDragged(int x, int y, int button){
+void ofApp::mouseDragged(int x, int y, int button)
+{
     if (cefgui!= NULL){
         cefgui->mouseMove(x, y);
     }
 }
 
 //--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button){
+void ofApp::mousePressed(int x, int y, int button)
+{
     if (cefgui!= NULL){
         cefgui->mousePressed(x, y);
-        //cefgui->mouseMove(x, y);
+        //--------------------------------------------------------------
     }
 }
 
 //--------------------------------------------------------------
-void ofApp::mouseReleased(int x, int y, int button){
+void ofApp::mouseReleased(int x, int y, int button)
+{
     if (cefgui!= NULL){
         cefgui->mouseReleased(x, y);
-        //cefgui->mouseMove(x, y);
     }
 }
 
 //--------------------------------------------------------------
-void ofApp::windowResized(int w, int h){
+void ofApp::windowResized(int w, int h)
+{
     if (cefgui!= NULL){
-    cefgui->reshape(w,h);
-    cefgui->renderHandler->init();
-    cefgui->browser->Reload();
+        cefgui->reshape(w,h);
+        cefgui->renderHandler->init();
+        cefgui->browser->Reload();
     }
     // this is failing
 }
 
 //--------------------------------------------------------------
-void ofApp::gotMessage(ofMessage msg){
+void ofApp::gotMessage(ofMessage msg)
+{
 
 }
 
 //--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
+void ofApp::dragEvent(ofDragInfo dragInfo)
+{
 
 }

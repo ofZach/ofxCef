@@ -6,12 +6,15 @@
 #ifndef CEFGUI_H
 #define CEFGUI_H
 
+//--------------------------------------------------------------
 class Cefgui;
 
 Cefgui* initCefgui(int argc, char** argv);
 
-class Cefgui {
-  public:
+//--------------------------------------------------------------
+class Cefgui
+{
+public:
     Cefgui();
 
     void load(const char*);

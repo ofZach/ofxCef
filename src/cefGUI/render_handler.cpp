@@ -8,6 +8,8 @@
 #import <Cocoa/Cocoa.h>
 
 
+//--------------------------------------------------------------
+//--------------------------------------------------------------
 
 #ifndef GL_BGR
 #define GL_BGR 0x80E0
@@ -33,7 +35,8 @@ DCHECK(_gl_error == GL_NO_ERROR) << \
 #endif
 
 
-
+//--------------------------------------------------------------
+//--------------------------------------------------------------
 
 static CefRect convertRect(const NSRect& target, const NSRect& frame) {
     NSRect rect = target;
@@ -45,6 +48,7 @@ static CefRect convertRect(const NSRect& target, const NSRect& frame) {
 }
 
 
+//--------------------------------------------------------------
 RenderHandler::RenderHandler(){
   transparent_ = true;
   initialized = false;
@@ -64,13 +68,14 @@ RenderHandler::RenderHandler(){
     } else {
         bIsRetinaDisplay = false;
     }
-    
+
     texture_id_ = 0;
 
     show_update_rect_ = true;
     
 }
 
+//--------------------------------------------------------------
 void RenderHandler::init(void){
     
     initialized = true;
@@ -98,14 +103,14 @@ void RenderHandler::init(void){
     glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE); VERIFY_NO_ERROR;
 }
 
-
-
+//--------------------------------------------------------------
 void RenderHandler::reshape(int w_, int h_){
   w = w_;
   h = h_;
  
 }
 
+//--------------------------------------------------------------
 void RenderHandler::OnPopupShow(CefRefPtr<CefBrowser> browser,
                                    bool show) {
     if (!show) {
@@ -114,6 +119,7 @@ void RenderHandler::OnPopupShow(CefRefPtr<CefBrowser> browser,
     }
 }
 
+//--------------------------------------------------------------
 void RenderHandler::OnPopupSize(CefRefPtr<CefBrowser> browser,
                                    const CefRect& rect) {
     if (rect.width <= 0 || rect.height <= 0)
@@ -122,6 +128,7 @@ void RenderHandler::OnPopupSize(CefRefPtr<CefBrowser> browser,
     popup_rect_ = GetPopupRectInWebView(original_popup_rect_);
 }
 
+//--------------------------------------------------------------
 CefRect RenderHandler::GetPopupRectInWebView(const CefRect& original_rect) {
     CefRect rc(original_rect);
     // if x or y are negative, move them to 0.
@@ -142,13 +149,13 @@ CefRect RenderHandler::GetPopupRectInWebView(const CefRect& original_rect) {
     return rc;
 }
 
+//--------------------------------------------------------------
 void RenderHandler::ClearPopupRects() {
     popup_rect_.Set(0, 0, 0, 0);
     original_popup_rect_.Set(0, 0, 0, 0);
 }
 
-
-
+//--------------------------------------------------------------
 bool RenderHandler::GetScreenInfo(CefRefPtr<CefBrowser> browser,
                    CefScreenInfo& screen_info) {
     
@@ -182,7 +189,7 @@ bool RenderHandler::GetScreenInfo(CefRefPtr<CefBrowser> browser,
     return true;
 }
 
-
+//--------------------------------------------------------------
 bool RenderHandler::GetViewRect(CefRefPtr<CefBrowser> browser, CefRect &rect)
 {
 
@@ -195,6 +202,7 @@ bool RenderHandler::GetViewRect(CefRefPtr<CefBrowser> browser, CefRect &rect)
   return true;
 }
 
+//--------------------------------------------------------------
 void RenderHandler::render() {
     
     //return;
@@ -309,7 +317,7 @@ void RenderHandler::render() {
     }
 }
 
-
+//--------------------------------------------------------------
 void RenderHandler::OnPaint(CefRefPtr<CefBrowser> browser,
                             PaintElementType type,
                             const RectList &dirtyRects,
@@ -319,10 +327,6 @@ void RenderHandler::OnPaint(CefRefPtr<CefBrowser> browser,
 
     if (!initialized)
         init();
-    
-    
-    
-    
     
     if (transparent_) {
         // Enable alpha blending.
@@ -408,6 +412,4 @@ void RenderHandler::OnPaint(CefRefPtr<CefBrowser> browser,
         // Disable alpha blending.
         glDisable(GL_BLEND); VERIFY_NO_ERROR;
     }
-
-
 }

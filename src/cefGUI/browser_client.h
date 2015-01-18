@@ -5,20 +5,22 @@
 #ifndef BROWSER_CLIENT_H
 #define BROWSER_CLIENT_H
 
-class BrowserClient : public CefClient {
-    public:
-      BrowserClient(RenderHandler*);
+//--------------------------------------------------------------
+class BrowserClient : public CefClient
+{
+public:
+    BrowserClient(RenderHandler*);
 
-      virtual CefRefPtr<CefRenderHandler> GetRenderHandler();
-    
+    virtual CefRefPtr<CefRenderHandler> GetRenderHandler();
+
     bool OnProcessMessageReceived(CefRefPtr<CefBrowser> browser,
-                                  CefProcessId source_process,
-                                  CefRefPtr<CefProcessMessage> message);
+                              CefProcessId source_process,
+                              CefRefPtr<CefProcessMessage> message);
 
-    private:
-      CefRefPtr<CefRenderHandler> handler;
+private:
+    CefRefPtr<CefRenderHandler> handler;
 
-      IMPLEMENT_REFCOUNTING(BrowserClient);
+    IMPLEMENT_REFCOUNTING(BrowserClient);
 
 };
 
