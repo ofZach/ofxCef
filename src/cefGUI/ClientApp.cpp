@@ -18,7 +18,6 @@
 
 #include "ClientApp.h"
 
-//#include "ClientHandler.h"
 #include "ClientV8ExtensionHandler.h"
 
 ClientApp::ClientApp()

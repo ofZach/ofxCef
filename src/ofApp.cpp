@@ -36,9 +36,15 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
     CefDoMessageLoopWork();
+    //CefRunMessageLoop();
 
     if (ofGetFrameNum() == 1){
         string path = "file://" + ofToDataPath("html/index.html", true);
+//        path = "http://haikusinteractifs.com/";
+//        path = "http://mrdoob.com/#/137/voxels_liquid";
+//        path = "http://threejs.org/examples/";
+        //path = "http://www.thefamilyfarmer.com";
+
         cefgui->load(path.c_str());
     }
     else if (ofGetFrameNum() == 300) {

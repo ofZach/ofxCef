@@ -10,6 +10,10 @@ class BrowserClient : public CefClient {
       BrowserClient(RenderHandler*);
 
       virtual CefRefPtr<CefRenderHandler> GetRenderHandler();
+    
+    bool OnProcessMessageReceived(CefRefPtr<CefBrowser> browser,
+                                  CefProcessId source_process,
+                                  CefRefPtr<CefProcessMessage> message);
 
     private:
       CefRefPtr<CefRenderHandler> handler;
