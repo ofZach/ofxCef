@@ -18,10 +18,9 @@ void ofApp::setup()
     
     // add scrolling callback
     glfwSetScrollCallback( ((ofAppGLFWWindow *) ofGetWindowPtr())->getGLFWWindow(), mouseScroll);
-
-    cefgui = initCefgui(argc, argv);
-    cefgui->reshape(ofGetWidth(), ofGetHeight());
     
+    cefgui = initCefgui(argc, argv);
+
     ofSetVerticalSync(false);
     ofDrawBitmapMode mode;
     ofSetDrawBitmapMode(OF_BITMAPMODE_MODEL );
@@ -57,36 +56,9 @@ void ofApp::update()
 //--------------------------------------------------------------
 void ofApp::draw()
 {
-
     ofBackground(255,0,255);
-//    cefgui->renderHandler->render();
     
-        // Alpha blending style. Texture values have premultiplied alpha.
-        glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
-        // Enable alpha blending.
-        glEnable(GL_BLEND);
-    
-    
-    ofMesh temp;
-    temp.setMode(OF_PRIMITIVE_TRIANGLE_STRIP);
-    temp.addVertex( ofPoint(0,0) );
-    temp.addTexCoord( ofPoint(0,0) );
-    temp.addVertex( ofPoint(ofGetWidth(),0) );
-    temp.addTexCoord( ofPoint(1,0) );
-    temp.addVertex( ofPoint(0,ofGetHeight()) );
-    temp.addTexCoord( ofPoint(0,1) );
-    temp.addVertex( ofPoint(ofGetWidth(),ofGetHeight()) );
-    temp.addTexCoord( ofPoint(1,1) );
-    ofPushMatrix();
-    
-    glEnable(GL_TEXTURE_2D);
-    glBindTexture(GL_TEXTURE_2D, cefgui->renderHandler->texture_id_);
-    temp.draw();
-    ofPopMatrix();
-    glBindTexture(GL_TEXTURE_2D, 0);
-
-    
-    ofEnableAlphaBlending();
+    cefgui->draw();
     
 //    ofPushMatrix();
 //    ofTranslate(ofPoint(ofGetMouseX(), ofGetMouseY()));
