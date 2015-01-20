@@ -16,7 +16,8 @@ class Cefgui
 {
 public:
     Cefgui();
-
+    ~Cefgui();
+    
     void load(const char*);
     void draw(void);
     void reshape(int, int);
