@@ -53,6 +53,7 @@ RenderHandler::RenderHandler(){
   transparent_ = true;
   initialized = false;
   
+    /*
     //http://stackoverflow.com/questions/11067066/mac-os-x-best-way-to-do-runtime-check-for-retina-display
     float displayScale = 1;
     if ([[NSScreen mainScreen] respondsToSelector:@selector(backingScaleFactor)]) {
@@ -63,16 +64,19 @@ RenderHandler::RenderHandler(){
                 displayScale = s;
         }
     }
+     */
+    
+    float displayScale = [[NSScreen mainScreen] backingScaleFactor];
+    
     if (displayScale > 1.0){
         bIsRetinaDisplay = true;
     } else {
         bIsRetinaDisplay = false;
     }
-
+    
     texture_id_ = 0;
 
     show_update_rect_ = true;
-    
 }
 
 //--------------------------------------------------------------
@@ -158,7 +162,6 @@ void RenderHandler::ClearPopupRects() {
 //--------------------------------------------------------------
 bool RenderHandler::GetScreenInfo(CefRefPtr<CefBrowser> browser,
                    CefScreenInfo& screen_info) {
-    
 
     NSWindow* mainWnd =  (NSWindow *) ((ofAppGLFWWindow *) ofGetWindowPtr())->getCocoaWindow();
     
@@ -192,13 +195,12 @@ bool RenderHandler::GetScreenInfo(CefRefPtr<CefBrowser> browser,
 //--------------------------------------------------------------
 bool RenderHandler::GetViewRect(CefRefPtr<CefBrowser> browser, CefRect &rect)
 {
-
     if (bIsRetinaDisplay){
         rect = CefRect(0,0, ofGetWidth()*0.5, ofGetHeight()*0.5);
     } else {
         rect = CefRect(0,0, ofGetWidth(), ofGetHeight());
     }
-    
+
   return true;
 }
 
@@ -285,6 +287,7 @@ void RenderHandler::render() {
         int top = update_rect_.y;
         int bottom = update_rect_.y + update_rect_.height;
         
+        
 #if defined(OS_LINUX)
         // Shrink the box so that top & right sides are drawn.
         top += 1;
@@ -345,6 +348,7 @@ void RenderHandler::OnPaint(CefRefPtr<CefBrowser> browser,
         
         view_width_ = width;
         view_height_ = height;
+        
         
         if (show_update_rect_)
             update_rect_ = dirtyRects[0];

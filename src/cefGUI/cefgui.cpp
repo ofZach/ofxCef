@@ -4,8 +4,43 @@
 #include <Cocoa/Cocoa.h>
 #include "ClientApp.h"
 
+//--------------------------------------------------------------
+//--------------------------------------------------------------
+@interface NSNotificationManager: NSObject
+{
+    Cefgui *observer;
+    notificationHandler callback;
+}
 
+- (void)onChangeScreen:(id)sender;
 
+@end
+
+@implementation NSNotificationManager
+
+- (id)initWithObserver:(Cefgui *)obs method:(notificationHandler)m;
+{
+    self = [super init];
+    if (self) {
+        observer = obs;
+        callback = m;
+        
+        NSWindow * cocoaWindow =  (NSWindow *) ((ofAppGLFWWindow *) ofGetWindowPtr())->getCocoaWindow();
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(onChangeScreen:) name:NSWindowDidChangeScreenNotification
+                                                   object:cocoaWindow];
+    }
+    return self;
+}
+
+- (void)onChangeScreen:(id)sender
+{
+    (observer->*callback)();
+}
+
+@end
+
+//--------------------------------------------------------------
 //--------------------------------------------------------------
 Cefgui* initCefgui(int argc, char** argv)
 {
@@ -26,27 +61,39 @@ Cefgui* initCefgui(int argc, char** argv)
 //--------------------------------------------------------------
 Cefgui::Cefgui()
 {
+    
     CefWindowInfo windowInfo;
     CefBrowserSettings settings;
 
-
     NSWindow * cocoaWindow =  (NSWindow *) ((ofAppGLFWWindow *) ofGetWindowPtr())->getCocoaWindow();
     NSView * view =  [ cocoaWindow contentView];
-
 
     windowInfo.SetAsWindowless(view, true);
     windowInfo.transparent_painting_enabled = 1;
     //windowInfo.SetAsChild(view, 0, 0, 1000, 1000);
 
-
-
     renderHandler = new RenderHandler();
+    
+    if (renderHandler->bIsRetinaDisplay) {
+        ofSetWindowPosition(0, 0);
+        ofSetWindowShape(ofGetWidth(), ofGetHeight());
+    }
 
     client = new BrowserClient(renderHandler);
     browser = CefBrowserHost::CreateBrowserSync(windowInfo, client.get(), "", settings, 0);
-
+    
+    if (renderHandler->bIsRetinaDisplay) {
+        reshape(ofGetWidth()*2, ofGetHeight()*2);
+    }
+    
     enableEvents();
+    
+    NSNotificationManager *nsNotificationManager = [[NSNotificationManager alloc] initWithObserver:this method:&Cefgui::notificationHandler];
+}
 
+//--------------------------------------------------------------
+Cefgui::~Cefgui()
+{
 }
 
 //--------------------------------------------------------------
@@ -69,13 +116,83 @@ void Cefgui::load(const char* url)
 //--------------------------------------------------------------
 void Cefgui::draw(void)
 {
-    CefDoMessageLoopWork();
-    //renderHandler->draw();
+    
+//    cout << "Cefgui::draw "<< endl;
+//    CefDoMessageLoopWork();
+    
+    // Alpha blending style. Texture values have premultiplied alpha.
+    glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
+    // Enable alpha blending.
+    glEnable(GL_BLEND);
+    
+    //cout << ofGetWidth() << " - " << ofGetHeight() << endl;
+    float width = ofGetWidth();
+    float height = ofGetHeight();
+    
+    ofMesh temp;
+    temp.setMode(OF_PRIMITIVE_TRIANGLE_STRIP);
+    temp.addVertex( ofPoint(0,0) );
+    temp.addTexCoord( ofPoint(0,0) );
+    temp.addVertex( ofPoint(width,0) );
+    temp.addTexCoord( ofPoint(1,0) );
+    temp.addVertex( ofPoint(0,height) );
+    temp.addTexCoord( ofPoint(0,1) );
+    temp.addVertex( ofPoint(width,height) );
+    temp.addTexCoord( ofPoint(1,1) );
+    ofPushMatrix();
+    
+    glEnable(GL_TEXTURE_2D);
+    glBindTexture(GL_TEXTURE_2D, renderHandler->texture_id_);
+    temp.draw();
+    ofPopMatrix();
+    glBindTexture(GL_TEXTURE_2D, 0);
+    
+    
+    ofEnableAlphaBlending();
+}
+
+//--------------------------------------------------------------
+void Cefgui::notificationHandler()
+{
+    float displayScale = [[NSScreen mainScreen] backingScaleFactor];
+    
+    cout << " ======= Cefgui::notificationHandler =========" << endl;
+    cout << "OF window size: " << ofGetWidth() << " - " << ofGetHeight() << endl;
+    cout << "Changed Screen / displayScale :: " << displayScale << " ::/ frame orig : " << [NSScreen mainScreen].frame.origin.x << " - " << [NSScreen mainScreen].frame.origin.y << " ::/ size " << [NSScreen mainScreen].frame.size.width << " - " << [NSScreen mainScreen].frame.size.height << endl;
+    
+    bool scaleChanged = false;
+    
+    if (displayScale > 1.0){
+        if (!renderHandler->bIsRetinaDisplay) {
+            scaleChanged = true;
+        }
+        renderHandler->bIsRetinaDisplay = true;
+        
+    } else {
+        if (renderHandler->bIsRetinaDisplay) {
+            scaleChanged = true;
+        }
+        
+        renderHandler->bIsRetinaDisplay = false;
+    }
+    
+//    if (scaleChanged) {
+//        if (renderHandler->bIsRetinaDisplay) {
+//            reshape(ofGetWidth()*2, ofGetHeight()*2);
+//        } else{
+//            reshape(ofGetWidth(), ofGetHeight());
+//        }
+//    }
+
+    reshape(ofGetWidth(), ofGetHeight());
+    renderHandler->init();
+    browser->Reload();
 }
 
 //--------------------------------------------------------------
 void Cefgui::reshape(int w, int h)
 {
+    cout << "Reshape: " << w << " - " << h << endl;
     renderHandler->reshape(w, h);
     browser->GetHost()->WasResized();
 }

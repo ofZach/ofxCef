@@ -31,6 +31,8 @@ public:
     void enableEvents();
     void executeJS(const char*);
 
+    void notificationHandler();
+
  // private:
     int mouseX, mouseY;
 
@@ -40,5 +42,7 @@ public:
     RenderHandler* renderHandler;
 
 };
+
+typedef void (Cefgui::*notificationHandler)();
 
 #endif
