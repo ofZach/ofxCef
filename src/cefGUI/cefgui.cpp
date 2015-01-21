@@ -88,7 +88,8 @@ Cefgui::Cefgui()
     
     enableEvents();
     
-    NSNotificationManager *nsNotificationManager = [[NSNotificationManager alloc] initWithObserver:this method:&Cefgui::notificationHandler];
+    // Listener to get a notification when the app window switches screen
+    //NSNotificationManager *nsNotificationManager = [[NSNotificationManager alloc] initWithObserver:this method:&Cefgui::notificationHandler];
 }
 
 //--------------------------------------------------------------
