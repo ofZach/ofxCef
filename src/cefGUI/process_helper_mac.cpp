@@ -7,12 +7,12 @@
 
 //--------------------------------------------------------------
 // Entry point function for sub-processes.
-int main(int argc, char* argv[])
-{
-    // Provide CEF with command-line arguments.
-    CefMainArgs main_args(argc, argv);
-
-    CefRefPtr<ClientApp> app(new ClientApp);
-    // Execute the sub-process.
-    return CefExecuteProcess(main_args, app.get(), NULL);
-}
+//int main(int argc, char* argv[])
+//{
+//    // Provide CEF with command-line arguments.
+//    CefMainArgs main_args(argc, argv);
+//
+//    CefRefPtr<ClientApp> app(new ClientApp);
+//    // Execute the sub-process.
+//    return CefExecuteProcess(main_args, app.get(), NULL);
+//}
