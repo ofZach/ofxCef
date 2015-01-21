@@ -26,19 +26,18 @@
 		E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E715D3B6510020DFD4 /* QTKit.framework */; };
 		E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F985F515E0DE99003869B5 /* Accelerate.framework */; };
 		F3F846FD1A7029930051D047 /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F846F81A7028CB0051D047 /* openFrameworksDebug.a */; };
-		F3F847BC1A702A0D0051D047 /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F847AE1A702A0D0051D047 /* Chromium Embedded Framework.framework */; };
-		F3F847BD1A702A0D0051D047 /* libcef_dll_wrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F847AF1A702A0D0051D047 /* libcef_dll_wrapper.a */; };
-		F3F847BE1A702A0D0051D047 /* browser_client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F847B11A702A0D0051D047 /* browser_client.cpp */; };
-		F3F847BF1A702A0D0051D047 /* cefgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F847B31A702A0D0051D047 /* cefgui.cpp */; };
-		F3F847C01A702A0D0051D047 /* ClientApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F847B51A702A0D0051D047 /* ClientApp.cpp */; };
-		F3F847C11A702A0D0051D047 /* ClientV8ExtensionHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F847B71A702A0D0051D047 /* ClientV8ExtensionHandler.cpp */; };
-		F3F847C21A702A0D0051D047 /* process_helper_mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F847B91A702A0D0051D047 /* process_helper_mac.cpp */; };
-		F3F847C31A702A0D0051D047 /* render_handler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F847BA1A702A0D0051D047 /* render_handler.cpp */; };
-		F3F847C41A702A2B0051D047 /* ClientApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F847B51A702A0D0051D047 /* ClientApp.cpp */; };
-		F3F847C51A702A2F0051D047 /* ClientV8ExtensionHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F847B71A702A0D0051D047 /* ClientV8ExtensionHandler.cpp */; };
-		F3F847C61A702A360051D047 /* process_helper_mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F847B91A702A0D0051D047 /* process_helper_mac.cpp */; };
-		F3F847C71A702A510051D047 /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F847AE1A702A0D0051D047 /* Chromium Embedded Framework.framework */; };
-		F3F847C81A702A540051D047 /* libcef_dll_wrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F847AF1A702A0D0051D047 /* libcef_dll_wrapper.a */; };
+		F3F84A4F1A7038C00051D047 /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F849E61A7038C00051D047 /* Chromium Embedded Framework.framework */; };
+		F3F84A501A7038C00051D047 /* libcef_dll_wrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F849E71A7038C00051D047 /* libcef_dll_wrapper.a */; };
+		F3F84A581A7038C00051D047 /* browser_client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F84A441A7038C00051D047 /* browser_client.cpp */; };
+		F3F84A591A7038C00051D047 /* cefgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F84A461A7038C00051D047 /* cefgui.cpp */; };
+		F3F84A5A1A7038C00051D047 /* ClientApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F84A481A7038C00051D047 /* ClientApp.cpp */; };
+		F3F84A5B1A7038C00051D047 /* ClientV8ExtensionHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F84A4A1A7038C00051D047 /* ClientV8ExtensionHandler.cpp */; };
+		F3F84A5D1A7038C00051D047 /* render_handler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F84A4D1A7038C00051D047 /* render_handler.cpp */; };
+		F3F84A5E1A7038F40051D047 /* ClientApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F84A481A7038C00051D047 /* ClientApp.cpp */; };
+		F3F84A5F1A7038F80051D047 /* ClientV8ExtensionHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F84A4A1A7038C00051D047 /* ClientV8ExtensionHandler.cpp */; };
+		F3F84A601A7038FD0051D047 /* process_helper_mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F84A4C1A7038C00051D047 /* process_helper_mac.cpp */; };
+		F3F84A641A703C260051D047 /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F849E61A7038C00051D047 /* Chromium Embedded Framework.framework */; };
+		F3F84A651A703C260051D047 /* libcef_dll_wrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F849E71A7038C00051D047 /* libcef_dll_wrapper.a */; };
 		FD2BA20E1A56E1840046DB39 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2BA20D1A56E1840046DB39 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,187 +96,187 @@
 		E7F985F515E0DE99003869B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
 		F3F846F21A7028CB0051D047 /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = "<group>"; };
 		F3F846F51A7028CB0051D047 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = "<group>"; };
-		F3F847011A702A0D0051D047 /* cef_atomic_ref_count.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_atomic_ref_count.h; sourceTree = "<group>"; };
-		F3F847021A702A0D0051D047 /* cef_atomicops.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_atomicops.h; sourceTree = "<group>"; };
-		F3F847031A702A0D0051D047 /* cef_basictypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_basictypes.h; sourceTree = "<group>"; };
-		F3F847041A702A0D0051D047 /* cef_bind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_bind.h; sourceTree = "<group>"; };
-		F3F847051A702A0D0051D047 /* cef_bind_helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_bind_helpers.h; sourceTree = "<group>"; };
-		F3F847061A702A0D0051D047 /* cef_build.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_build.h; sourceTree = "<group>"; };
-		F3F847071A702A0D0051D047 /* cef_callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_callback.h; sourceTree = "<group>"; };
-		F3F847081A702A0D0051D047 /* cef_callback_forward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_callback_forward.h; sourceTree = "<group>"; };
-		F3F847091A702A0D0051D047 /* cef_callback_helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_callback_helpers.h; sourceTree = "<group>"; };
-		F3F8470A1A702A0D0051D047 /* cef_callback_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_callback_list.h; sourceTree = "<group>"; };
-		F3F8470B1A702A0D0051D047 /* cef_cancelable_callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_cancelable_callback.h; sourceTree = "<group>"; };
-		F3F8470C1A702A0D0051D047 /* cef_lock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_lock.h; sourceTree = "<group>"; };
-		F3F8470D1A702A0D0051D047 /* cef_logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_logging.h; sourceTree = "<group>"; };
-		F3F8470E1A702A0D0051D047 /* cef_macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_macros.h; sourceTree = "<group>"; };
-		F3F8470F1A702A0D0051D047 /* cef_move.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_move.h; sourceTree = "<group>"; };
-		F3F847101A702A0D0051D047 /* cef_platform_thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_platform_thread.h; sourceTree = "<group>"; };
-		F3F847111A702A0D0051D047 /* cef_ref_counted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_ref_counted.h; sourceTree = "<group>"; };
-		F3F847121A702A0D0051D047 /* cef_scoped_ptr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_scoped_ptr.h; sourceTree = "<group>"; };
-		F3F847131A702A0D0051D047 /* cef_string16.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_string16.h; sourceTree = "<group>"; };
-		F3F847141A702A0D0051D047 /* cef_template_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_template_util.h; sourceTree = "<group>"; };
-		F3F847151A702A0D0051D047 /* cef_thread_checker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_thread_checker.h; sourceTree = "<group>"; };
-		F3F847161A702A0D0051D047 /* cef_thread_collision_warner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_thread_collision_warner.h; sourceTree = "<group>"; };
-		F3F847171A702A0D0051D047 /* cef_trace_event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_trace_event.h; sourceTree = "<group>"; };
-		F3F847181A702A0D0051D047 /* cef_tuple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_tuple.h; sourceTree = "<group>"; };
-		F3F847191A702A0D0051D047 /* cef_weak_ptr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_weak_ptr.h; sourceTree = "<group>"; };
-		F3F8471B1A702A0D0051D047 /* cef_atomicops_atomicword_compat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_atomicops_atomicword_compat.h; sourceTree = "<group>"; };
-		F3F8471C1A702A0D0051D047 /* cef_atomicops_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_atomicops_mac.h; sourceTree = "<group>"; };
-		F3F8471D1A702A0D0051D047 /* cef_bind_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_bind_internal.h; sourceTree = "<group>"; };
-		F3F8471E1A702A0D0051D047 /* cef_callback_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_callback_internal.h; sourceTree = "<group>"; };
-		F3F8471F1A702A0D0051D047 /* cef_lock_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_lock_impl.h; sourceTree = "<group>"; };
-		F3F847201A702A0D0051D047 /* cef_raw_scoped_refptr_mismatch_checker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_raw_scoped_refptr_mismatch_checker.h; sourceTree = "<group>"; };
-		F3F847211A702A0D0051D047 /* cef_thread_checker_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_thread_checker_impl.h; sourceTree = "<group>"; };
-		F3F847231A702A0D0051D047 /* cef_app_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_app_capi.h; sourceTree = "<group>"; };
-		F3F847241A702A0D0051D047 /* cef_auth_callback_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_auth_callback_capi.h; sourceTree = "<group>"; };
-		F3F847251A702A0D0051D047 /* cef_base_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_base_capi.h; sourceTree = "<group>"; };
-		F3F847261A702A0D0051D047 /* cef_browser_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_browser_capi.h; sourceTree = "<group>"; };
-		F3F847271A702A0D0051D047 /* cef_browser_process_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_browser_process_handler_capi.h; sourceTree = "<group>"; };
-		F3F847281A702A0D0051D047 /* cef_callback_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_callback_capi.h; sourceTree = "<group>"; };
-		F3F847291A702A0D0051D047 /* cef_client_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_client_capi.h; sourceTree = "<group>"; };
-		F3F8472A1A702A0D0051D047 /* cef_command_line_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_command_line_capi.h; sourceTree = "<group>"; };
-		F3F8472B1A702A0D0051D047 /* cef_context_menu_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_context_menu_handler_capi.h; sourceTree = "<group>"; };
-		F3F8472C1A702A0D0051D047 /* cef_cookie_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_cookie_capi.h; sourceTree = "<group>"; };
-		F3F8472D1A702A0D0051D047 /* cef_dialog_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_dialog_handler_capi.h; sourceTree = "<group>"; };
-		F3F8472E1A702A0D0051D047 /* cef_display_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_display_handler_capi.h; sourceTree = "<group>"; };
-		F3F8472F1A702A0D0051D047 /* cef_dom_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_dom_capi.h; sourceTree = "<group>"; };
-		F3F847301A702A0D0051D047 /* cef_download_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_download_handler_capi.h; sourceTree = "<group>"; };
-		F3F847311A702A0D0051D047 /* cef_download_item_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_download_item_capi.h; sourceTree = "<group>"; };
-		F3F847321A702A0D0051D047 /* cef_drag_data_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_drag_data_capi.h; sourceTree = "<group>"; };
-		F3F847331A702A0D0051D047 /* cef_drag_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_drag_handler_capi.h; sourceTree = "<group>"; };
-		F3F847341A702A0D0051D047 /* cef_focus_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_focus_handler_capi.h; sourceTree = "<group>"; };
-		F3F847351A702A0D0051D047 /* cef_frame_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_frame_capi.h; sourceTree = "<group>"; };
-		F3F847361A702A0D0051D047 /* cef_geolocation_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_geolocation_capi.h; sourceTree = "<group>"; };
-		F3F847371A702A0D0051D047 /* cef_geolocation_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_geolocation_handler_capi.h; sourceTree = "<group>"; };
-		F3F847381A702A0D0051D047 /* cef_jsdialog_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_jsdialog_handler_capi.h; sourceTree = "<group>"; };
-		F3F847391A702A0D0051D047 /* cef_keyboard_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_keyboard_handler_capi.h; sourceTree = "<group>"; };
-		F3F8473A1A702A0D0051D047 /* cef_life_span_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_life_span_handler_capi.h; sourceTree = "<group>"; };
-		F3F8473B1A702A0D0051D047 /* cef_load_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_load_handler_capi.h; sourceTree = "<group>"; };
-		F3F8473C1A702A0D0051D047 /* cef_menu_model_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_menu_model_capi.h; sourceTree = "<group>"; };
-		F3F8473D1A702A0D0051D047 /* cef_navigation_entry_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_navigation_entry_capi.h; sourceTree = "<group>"; };
-		F3F8473E1A702A0D0051D047 /* cef_origin_whitelist_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_origin_whitelist_capi.h; sourceTree = "<group>"; };
-		F3F8473F1A702A0D0051D047 /* cef_path_util_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_path_util_capi.h; sourceTree = "<group>"; };
-		F3F847401A702A0D0051D047 /* cef_print_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_print_handler_capi.h; sourceTree = "<group>"; };
-		F3F847411A702A0D0051D047 /* cef_print_settings_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_print_settings_capi.h; sourceTree = "<group>"; };
-		F3F847421A702A0D0051D047 /* cef_process_message_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_process_message_capi.h; sourceTree = "<group>"; };
-		F3F847431A702A0D0051D047 /* cef_process_util_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_process_util_capi.h; sourceTree = "<group>"; };
-		F3F847441A702A0D0051D047 /* cef_render_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_render_handler_capi.h; sourceTree = "<group>"; };
-		F3F847451A702A0D0051D047 /* cef_render_process_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_render_process_handler_capi.h; sourceTree = "<group>"; };
-		F3F847461A702A0D0051D047 /* cef_request_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_request_capi.h; sourceTree = "<group>"; };
-		F3F847471A702A0D0051D047 /* cef_request_context_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_request_context_capi.h; sourceTree = "<group>"; };
-		F3F847481A702A0D0051D047 /* cef_request_context_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_request_context_handler_capi.h; sourceTree = "<group>"; };
-		F3F847491A702A0D0051D047 /* cef_request_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_request_handler_capi.h; sourceTree = "<group>"; };
-		F3F8474A1A702A0D0051D047 /* cef_resource_bundle_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_resource_bundle_handler_capi.h; sourceTree = "<group>"; };
-		F3F8474B1A702A0D0051D047 /* cef_resource_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_resource_handler_capi.h; sourceTree = "<group>"; };
-		F3F8474C1A702A0D0051D047 /* cef_response_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_response_capi.h; sourceTree = "<group>"; };
-		F3F8474D1A702A0D0051D047 /* cef_scheme_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_scheme_capi.h; sourceTree = "<group>"; };
-		F3F8474E1A702A0D0051D047 /* cef_stream_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_stream_capi.h; sourceTree = "<group>"; };
-		F3F8474F1A702A0D0051D047 /* cef_string_visitor_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_string_visitor_capi.h; sourceTree = "<group>"; };
-		F3F847501A702A0D0051D047 /* cef_task_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_task_capi.h; sourceTree = "<group>"; };
-		F3F847511A702A0D0051D047 /* cef_trace_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_trace_capi.h; sourceTree = "<group>"; };
-		F3F847521A702A0D0051D047 /* cef_url_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_url_capi.h; sourceTree = "<group>"; };
-		F3F847531A702A0D0051D047 /* cef_urlrequest_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_urlrequest_capi.h; sourceTree = "<group>"; };
-		F3F847541A702A0D0051D047 /* cef_v8_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_v8_capi.h; sourceTree = "<group>"; };
-		F3F847551A702A0D0051D047 /* cef_values_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_values_capi.h; sourceTree = "<group>"; };
-		F3F847561A702A0D0051D047 /* cef_web_plugin_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_web_plugin_capi.h; sourceTree = "<group>"; };
-		F3F847571A702A0D0051D047 /* cef_xml_reader_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_xml_reader_capi.h; sourceTree = "<group>"; };
-		F3F847581A702A0D0051D047 /* cef_zip_reader_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_zip_reader_capi.h; sourceTree = "<group>"; };
-		F3F847591A702A0D0051D047 /* cef_app.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_app.h; sourceTree = "<group>"; };
-		F3F8475A1A702A0D0051D047 /* cef_application_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_application_mac.h; sourceTree = "<group>"; };
-		F3F8475B1A702A0D0051D047 /* cef_auth_callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_auth_callback.h; sourceTree = "<group>"; };
-		F3F8475C1A702A0D0051D047 /* cef_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_base.h; sourceTree = "<group>"; };
-		F3F8475D1A702A0D0051D047 /* cef_browser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_browser.h; sourceTree = "<group>"; };
-		F3F8475E1A702A0D0051D047 /* cef_browser_process_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_browser_process_handler.h; sourceTree = "<group>"; };
-		F3F8475F1A702A0D0051D047 /* cef_callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_callback.h; sourceTree = "<group>"; };
-		F3F847601A702A0D0051D047 /* cef_client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_client.h; sourceTree = "<group>"; };
-		F3F847611A702A0D0051D047 /* cef_command_line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_command_line.h; sourceTree = "<group>"; };
-		F3F847621A702A0D0051D047 /* cef_context_menu_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_context_menu_handler.h; sourceTree = "<group>"; };
-		F3F847631A702A0D0051D047 /* cef_cookie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_cookie.h; sourceTree = "<group>"; };
-		F3F847641A702A0D0051D047 /* cef_dialog_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_dialog_handler.h; sourceTree = "<group>"; };
-		F3F847651A702A0D0051D047 /* cef_display_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_display_handler.h; sourceTree = "<group>"; };
-		F3F847661A702A0D0051D047 /* cef_dom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_dom.h; sourceTree = "<group>"; };
-		F3F847671A702A0D0051D047 /* cef_download_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_download_handler.h; sourceTree = "<group>"; };
-		F3F847681A702A0D0051D047 /* cef_download_item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_download_item.h; sourceTree = "<group>"; };
-		F3F847691A702A0D0051D047 /* cef_drag_data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_drag_data.h; sourceTree = "<group>"; };
-		F3F8476A1A702A0D0051D047 /* cef_drag_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_drag_handler.h; sourceTree = "<group>"; };
-		F3F8476B1A702A0D0051D047 /* cef_focus_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_focus_handler.h; sourceTree = "<group>"; };
-		F3F8476C1A702A0D0051D047 /* cef_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_frame.h; sourceTree = "<group>"; };
-		F3F8476D1A702A0D0051D047 /* cef_geolocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_geolocation.h; sourceTree = "<group>"; };
-		F3F8476E1A702A0D0051D047 /* cef_geolocation_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_geolocation_handler.h; sourceTree = "<group>"; };
-		F3F8476F1A702A0D0051D047 /* cef_jsdialog_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_jsdialog_handler.h; sourceTree = "<group>"; };
-		F3F847701A702A0D0051D047 /* cef_keyboard_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_keyboard_handler.h; sourceTree = "<group>"; };
-		F3F847711A702A0D0051D047 /* cef_life_span_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_life_span_handler.h; sourceTree = "<group>"; };
-		F3F847721A702A0D0051D047 /* cef_load_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_load_handler.h; sourceTree = "<group>"; };
-		F3F847731A702A0D0051D047 /* cef_menu_model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_menu_model.h; sourceTree = "<group>"; };
-		F3F847741A702A0D0051D047 /* cef_navigation_entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_navigation_entry.h; sourceTree = "<group>"; };
-		F3F847751A702A0D0051D047 /* cef_origin_whitelist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_origin_whitelist.h; sourceTree = "<group>"; };
-		F3F847761A702A0D0051D047 /* cef_pack_resources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_pack_resources.h; sourceTree = "<group>"; };
-		F3F847771A702A0D0051D047 /* cef_pack_strings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_pack_strings.h; sourceTree = "<group>"; };
-		F3F847781A702A0D0051D047 /* cef_path_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_path_util.h; sourceTree = "<group>"; };
-		F3F847791A702A0D0051D047 /* cef_print_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_print_handler.h; sourceTree = "<group>"; };
-		F3F8477A1A702A0D0051D047 /* cef_print_settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_print_settings.h; sourceTree = "<group>"; };
-		F3F8477B1A702A0D0051D047 /* cef_process_message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_process_message.h; sourceTree = "<group>"; };
-		F3F8477C1A702A0D0051D047 /* cef_process_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_process_util.h; sourceTree = "<group>"; };
-		F3F8477D1A702A0D0051D047 /* cef_render_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_render_handler.h; sourceTree = "<group>"; };
-		F3F8477E1A702A0D0051D047 /* cef_render_process_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_render_process_handler.h; sourceTree = "<group>"; };
-		F3F8477F1A702A0D0051D047 /* cef_request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_request.h; sourceTree = "<group>"; };
-		F3F847801A702A0D0051D047 /* cef_request_context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_request_context.h; sourceTree = "<group>"; };
-		F3F847811A702A0D0051D047 /* cef_request_context_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_request_context_handler.h; sourceTree = "<group>"; };
-		F3F847821A702A0D0051D047 /* cef_request_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_request_handler.h; sourceTree = "<group>"; };
-		F3F847831A702A0D0051D047 /* cef_resource_bundle_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_resource_bundle_handler.h; sourceTree = "<group>"; };
-		F3F847841A702A0D0051D047 /* cef_resource_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_resource_handler.h; sourceTree = "<group>"; };
-		F3F847851A702A0D0051D047 /* cef_response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_response.h; sourceTree = "<group>"; };
-		F3F847861A702A0D0051D047 /* cef_runnable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_runnable.h; sourceTree = "<group>"; };
-		F3F847871A702A0D0051D047 /* cef_scheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_scheme.h; sourceTree = "<group>"; };
-		F3F847881A702A0D0051D047 /* cef_stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_stream.h; sourceTree = "<group>"; };
-		F3F847891A702A0D0051D047 /* cef_string_visitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_string_visitor.h; sourceTree = "<group>"; };
-		F3F8478A1A702A0D0051D047 /* cef_task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_task.h; sourceTree = "<group>"; };
-		F3F8478B1A702A0D0051D047 /* cef_trace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_trace.h; sourceTree = "<group>"; };
-		F3F8478C1A702A0D0051D047 /* cef_url.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_url.h; sourceTree = "<group>"; };
-		F3F8478D1A702A0D0051D047 /* cef_urlrequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_urlrequest.h; sourceTree = "<group>"; };
-		F3F8478E1A702A0D0051D047 /* cef_v8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_v8.h; sourceTree = "<group>"; };
-		F3F8478F1A702A0D0051D047 /* cef_values.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_values.h; sourceTree = "<group>"; };
-		F3F847901A702A0D0051D047 /* cef_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_version.h; sourceTree = "<group>"; };
-		F3F847911A702A0D0051D047 /* cef_web_plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_web_plugin.h; sourceTree = "<group>"; };
-		F3F847921A702A0D0051D047 /* cef_xml_reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_xml_reader.h; sourceTree = "<group>"; };
-		F3F847931A702A0D0051D047 /* cef_zip_reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_zip_reader.h; sourceTree = "<group>"; };
-		F3F847951A702A0D0051D047 /* cef_export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_export.h; sourceTree = "<group>"; };
-		F3F847961A702A0D0051D047 /* cef_logging_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_logging_internal.h; sourceTree = "<group>"; };
-		F3F847971A702A0D0051D047 /* cef_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_mac.h; sourceTree = "<group>"; };
-		F3F847981A702A0D0051D047 /* cef_ptr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_ptr.h; sourceTree = "<group>"; };
-		F3F847991A702A0D0051D047 /* cef_string.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_string.h; sourceTree = "<group>"; };
-		F3F8479A1A702A0D0051D047 /* cef_string_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_string_list.h; sourceTree = "<group>"; };
-		F3F8479B1A702A0D0051D047 /* cef_string_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_string_map.h; sourceTree = "<group>"; };
-		F3F8479C1A702A0D0051D047 /* cef_string_multimap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_string_multimap.h; sourceTree = "<group>"; };
-		F3F8479D1A702A0D0051D047 /* cef_string_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_string_types.h; sourceTree = "<group>"; };
-		F3F8479E1A702A0D0051D047 /* cef_string_wrappers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_string_wrappers.h; sourceTree = "<group>"; };
-		F3F8479F1A702A0D0051D047 /* cef_thread_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_thread_internal.h; sourceTree = "<group>"; };
-		F3F847A01A702A0D0051D047 /* cef_time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_time.h; sourceTree = "<group>"; };
-		F3F847A11A702A0D0051D047 /* cef_trace_event_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_trace_event_internal.h; sourceTree = "<group>"; };
-		F3F847A21A702A0D0051D047 /* cef_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_types.h; sourceTree = "<group>"; };
-		F3F847A31A702A0D0051D047 /* cef_types_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_types_mac.h; sourceTree = "<group>"; };
-		F3F847A41A702A0D0051D047 /* cef_types_wrappers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_types_wrappers.h; sourceTree = "<group>"; };
-		F3F847A61A702A0D0051D047 /* cef_byte_read_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_byte_read_handler.h; sourceTree = "<group>"; };
-		F3F847A71A702A0D0051D047 /* cef_closure_task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_closure_task.h; sourceTree = "<group>"; };
-		F3F847A81A702A0D0051D047 /* cef_helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_helpers.h; sourceTree = "<group>"; };
-		F3F847A91A702A0D0051D047 /* cef_message_router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_message_router.h; sourceTree = "<group>"; };
-		F3F847AA1A702A0D0051D047 /* cef_stream_resource_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_stream_resource_handler.h; sourceTree = "<group>"; };
-		F3F847AB1A702A0D0051D047 /* cef_xml_object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_xml_object.h; sourceTree = "<group>"; };
-		F3F847AC1A702A0D0051D047 /* cef_zip_archive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_zip_archive.h; sourceTree = "<group>"; };
-		F3F847AE1A702A0D0051D047 /* Chromium Embedded Framework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Chromium Embedded Framework.framework"; sourceTree = "<group>"; };
-		F3F847AF1A702A0D0051D047 /* libcef_dll_wrapper.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcef_dll_wrapper.a; sourceTree = "<group>"; };
-		F3F847B11A702A0D0051D047 /* browser_client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = browser_client.cpp; sourceTree = "<group>"; };
-		F3F847B21A702A0D0051D047 /* browser_client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = browser_client.h; sourceTree = "<group>"; };
-		F3F847B31A702A0D0051D047 /* cefgui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = cefgui.cpp; sourceTree = "<group>"; };
-		F3F847B41A702A0D0051D047 /* cefgui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cefgui.h; sourceTree = "<group>"; };
-		F3F847B51A702A0D0051D047 /* ClientApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClientApp.cpp; sourceTree = "<group>"; };
-		F3F847B61A702A0D0051D047 /* ClientApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientApp.h; sourceTree = "<group>"; };
-		F3F847B71A702A0D0051D047 /* ClientV8ExtensionHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClientV8ExtensionHandler.cpp; sourceTree = "<group>"; };
-		F3F847B81A702A0D0051D047 /* ClientV8ExtensionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientV8ExtensionHandler.h; sourceTree = "<group>"; };
-		F3F847B91A702A0D0051D047 /* process_helper_mac.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = process_helper_mac.cpp; sourceTree = "<group>"; };
-		F3F847BA1A702A0D0051D047 /* render_handler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = render_handler.cpp; sourceTree = "<group>"; };
-		F3F847BB1A702A0D0051D047 /* render_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = render_handler.h; sourceTree = "<group>"; };
+		F3F849391A7038C00051D047 /* cef_atomic_ref_count.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_atomic_ref_count.h; sourceTree = "<group>"; };
+		F3F8493A1A7038C00051D047 /* cef_atomicops.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_atomicops.h; sourceTree = "<group>"; };
+		F3F8493B1A7038C00051D047 /* cef_basictypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_basictypes.h; sourceTree = "<group>"; };
+		F3F8493C1A7038C00051D047 /* cef_bind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_bind.h; sourceTree = "<group>"; };
+		F3F8493D1A7038C00051D047 /* cef_bind_helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_bind_helpers.h; sourceTree = "<group>"; };
+		F3F8493E1A7038C00051D047 /* cef_build.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_build.h; sourceTree = "<group>"; };
+		F3F8493F1A7038C00051D047 /* cef_callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_callback.h; sourceTree = "<group>"; };
+		F3F849401A7038C00051D047 /* cef_callback_forward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_callback_forward.h; sourceTree = "<group>"; };
+		F3F849411A7038C00051D047 /* cef_callback_helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_callback_helpers.h; sourceTree = "<group>"; };
+		F3F849421A7038C00051D047 /* cef_callback_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_callback_list.h; sourceTree = "<group>"; };
+		F3F849431A7038C00051D047 /* cef_cancelable_callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_cancelable_callback.h; sourceTree = "<group>"; };
+		F3F849441A7038C00051D047 /* cef_lock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_lock.h; sourceTree = "<group>"; };
+		F3F849451A7038C00051D047 /* cef_logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_logging.h; sourceTree = "<group>"; };
+		F3F849461A7038C00051D047 /* cef_macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_macros.h; sourceTree = "<group>"; };
+		F3F849471A7038C00051D047 /* cef_move.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_move.h; sourceTree = "<group>"; };
+		F3F849481A7038C00051D047 /* cef_platform_thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_platform_thread.h; sourceTree = "<group>"; };
+		F3F849491A7038C00051D047 /* cef_ref_counted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_ref_counted.h; sourceTree = "<group>"; };
+		F3F8494A1A7038C00051D047 /* cef_scoped_ptr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_scoped_ptr.h; sourceTree = "<group>"; };
+		F3F8494B1A7038C00051D047 /* cef_string16.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_string16.h; sourceTree = "<group>"; };
+		F3F8494C1A7038C00051D047 /* cef_template_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_template_util.h; sourceTree = "<group>"; };
+		F3F8494D1A7038C00051D047 /* cef_thread_checker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_thread_checker.h; sourceTree = "<group>"; };
+		F3F8494E1A7038C00051D047 /* cef_thread_collision_warner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_thread_collision_warner.h; sourceTree = "<group>"; };
+		F3F8494F1A7038C00051D047 /* cef_trace_event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_trace_event.h; sourceTree = "<group>"; };
+		F3F849501A7038C00051D047 /* cef_tuple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_tuple.h; sourceTree = "<group>"; };
+		F3F849511A7038C00051D047 /* cef_weak_ptr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_weak_ptr.h; sourceTree = "<group>"; };
+		F3F849531A7038C00051D047 /* cef_atomicops_atomicword_compat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_atomicops_atomicword_compat.h; sourceTree = "<group>"; };
+		F3F849541A7038C00051D047 /* cef_atomicops_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_atomicops_mac.h; sourceTree = "<group>"; };
+		F3F849551A7038C00051D047 /* cef_bind_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_bind_internal.h; sourceTree = "<group>"; };
+		F3F849561A7038C00051D047 /* cef_callback_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_callback_internal.h; sourceTree = "<group>"; };
+		F3F849571A7038C00051D047 /* cef_lock_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_lock_impl.h; sourceTree = "<group>"; };
+		F3F849581A7038C00051D047 /* cef_raw_scoped_refptr_mismatch_checker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_raw_scoped_refptr_mismatch_checker.h; sourceTree = "<group>"; };
+		F3F849591A7038C00051D047 /* cef_thread_checker_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_thread_checker_impl.h; sourceTree = "<group>"; };
+		F3F8495B1A7038C00051D047 /* cef_app_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_app_capi.h; sourceTree = "<group>"; };
+		F3F8495C1A7038C00051D047 /* cef_auth_callback_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_auth_callback_capi.h; sourceTree = "<group>"; };
+		F3F8495D1A7038C00051D047 /* cef_base_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_base_capi.h; sourceTree = "<group>"; };
+		F3F8495E1A7038C00051D047 /* cef_browser_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_browser_capi.h; sourceTree = "<group>"; };
+		F3F8495F1A7038C00051D047 /* cef_browser_process_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_browser_process_handler_capi.h; sourceTree = "<group>"; };
+		F3F849601A7038C00051D047 /* cef_callback_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_callback_capi.h; sourceTree = "<group>"; };
+		F3F849611A7038C00051D047 /* cef_client_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_client_capi.h; sourceTree = "<group>"; };
+		F3F849621A7038C00051D047 /* cef_command_line_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_command_line_capi.h; sourceTree = "<group>"; };
+		F3F849631A7038C00051D047 /* cef_context_menu_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_context_menu_handler_capi.h; sourceTree = "<group>"; };
+		F3F849641A7038C00051D047 /* cef_cookie_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_cookie_capi.h; sourceTree = "<group>"; };
+		F3F849651A7038C00051D047 /* cef_dialog_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_dialog_handler_capi.h; sourceTree = "<group>"; };
+		F3F849661A7038C00051D047 /* cef_display_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_display_handler_capi.h; sourceTree = "<group>"; };
+		F3F849671A7038C00051D047 /* cef_dom_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_dom_capi.h; sourceTree = "<group>"; };
+		F3F849681A7038C00051D047 /* cef_download_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_download_handler_capi.h; sourceTree = "<group>"; };
+		F3F849691A7038C00051D047 /* cef_download_item_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_download_item_capi.h; sourceTree = "<group>"; };
+		F3F8496A1A7038C00051D047 /* cef_drag_data_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_drag_data_capi.h; sourceTree = "<group>"; };
+		F3F8496B1A7038C00051D047 /* cef_drag_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_drag_handler_capi.h; sourceTree = "<group>"; };
+		F3F8496C1A7038C00051D047 /* cef_focus_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_focus_handler_capi.h; sourceTree = "<group>"; };
+		F3F8496D1A7038C00051D047 /* cef_frame_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_frame_capi.h; sourceTree = "<group>"; };
+		F3F8496E1A7038C00051D047 /* cef_geolocation_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_geolocation_capi.h; sourceTree = "<group>"; };
+		F3F8496F1A7038C00051D047 /* cef_geolocation_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_geolocation_handler_capi.h; sourceTree = "<group>"; };
+		F3F849701A7038C00051D047 /* cef_jsdialog_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_jsdialog_handler_capi.h; sourceTree = "<group>"; };
+		F3F849711A7038C00051D047 /* cef_keyboard_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_keyboard_handler_capi.h; sourceTree = "<group>"; };
+		F3F849721A7038C00051D047 /* cef_life_span_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_life_span_handler_capi.h; sourceTree = "<group>"; };
+		F3F849731A7038C00051D047 /* cef_load_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_load_handler_capi.h; sourceTree = "<group>"; };
+		F3F849741A7038C00051D047 /* cef_menu_model_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_menu_model_capi.h; sourceTree = "<group>"; };
+		F3F849751A7038C00051D047 /* cef_navigation_entry_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_navigation_entry_capi.h; sourceTree = "<group>"; };
+		F3F849761A7038C00051D047 /* cef_origin_whitelist_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_origin_whitelist_capi.h; sourceTree = "<group>"; };
+		F3F849771A7038C00051D047 /* cef_path_util_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_path_util_capi.h; sourceTree = "<group>"; };
+		F3F849781A7038C00051D047 /* cef_print_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_print_handler_capi.h; sourceTree = "<group>"; };
+		F3F849791A7038C00051D047 /* cef_print_settings_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_print_settings_capi.h; sourceTree = "<group>"; };
+		F3F8497A1A7038C00051D047 /* cef_process_message_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_process_message_capi.h; sourceTree = "<group>"; };
+		F3F8497B1A7038C00051D047 /* cef_process_util_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_process_util_capi.h; sourceTree = "<group>"; };
+		F3F8497C1A7038C00051D047 /* cef_render_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_render_handler_capi.h; sourceTree = "<group>"; };
+		F3F8497D1A7038C00051D047 /* cef_render_process_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_render_process_handler_capi.h; sourceTree = "<group>"; };
+		F3F8497E1A7038C00051D047 /* cef_request_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_request_capi.h; sourceTree = "<group>"; };
+		F3F8497F1A7038C00051D047 /* cef_request_context_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_request_context_capi.h; sourceTree = "<group>"; };
+		F3F849801A7038C00051D047 /* cef_request_context_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_request_context_handler_capi.h; sourceTree = "<group>"; };
+		F3F849811A7038C00051D047 /* cef_request_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_request_handler_capi.h; sourceTree = "<group>"; };
+		F3F849821A7038C00051D047 /* cef_resource_bundle_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_resource_bundle_handler_capi.h; sourceTree = "<group>"; };
+		F3F849831A7038C00051D047 /* cef_resource_handler_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_resource_handler_capi.h; sourceTree = "<group>"; };
+		F3F849841A7038C00051D047 /* cef_response_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_response_capi.h; sourceTree = "<group>"; };
+		F3F849851A7038C00051D047 /* cef_scheme_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_scheme_capi.h; sourceTree = "<group>"; };
+		F3F849861A7038C00051D047 /* cef_stream_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_stream_capi.h; sourceTree = "<group>"; };
+		F3F849871A7038C00051D047 /* cef_string_visitor_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_string_visitor_capi.h; sourceTree = "<group>"; };
+		F3F849881A7038C00051D047 /* cef_task_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_task_capi.h; sourceTree = "<group>"; };
+		F3F849891A7038C00051D047 /* cef_trace_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_trace_capi.h; sourceTree = "<group>"; };
+		F3F8498A1A7038C00051D047 /* cef_url_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_url_capi.h; sourceTree = "<group>"; };
+		F3F8498B1A7038C00051D047 /* cef_urlrequest_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_urlrequest_capi.h; sourceTree = "<group>"; };
+		F3F8498C1A7038C00051D047 /* cef_v8_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_v8_capi.h; sourceTree = "<group>"; };
+		F3F8498D1A7038C00051D047 /* cef_values_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_values_capi.h; sourceTree = "<group>"; };
+		F3F8498E1A7038C00051D047 /* cef_web_plugin_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_web_plugin_capi.h; sourceTree = "<group>"; };
+		F3F8498F1A7038C00051D047 /* cef_xml_reader_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_xml_reader_capi.h; sourceTree = "<group>"; };
+		F3F849901A7038C00051D047 /* cef_zip_reader_capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_zip_reader_capi.h; sourceTree = "<group>"; };
+		F3F849911A7038C00051D047 /* cef_app.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_app.h; sourceTree = "<group>"; };
+		F3F849921A7038C00051D047 /* cef_application_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_application_mac.h; sourceTree = "<group>"; };
+		F3F849931A7038C00051D047 /* cef_auth_callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_auth_callback.h; sourceTree = "<group>"; };
+		F3F849941A7038C00051D047 /* cef_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_base.h; sourceTree = "<group>"; };
+		F3F849951A7038C00051D047 /* cef_browser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_browser.h; sourceTree = "<group>"; };
+		F3F849961A7038C00051D047 /* cef_browser_process_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_browser_process_handler.h; sourceTree = "<group>"; };
+		F3F849971A7038C00051D047 /* cef_callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_callback.h; sourceTree = "<group>"; };
+		F3F849981A7038C00051D047 /* cef_client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_client.h; sourceTree = "<group>"; };
+		F3F849991A7038C00051D047 /* cef_command_line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_command_line.h; sourceTree = "<group>"; };
+		F3F8499A1A7038C00051D047 /* cef_context_menu_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_context_menu_handler.h; sourceTree = "<group>"; };
+		F3F8499B1A7038C00051D047 /* cef_cookie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_cookie.h; sourceTree = "<group>"; };
+		F3F8499C1A7038C00051D047 /* cef_dialog_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_dialog_handler.h; sourceTree = "<group>"; };
+		F3F8499D1A7038C00051D047 /* cef_display_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_display_handler.h; sourceTree = "<group>"; };
+		F3F8499E1A7038C00051D047 /* cef_dom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_dom.h; sourceTree = "<group>"; };
+		F3F8499F1A7038C00051D047 /* cef_download_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_download_handler.h; sourceTree = "<group>"; };
+		F3F849A01A7038C00051D047 /* cef_download_item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_download_item.h; sourceTree = "<group>"; };
+		F3F849A11A7038C00051D047 /* cef_drag_data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_drag_data.h; sourceTree = "<group>"; };
+		F3F849A21A7038C00051D047 /* cef_drag_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_drag_handler.h; sourceTree = "<group>"; };
+		F3F849A31A7038C00051D047 /* cef_focus_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_focus_handler.h; sourceTree = "<group>"; };
+		F3F849A41A7038C00051D047 /* cef_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_frame.h; sourceTree = "<group>"; };
+		F3F849A51A7038C00051D047 /* cef_geolocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_geolocation.h; sourceTree = "<group>"; };
+		F3F849A61A7038C00051D047 /* cef_geolocation_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_geolocation_handler.h; sourceTree = "<group>"; };
+		F3F849A71A7038C00051D047 /* cef_jsdialog_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_jsdialog_handler.h; sourceTree = "<group>"; };
+		F3F849A81A7038C00051D047 /* cef_keyboard_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_keyboard_handler.h; sourceTree = "<group>"; };
+		F3F849A91A7038C00051D047 /* cef_life_span_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_life_span_handler.h; sourceTree = "<group>"; };
+		F3F849AA1A7038C00051D047 /* cef_load_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_load_handler.h; sourceTree = "<group>"; };
+		F3F849AB1A7038C00051D047 /* cef_menu_model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_menu_model.h; sourceTree = "<group>"; };
+		F3F849AC1A7038C00051D047 /* cef_navigation_entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_navigation_entry.h; sourceTree = "<group>"; };
+		F3F849AD1A7038C00051D047 /* cef_origin_whitelist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_origin_whitelist.h; sourceTree = "<group>"; };
+		F3F849AE1A7038C00051D047 /* cef_pack_resources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_pack_resources.h; sourceTree = "<group>"; };
+		F3F849AF1A7038C00051D047 /* cef_pack_strings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_pack_strings.h; sourceTree = "<group>"; };
+		F3F849B01A7038C00051D047 /* cef_path_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_path_util.h; sourceTree = "<group>"; };
+		F3F849B11A7038C00051D047 /* cef_print_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_print_handler.h; sourceTree = "<group>"; };
+		F3F849B21A7038C00051D047 /* cef_print_settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_print_settings.h; sourceTree = "<group>"; };
+		F3F849B31A7038C00051D047 /* cef_process_message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_process_message.h; sourceTree = "<group>"; };
+		F3F849B41A7038C00051D047 /* cef_process_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_process_util.h; sourceTree = "<group>"; };
+		F3F849B51A7038C00051D047 /* cef_render_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_render_handler.h; sourceTree = "<group>"; };
+		F3F849B61A7038C00051D047 /* cef_render_process_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_render_process_handler.h; sourceTree = "<group>"; };
+		F3F849B71A7038C00051D047 /* cef_request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_request.h; sourceTree = "<group>"; };
+		F3F849B81A7038C00051D047 /* cef_request_context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_request_context.h; sourceTree = "<group>"; };
+		F3F849B91A7038C00051D047 /* cef_request_context_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_request_context_handler.h; sourceTree = "<group>"; };
+		F3F849BA1A7038C00051D047 /* cef_request_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_request_handler.h; sourceTree = "<group>"; };
+		F3F849BB1A7038C00051D047 /* cef_resource_bundle_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_resource_bundle_handler.h; sourceTree = "<group>"; };
+		F3F849BC1A7038C00051D047 /* cef_resource_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_resource_handler.h; sourceTree = "<group>"; };
+		F3F849BD1A7038C00051D047 /* cef_response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_response.h; sourceTree = "<group>"; };
+		F3F849BE1A7038C00051D047 /* cef_runnable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_runnable.h; sourceTree = "<group>"; };
+		F3F849BF1A7038C00051D047 /* cef_scheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_scheme.h; sourceTree = "<group>"; };
+		F3F849C01A7038C00051D047 /* cef_stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_stream.h; sourceTree = "<group>"; };
+		F3F849C11A7038C00051D047 /* cef_string_visitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_string_visitor.h; sourceTree = "<group>"; };
+		F3F849C21A7038C00051D047 /* cef_task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_task.h; sourceTree = "<group>"; };
+		F3F849C31A7038C00051D047 /* cef_trace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_trace.h; sourceTree = "<group>"; };
+		F3F849C41A7038C00051D047 /* cef_url.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_url.h; sourceTree = "<group>"; };
+		F3F849C51A7038C00051D047 /* cef_urlrequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_urlrequest.h; sourceTree = "<group>"; };
+		F3F849C61A7038C00051D047 /* cef_v8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_v8.h; sourceTree = "<group>"; };
+		F3F849C71A7038C00051D047 /* cef_values.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_values.h; sourceTree = "<group>"; };
+		F3F849C81A7038C00051D047 /* cef_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_version.h; sourceTree = "<group>"; };
+		F3F849C91A7038C00051D047 /* cef_web_plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_web_plugin.h; sourceTree = "<group>"; };
+		F3F849CA1A7038C00051D047 /* cef_xml_reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_xml_reader.h; sourceTree = "<group>"; };
+		F3F849CB1A7038C00051D047 /* cef_zip_reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_zip_reader.h; sourceTree = "<group>"; };
+		F3F849CD1A7038C00051D047 /* cef_export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_export.h; sourceTree = "<group>"; };
+		F3F849CE1A7038C00051D047 /* cef_logging_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_logging_internal.h; sourceTree = "<group>"; };
+		F3F849CF1A7038C00051D047 /* cef_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_mac.h; sourceTree = "<group>"; };
+		F3F849D01A7038C00051D047 /* cef_ptr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_ptr.h; sourceTree = "<group>"; };
+		F3F849D11A7038C00051D047 /* cef_string.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_string.h; sourceTree = "<group>"; };
+		F3F849D21A7038C00051D047 /* cef_string_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_string_list.h; sourceTree = "<group>"; };
+		F3F849D31A7038C00051D047 /* cef_string_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_string_map.h; sourceTree = "<group>"; };
+		F3F849D41A7038C00051D047 /* cef_string_multimap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_string_multimap.h; sourceTree = "<group>"; };
+		F3F849D51A7038C00051D047 /* cef_string_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_string_types.h; sourceTree = "<group>"; };
+		F3F849D61A7038C00051D047 /* cef_string_wrappers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_string_wrappers.h; sourceTree = "<group>"; };
+		F3F849D71A7038C00051D047 /* cef_thread_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_thread_internal.h; sourceTree = "<group>"; };
+		F3F849D81A7038C00051D047 /* cef_time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_time.h; sourceTree = "<group>"; };
+		F3F849D91A7038C00051D047 /* cef_trace_event_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_trace_event_internal.h; sourceTree = "<group>"; };
+		F3F849DA1A7038C00051D047 /* cef_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_types.h; sourceTree = "<group>"; };
+		F3F849DB1A7038C00051D047 /* cef_types_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_types_mac.h; sourceTree = "<group>"; };
+		F3F849DC1A7038C00051D047 /* cef_types_wrappers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_types_wrappers.h; sourceTree = "<group>"; };
+		F3F849DE1A7038C00051D047 /* cef_byte_read_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_byte_read_handler.h; sourceTree = "<group>"; };
+		F3F849DF1A7038C00051D047 /* cef_closure_task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_closure_task.h; sourceTree = "<group>"; };
+		F3F849E01A7038C00051D047 /* cef_helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_helpers.h; sourceTree = "<group>"; };
+		F3F849E11A7038C00051D047 /* cef_message_router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_message_router.h; sourceTree = "<group>"; };
+		F3F849E21A7038C00051D047 /* cef_stream_resource_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_stream_resource_handler.h; sourceTree = "<group>"; };
+		F3F849E31A7038C00051D047 /* cef_xml_object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_xml_object.h; sourceTree = "<group>"; };
+		F3F849E41A7038C00051D047 /* cef_zip_archive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_zip_archive.h; sourceTree = "<group>"; };
+		F3F849E61A7038C00051D047 /* Chromium Embedded Framework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Chromium Embedded Framework.framework"; sourceTree = "<group>"; };
+		F3F849E71A7038C00051D047 /* libcef_dll_wrapper.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcef_dll_wrapper.a; sourceTree = "<group>"; };
+		F3F84A441A7038C00051D047 /* browser_client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = browser_client.cpp; sourceTree = "<group>"; };
+		F3F84A451A7038C00051D047 /* browser_client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = browser_client.h; sourceTree = "<group>"; };
+		F3F84A461A7038C00051D047 /* cefgui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = cefgui.cpp; sourceTree = "<group>"; };
+		F3F84A471A7038C00051D047 /* cefgui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cefgui.h; sourceTree = "<group>"; };
+		F3F84A481A7038C00051D047 /* ClientApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClientApp.cpp; sourceTree = "<group>"; };
+		F3F84A491A7038C00051D047 /* ClientApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientApp.h; sourceTree = "<group>"; };
+		F3F84A4A1A7038C00051D047 /* ClientV8ExtensionHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClientV8ExtensionHandler.cpp; sourceTree = "<group>"; };
+		F3F84A4B1A7038C00051D047 /* ClientV8ExtensionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientV8ExtensionHandler.h; sourceTree = "<group>"; };
+		F3F84A4C1A7038C00051D047 /* process_helper_mac.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = process_helper_mac.cpp; sourceTree = "<group>"; };
+		F3F84A4D1A7038C00051D047 /* render_handler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = render_handler.cpp; sourceTree = "<group>"; };
+		F3F84A4E1A7038C00051D047 /* render_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = render_handler.h; sourceTree = "<group>"; };
 		FD2BA20D1A56E1840046DB39 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		FD2BA2101A56E1840046DB39 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		FD2BA2111A56E1840046DB39 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -303,11 +302,11 @@
 				E45BE9800E8CC7DD009D7055 /* CoreFoundation.framework in Frameworks */,
 				E45BE9810E8CC7DD009D7055 /* CoreServices.framework in Frameworks */,
 				E45BE9830E8CC7DD009D7055 /* OpenGL.framework in Frameworks */,
-				F3F847BD1A702A0D0051D047 /* libcef_dll_wrapper.a in Frameworks */,
+				F3F84A501A7038C00051D047 /* libcef_dll_wrapper.a in Frameworks */,
 				E45BE9840E8CC7DD009D7055 /* QuickTime.framework in Frameworks */,
 				E4C2424710CC5A17004149E2 /* AppKit.framework in Frameworks */,
 				E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */,
-				F3F847BC1A702A0D0051D047 /* Chromium Embedded Framework.framework in Frameworks */,
+				F3F84A4F1A7038C00051D047 /* Chromium Embedded Framework.framework in Frameworks */,
 				E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */,
 				E7E077E515D3B63C0020DFD4 /* CoreVideo.framework in Frameworks */,
 			);
@@ -318,8 +317,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD2BA20E1A56E1840046DB39 /* Cocoa.framework in Frameworks */,
-				F3F847C71A702A510051D047 /* Chromium Embedded Framework.framework in Frameworks */,
-				F3F847C81A702A540051D047 /* libcef_dll_wrapper.a in Frameworks */,
+				F3F84A641A703C260051D047 /* Chromium Embedded Framework.framework in Frameworks */,
+				F3F84A651A703C260051D047 /* libcef_dll_wrapper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +328,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				F3F849331A7038C00051D047 /* ofxCEF */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -389,8 +389,6 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				F3F846FE1A702A0D0051D047 /* CEF */,
-				F3F847B01A702A0D0051D047 /* cefGUI */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
@@ -415,257 +413,265 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F3F846FE1A702A0D0051D047 /* CEF */ = {
+		F3F849331A7038C00051D047 /* ofxCEF */ = {
 			isa = PBXGroup;
 			children = (
-				F3F846FF1A702A0D0051D047 /* include */,
-				F3F847AD1A702A0D0051D047 /* lib */,
+				F3F849361A7038C00051D047 /* CEF */,
+				F3F84A431A7038C00051D047 /* src */,
 			);
-			name = CEF;
-			path = ../../src/CEF;
+			name = ofxCEF;
+			path = ..;
 			sourceTree = "<group>";
 		};
-		F3F846FF1A702A0D0051D047 /* include */ = {
+		F3F849361A7038C00051D047 /* CEF */ = {
 			isa = PBXGroup;
 			children = (
-				F3F847001A702A0D0051D047 /* base */,
-				F3F847221A702A0D0051D047 /* capi */,
-				F3F847591A702A0D0051D047 /* cef_app.h */,
-				F3F8475A1A702A0D0051D047 /* cef_application_mac.h */,
-				F3F8475B1A702A0D0051D047 /* cef_auth_callback.h */,
-				F3F8475C1A702A0D0051D047 /* cef_base.h */,
-				F3F8475D1A702A0D0051D047 /* cef_browser.h */,
-				F3F8475E1A702A0D0051D047 /* cef_browser_process_handler.h */,
-				F3F8475F1A702A0D0051D047 /* cef_callback.h */,
-				F3F847601A702A0D0051D047 /* cef_client.h */,
-				F3F847611A702A0D0051D047 /* cef_command_line.h */,
-				F3F847621A702A0D0051D047 /* cef_context_menu_handler.h */,
-				F3F847631A702A0D0051D047 /* cef_cookie.h */,
-				F3F847641A702A0D0051D047 /* cef_dialog_handler.h */,
-				F3F847651A702A0D0051D047 /* cef_display_handler.h */,
-				F3F847661A702A0D0051D047 /* cef_dom.h */,
-				F3F847671A702A0D0051D047 /* cef_download_handler.h */,
-				F3F847681A702A0D0051D047 /* cef_download_item.h */,
-				F3F847691A702A0D0051D047 /* cef_drag_data.h */,
-				F3F8476A1A702A0D0051D047 /* cef_drag_handler.h */,
-				F3F8476B1A702A0D0051D047 /* cef_focus_handler.h */,
-				F3F8476C1A702A0D0051D047 /* cef_frame.h */,
-				F3F8476D1A702A0D0051D047 /* cef_geolocation.h */,
-				F3F8476E1A702A0D0051D047 /* cef_geolocation_handler.h */,
-				F3F8476F1A702A0D0051D047 /* cef_jsdialog_handler.h */,
-				F3F847701A702A0D0051D047 /* cef_keyboard_handler.h */,
-				F3F847711A702A0D0051D047 /* cef_life_span_handler.h */,
-				F3F847721A702A0D0051D047 /* cef_load_handler.h */,
-				F3F847731A702A0D0051D047 /* cef_menu_model.h */,
-				F3F847741A702A0D0051D047 /* cef_navigation_entry.h */,
-				F3F847751A702A0D0051D047 /* cef_origin_whitelist.h */,
-				F3F847761A702A0D0051D047 /* cef_pack_resources.h */,
-				F3F847771A702A0D0051D047 /* cef_pack_strings.h */,
-				F3F847781A702A0D0051D047 /* cef_path_util.h */,
-				F3F847791A702A0D0051D047 /* cef_print_handler.h */,
-				F3F8477A1A702A0D0051D047 /* cef_print_settings.h */,
-				F3F8477B1A702A0D0051D047 /* cef_process_message.h */,
-				F3F8477C1A702A0D0051D047 /* cef_process_util.h */,
-				F3F8477D1A702A0D0051D047 /* cef_render_handler.h */,
-				F3F8477E1A702A0D0051D047 /* cef_render_process_handler.h */,
-				F3F8477F1A702A0D0051D047 /* cef_request.h */,
-				F3F847801A702A0D0051D047 /* cef_request_context.h */,
-				F3F847811A702A0D0051D047 /* cef_request_context_handler.h */,
-				F3F847821A702A0D0051D047 /* cef_request_handler.h */,
-				F3F847831A702A0D0051D047 /* cef_resource_bundle_handler.h */,
-				F3F847841A702A0D0051D047 /* cef_resource_handler.h */,
-				F3F847851A702A0D0051D047 /* cef_response.h */,
-				F3F847861A702A0D0051D047 /* cef_runnable.h */,
-				F3F847871A702A0D0051D047 /* cef_scheme.h */,
-				F3F847881A702A0D0051D047 /* cef_stream.h */,
-				F3F847891A702A0D0051D047 /* cef_string_visitor.h */,
-				F3F8478A1A702A0D0051D047 /* cef_task.h */,
-				F3F8478B1A702A0D0051D047 /* cef_trace.h */,
-				F3F8478C1A702A0D0051D047 /* cef_url.h */,
-				F3F8478D1A702A0D0051D047 /* cef_urlrequest.h */,
-				F3F8478E1A702A0D0051D047 /* cef_v8.h */,
-				F3F8478F1A702A0D0051D047 /* cef_values.h */,
-				F3F847901A702A0D0051D047 /* cef_version.h */,
-				F3F847911A702A0D0051D047 /* cef_web_plugin.h */,
-				F3F847921A702A0D0051D047 /* cef_xml_reader.h */,
-				F3F847931A702A0D0051D047 /* cef_zip_reader.h */,
-				F3F847941A702A0D0051D047 /* internal */,
-				F3F847A51A702A0D0051D047 /* wrapper */,
+				F3F849371A7038C00051D047 /* include */,
+				F3F849E51A7038C00051D047 /* lib */,
+			);
+			path = CEF;
+			sourceTree = "<group>";
+		};
+		F3F849371A7038C00051D047 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				F3F849381A7038C00051D047 /* base */,
+				F3F8495A1A7038C00051D047 /* capi */,
+				F3F849911A7038C00051D047 /* cef_app.h */,
+				F3F849921A7038C00051D047 /* cef_application_mac.h */,
+				F3F849931A7038C00051D047 /* cef_auth_callback.h */,
+				F3F849941A7038C00051D047 /* cef_base.h */,
+				F3F849951A7038C00051D047 /* cef_browser.h */,
+				F3F849961A7038C00051D047 /* cef_browser_process_handler.h */,
+				F3F849971A7038C00051D047 /* cef_callback.h */,
+				F3F849981A7038C00051D047 /* cef_client.h */,
+				F3F849991A7038C00051D047 /* cef_command_line.h */,
+				F3F8499A1A7038C00051D047 /* cef_context_menu_handler.h */,
+				F3F8499B1A7038C00051D047 /* cef_cookie.h */,
+				F3F8499C1A7038C00051D047 /* cef_dialog_handler.h */,
+				F3F8499D1A7038C00051D047 /* cef_display_handler.h */,
+				F3F8499E1A7038C00051D047 /* cef_dom.h */,
+				F3F8499F1A7038C00051D047 /* cef_download_handler.h */,
+				F3F849A01A7038C00051D047 /* cef_download_item.h */,
+				F3F849A11A7038C00051D047 /* cef_drag_data.h */,
+				F3F849A21A7038C00051D047 /* cef_drag_handler.h */,
+				F3F849A31A7038C00051D047 /* cef_focus_handler.h */,
+				F3F849A41A7038C00051D047 /* cef_frame.h */,
+				F3F849A51A7038C00051D047 /* cef_geolocation.h */,
+				F3F849A61A7038C00051D047 /* cef_geolocation_handler.h */,
+				F3F849A71A7038C00051D047 /* cef_jsdialog_handler.h */,
+				F3F849A81A7038C00051D047 /* cef_keyboard_handler.h */,
+				F3F849A91A7038C00051D047 /* cef_life_span_handler.h */,
+				F3F849AA1A7038C00051D047 /* cef_load_handler.h */,
+				F3F849AB1A7038C00051D047 /* cef_menu_model.h */,
+				F3F849AC1A7038C00051D047 /* cef_navigation_entry.h */,
+				F3F849AD1A7038C00051D047 /* cef_origin_whitelist.h */,
+				F3F849AE1A7038C00051D047 /* cef_pack_resources.h */,
+				F3F849AF1A7038C00051D047 /* cef_pack_strings.h */,
+				F3F849B01A7038C00051D047 /* cef_path_util.h */,
+				F3F849B11A7038C00051D047 /* cef_print_handler.h */,
+				F3F849B21A7038C00051D047 /* cef_print_settings.h */,
+				F3F849B31A7038C00051D047 /* cef_process_message.h */,
+				F3F849B41A7038C00051D047 /* cef_process_util.h */,
+				F3F849B51A7038C00051D047 /* cef_render_handler.h */,
+				F3F849B61A7038C00051D047 /* cef_render_process_handler.h */,
+				F3F849B71A7038C00051D047 /* cef_request.h */,
+				F3F849B81A7038C00051D047 /* cef_request_context.h */,
+				F3F849B91A7038C00051D047 /* cef_request_context_handler.h */,
+				F3F849BA1A7038C00051D047 /* cef_request_handler.h */,
+				F3F849BB1A7038C00051D047 /* cef_resource_bundle_handler.h */,
+				F3F849BC1A7038C00051D047 /* cef_resource_handler.h */,
+				F3F849BD1A7038C00051D047 /* cef_response.h */,
+				F3F849BE1A7038C00051D047 /* cef_runnable.h */,
+				F3F849BF1A7038C00051D047 /* cef_scheme.h */,
+				F3F849C01A7038C00051D047 /* cef_stream.h */,
+				F3F849C11A7038C00051D047 /* cef_string_visitor.h */,
+				F3F849C21A7038C00051D047 /* cef_task.h */,
+				F3F849C31A7038C00051D047 /* cef_trace.h */,
+				F3F849C41A7038C00051D047 /* cef_url.h */,
+				F3F849C51A7038C00051D047 /* cef_urlrequest.h */,
+				F3F849C61A7038C00051D047 /* cef_v8.h */,
+				F3F849C71A7038C00051D047 /* cef_values.h */,
+				F3F849C81A7038C00051D047 /* cef_version.h */,
+				F3F849C91A7038C00051D047 /* cef_web_plugin.h */,
+				F3F849CA1A7038C00051D047 /* cef_xml_reader.h */,
+				F3F849CB1A7038C00051D047 /* cef_zip_reader.h */,
+				F3F849CC1A7038C00051D047 /* internal */,
+				F3F849DD1A7038C00051D047 /* wrapper */,
 			);
 			path = include;
 			sourceTree = "<group>";
 		};
-		F3F847001A702A0D0051D047 /* base */ = {
+		F3F849381A7038C00051D047 /* base */ = {
 			isa = PBXGroup;
 			children = (
-				F3F847011A702A0D0051D047 /* cef_atomic_ref_count.h */,
-				F3F847021A702A0D0051D047 /* cef_atomicops.h */,
-				F3F847031A702A0D0051D047 /* cef_basictypes.h */,
-				F3F847041A702A0D0051D047 /* cef_bind.h */,
-				F3F847051A702A0D0051D047 /* cef_bind_helpers.h */,
-				F3F847061A702A0D0051D047 /* cef_build.h */,
-				F3F847071A702A0D0051D047 /* cef_callback.h */,
-				F3F847081A702A0D0051D047 /* cef_callback_forward.h */,
-				F3F847091A702A0D0051D047 /* cef_callback_helpers.h */,
-				F3F8470A1A702A0D0051D047 /* cef_callback_list.h */,
-				F3F8470B1A702A0D0051D047 /* cef_cancelable_callback.h */,
-				F3F8470C1A702A0D0051D047 /* cef_lock.h */,
-				F3F8470D1A702A0D0051D047 /* cef_logging.h */,
-				F3F8470E1A702A0D0051D047 /* cef_macros.h */,
-				F3F8470F1A702A0D0051D047 /* cef_move.h */,
-				F3F847101A702A0D0051D047 /* cef_platform_thread.h */,
-				F3F847111A702A0D0051D047 /* cef_ref_counted.h */,
-				F3F847121A702A0D0051D047 /* cef_scoped_ptr.h */,
-				F3F847131A702A0D0051D047 /* cef_string16.h */,
-				F3F847141A702A0D0051D047 /* cef_template_util.h */,
-				F3F847151A702A0D0051D047 /* cef_thread_checker.h */,
-				F3F847161A702A0D0051D047 /* cef_thread_collision_warner.h */,
-				F3F847171A702A0D0051D047 /* cef_trace_event.h */,
-				F3F847181A702A0D0051D047 /* cef_tuple.h */,
-				F3F847191A702A0D0051D047 /* cef_weak_ptr.h */,
-				F3F8471A1A702A0D0051D047 /* internal */,
+				F3F849391A7038C00051D047 /* cef_atomic_ref_count.h */,
+				F3F8493A1A7038C00051D047 /* cef_atomicops.h */,
+				F3F8493B1A7038C00051D047 /* cef_basictypes.h */,
+				F3F8493C1A7038C00051D047 /* cef_bind.h */,
+				F3F8493D1A7038C00051D047 /* cef_bind_helpers.h */,
+				F3F8493E1A7038C00051D047 /* cef_build.h */,
+				F3F8493F1A7038C00051D047 /* cef_callback.h */,
+				F3F849401A7038C00051D047 /* cef_callback_forward.h */,
+				F3F849411A7038C00051D047 /* cef_callback_helpers.h */,
+				F3F849421A7038C00051D047 /* cef_callback_list.h */,
+				F3F849431A7038C00051D047 /* cef_cancelable_callback.h */,
+				F3F849441A7038C00051D047 /* cef_lock.h */,
+				F3F849451A7038C00051D047 /* cef_logging.h */,
+				F3F849461A7038C00051D047 /* cef_macros.h */,
+				F3F849471A7038C00051D047 /* cef_move.h */,
+				F3F849481A7038C00051D047 /* cef_platform_thread.h */,
+				F3F849491A7038C00051D047 /* cef_ref_counted.h */,
+				F3F8494A1A7038C00051D047 /* cef_scoped_ptr.h */,
+				F3F8494B1A7038C00051D047 /* cef_string16.h */,
+				F3F8494C1A7038C00051D047 /* cef_template_util.h */,
+				F3F8494D1A7038C00051D047 /* cef_thread_checker.h */,
+				F3F8494E1A7038C00051D047 /* cef_thread_collision_warner.h */,
+				F3F8494F1A7038C00051D047 /* cef_trace_event.h */,
+				F3F849501A7038C00051D047 /* cef_tuple.h */,
+				F3F849511A7038C00051D047 /* cef_weak_ptr.h */,
+				F3F849521A7038C00051D047 /* internal */,
 			);
 			path = base;
 			sourceTree = "<group>";
 		};
-		F3F8471A1A702A0D0051D047 /* internal */ = {
+		F3F849521A7038C00051D047 /* internal */ = {
 			isa = PBXGroup;
 			children = (
-				F3F8471B1A702A0D0051D047 /* cef_atomicops_atomicword_compat.h */,
-				F3F8471C1A702A0D0051D047 /* cef_atomicops_mac.h */,
-				F3F8471D1A702A0D0051D047 /* cef_bind_internal.h */,
-				F3F8471E1A702A0D0051D047 /* cef_callback_internal.h */,
-				F3F8471F1A702A0D0051D047 /* cef_lock_impl.h */,
-				F3F847201A702A0D0051D047 /* cef_raw_scoped_refptr_mismatch_checker.h */,
-				F3F847211A702A0D0051D047 /* cef_thread_checker_impl.h */,
+				F3F849531A7038C00051D047 /* cef_atomicops_atomicword_compat.h */,
+				F3F849541A7038C00051D047 /* cef_atomicops_mac.h */,
+				F3F849551A7038C00051D047 /* cef_bind_internal.h */,
+				F3F849561A7038C00051D047 /* cef_callback_internal.h */,
+				F3F849571A7038C00051D047 /* cef_lock_impl.h */,
+				F3F849581A7038C00051D047 /* cef_raw_scoped_refptr_mismatch_checker.h */,
+				F3F849591A7038C00051D047 /* cef_thread_checker_impl.h */,
 			);
 			path = internal;
 			sourceTree = "<group>";
 		};
-		F3F847221A702A0D0051D047 /* capi */ = {
+		F3F8495A1A7038C00051D047 /* capi */ = {
 			isa = PBXGroup;
 			children = (
-				F3F847231A702A0D0051D047 /* cef_app_capi.h */,
-				F3F847241A702A0D0051D047 /* cef_auth_callback_capi.h */,
-				F3F847251A702A0D0051D047 /* cef_base_capi.h */,
-				F3F847261A702A0D0051D047 /* cef_browser_capi.h */,
-				F3F847271A702A0D0051D047 /* cef_browser_process_handler_capi.h */,
-				F3F847281A702A0D0051D047 /* cef_callback_capi.h */,
-				F3F847291A702A0D0051D047 /* cef_client_capi.h */,
-				F3F8472A1A702A0D0051D047 /* cef_command_line_capi.h */,
-				F3F8472B1A702A0D0051D047 /* cef_context_menu_handler_capi.h */,
-				F3F8472C1A702A0D0051D047 /* cef_cookie_capi.h */,
-				F3F8472D1A702A0D0051D047 /* cef_dialog_handler_capi.h */,
-				F3F8472E1A702A0D0051D047 /* cef_display_handler_capi.h */,
-				F3F8472F1A702A0D0051D047 /* cef_dom_capi.h */,
-				F3F847301A702A0D0051D047 /* cef_download_handler_capi.h */,
-				F3F847311A702A0D0051D047 /* cef_download_item_capi.h */,
-				F3F847321A702A0D0051D047 /* cef_drag_data_capi.h */,
-				F3F847331A702A0D0051D047 /* cef_drag_handler_capi.h */,
-				F3F847341A702A0D0051D047 /* cef_focus_handler_capi.h */,
-				F3F847351A702A0D0051D047 /* cef_frame_capi.h */,
-				F3F847361A702A0D0051D047 /* cef_geolocation_capi.h */,
-				F3F847371A702A0D0051D047 /* cef_geolocation_handler_capi.h */,
-				F3F847381A702A0D0051D047 /* cef_jsdialog_handler_capi.h */,
-				F3F847391A702A0D0051D047 /* cef_keyboard_handler_capi.h */,
-				F3F8473A1A702A0D0051D047 /* cef_life_span_handler_capi.h */,
-				F3F8473B1A702A0D0051D047 /* cef_load_handler_capi.h */,
-				F3F8473C1A702A0D0051D047 /* cef_menu_model_capi.h */,
-				F3F8473D1A702A0D0051D047 /* cef_navigation_entry_capi.h */,
-				F3F8473E1A702A0D0051D047 /* cef_origin_whitelist_capi.h */,
-				F3F8473F1A702A0D0051D047 /* cef_path_util_capi.h */,
-				F3F847401A702A0D0051D047 /* cef_print_handler_capi.h */,
-				F3F847411A702A0D0051D047 /* cef_print_settings_capi.h */,
-				F3F847421A702A0D0051D047 /* cef_process_message_capi.h */,
-				F3F847431A702A0D0051D047 /* cef_process_util_capi.h */,
-				F3F847441A702A0D0051D047 /* cef_render_handler_capi.h */,
-				F3F847451A702A0D0051D047 /* cef_render_process_handler_capi.h */,
-				F3F847461A702A0D0051D047 /* cef_request_capi.h */,
-				F3F847471A702A0D0051D047 /* cef_request_context_capi.h */,
-				F3F847481A702A0D0051D047 /* cef_request_context_handler_capi.h */,
-				F3F847491A702A0D0051D047 /* cef_request_handler_capi.h */,
-				F3F8474A1A702A0D0051D047 /* cef_resource_bundle_handler_capi.h */,
-				F3F8474B1A702A0D0051D047 /* cef_resource_handler_capi.h */,
-				F3F8474C1A702A0D0051D047 /* cef_response_capi.h */,
-				F3F8474D1A702A0D0051D047 /* cef_scheme_capi.h */,
-				F3F8474E1A702A0D0051D047 /* cef_stream_capi.h */,
-				F3F8474F1A702A0D0051D047 /* cef_string_visitor_capi.h */,
-				F3F847501A702A0D0051D047 /* cef_task_capi.h */,
-				F3F847511A702A0D0051D047 /* cef_trace_capi.h */,
-				F3F847521A702A0D0051D047 /* cef_url_capi.h */,
-				F3F847531A702A0D0051D047 /* cef_urlrequest_capi.h */,
-				F3F847541A702A0D0051D047 /* cef_v8_capi.h */,
-				F3F847551A702A0D0051D047 /* cef_values_capi.h */,
-				F3F847561A702A0D0051D047 /* cef_web_plugin_capi.h */,
-				F3F847571A702A0D0051D047 /* cef_xml_reader_capi.h */,
-				F3F847581A702A0D0051D047 /* cef_zip_reader_capi.h */,
+				F3F8495B1A7038C00051D047 /* cef_app_capi.h */,
+				F3F8495C1A7038C00051D047 /* cef_auth_callback_capi.h */,
+				F3F8495D1A7038C00051D047 /* cef_base_capi.h */,
+				F3F8495E1A7038C00051D047 /* cef_browser_capi.h */,
+				F3F8495F1A7038C00051D047 /* cef_browser_process_handler_capi.h */,
+				F3F849601A7038C00051D047 /* cef_callback_capi.h */,
+				F3F849611A7038C00051D047 /* cef_client_capi.h */,
+				F3F849621A7038C00051D047 /* cef_command_line_capi.h */,
+				F3F849631A7038C00051D047 /* cef_context_menu_handler_capi.h */,
+				F3F849641A7038C00051D047 /* cef_cookie_capi.h */,
+				F3F849651A7038C00051D047 /* cef_dialog_handler_capi.h */,
+				F3F849661A7038C00051D047 /* cef_display_handler_capi.h */,
+				F3F849671A7038C00051D047 /* cef_dom_capi.h */,
+				F3F849681A7038C00051D047 /* cef_download_handler_capi.h */,
+				F3F849691A7038C00051D047 /* cef_download_item_capi.h */,
+				F3F8496A1A7038C00051D047 /* cef_drag_data_capi.h */,
+				F3F8496B1A7038C00051D047 /* cef_drag_handler_capi.h */,
+				F3F8496C1A7038C00051D047 /* cef_focus_handler_capi.h */,
+				F3F8496D1A7038C00051D047 /* cef_frame_capi.h */,
+				F3F8496E1A7038C00051D047 /* cef_geolocation_capi.h */,
+				F3F8496F1A7038C00051D047 /* cef_geolocation_handler_capi.h */,
+				F3F849701A7038C00051D047 /* cef_jsdialog_handler_capi.h */,
+				F3F849711A7038C00051D047 /* cef_keyboard_handler_capi.h */,
+				F3F849721A7038C00051D047 /* cef_life_span_handler_capi.h */,
+				F3F849731A7038C00051D047 /* cef_load_handler_capi.h */,
+				F3F849741A7038C00051D047 /* cef_menu_model_capi.h */,
+				F3F849751A7038C00051D047 /* cef_navigation_entry_capi.h */,
+				F3F849761A7038C00051D047 /* cef_origin_whitelist_capi.h */,
+				F3F849771A7038C00051D047 /* cef_path_util_capi.h */,
+				F3F849781A7038C00051D047 /* cef_print_handler_capi.h */,
+				F3F849791A7038C00051D047 /* cef_print_settings_capi.h */,
+				F3F8497A1A7038C00051D047 /* cef_process_message_capi.h */,
+				F3F8497B1A7038C00051D047 /* cef_process_util_capi.h */,
+				F3F8497C1A7038C00051D047 /* cef_render_handler_capi.h */,
+				F3F8497D1A7038C00051D047 /* cef_render_process_handler_capi.h */,
+				F3F8497E1A7038C00051D047 /* cef_request_capi.h */,
+				F3F8497F1A7038C00051D047 /* cef_request_context_capi.h */,
+				F3F849801A7038C00051D047 /* cef_request_context_handler_capi.h */,
+				F3F849811A7038C00051D047 /* cef_request_handler_capi.h */,
+				F3F849821A7038C00051D047 /* cef_resource_bundle_handler_capi.h */,
+				F3F849831A7038C00051D047 /* cef_resource_handler_capi.h */,
+				F3F849841A7038C00051D047 /* cef_response_capi.h */,
+				F3F849851A7038C00051D047 /* cef_scheme_capi.h */,
+				F3F849861A7038C00051D047 /* cef_stream_capi.h */,
+				F3F849871A7038C00051D047 /* cef_string_visitor_capi.h */,
+				F3F849881A7038C00051D047 /* cef_task_capi.h */,
+				F3F849891A7038C00051D047 /* cef_trace_capi.h */,
+				F3F8498A1A7038C00051D047 /* cef_url_capi.h */,
+				F3F8498B1A7038C00051D047 /* cef_urlrequest_capi.h */,
+				F3F8498C1A7038C00051D047 /* cef_v8_capi.h */,
+				F3F8498D1A7038C00051D047 /* cef_values_capi.h */,
+				F3F8498E1A7038C00051D047 /* cef_web_plugin_capi.h */,
+				F3F8498F1A7038C00051D047 /* cef_xml_reader_capi.h */,
+				F3F849901A7038C00051D047 /* cef_zip_reader_capi.h */,
 			);
 			path = capi;
 			sourceTree = "<group>";
 		};
-		F3F847941A702A0D0051D047 /* internal */ = {
+		F3F849CC1A7038C00051D047 /* internal */ = {
 			isa = PBXGroup;
 			children = (
-				F3F847951A702A0D0051D047 /* cef_export.h */,
-				F3F847961A702A0D0051D047 /* cef_logging_internal.h */,
-				F3F847971A702A0D0051D047 /* cef_mac.h */,
-				F3F847981A702A0D0051D047 /* cef_ptr.h */,
-				F3F847991A702A0D0051D047 /* cef_string.h */,
-				F3F8479A1A702A0D0051D047 /* cef_string_list.h */,
-				F3F8479B1A702A0D0051D047 /* cef_string_map.h */,
-				F3F8479C1A702A0D0051D047 /* cef_string_multimap.h */,
-				F3F8479D1A702A0D0051D047 /* cef_string_types.h */,
-				F3F8479E1A702A0D0051D047 /* cef_string_wrappers.h */,
-				F3F8479F1A702A0D0051D047 /* cef_thread_internal.h */,
-				F3F847A01A702A0D0051D047 /* cef_time.h */,
-				F3F847A11A702A0D0051D047 /* cef_trace_event_internal.h */,
-				F3F847A21A702A0D0051D047 /* cef_types.h */,
-				F3F847A31A702A0D0051D047 /* cef_types_mac.h */,
-				F3F847A41A702A0D0051D047 /* cef_types_wrappers.h */,
+				F3F849CD1A7038C00051D047 /* cef_export.h */,
+				F3F849CE1A7038C00051D047 /* cef_logging_internal.h */,
+				F3F849CF1A7038C00051D047 /* cef_mac.h */,
+				F3F849D01A7038C00051D047 /* cef_ptr.h */,
+				F3F849D11A7038C00051D047 /* cef_string.h */,
+				F3F849D21A7038C00051D047 /* cef_string_list.h */,
+				F3F849D31A7038C00051D047 /* cef_string_map.h */,
+				F3F849D41A7038C00051D047 /* cef_string_multimap.h */,
+				F3F849D51A7038C00051D047 /* cef_string_types.h */,
+				F3F849D61A7038C00051D047 /* cef_string_wrappers.h */,
+				F3F849D71A7038C00051D047 /* cef_thread_internal.h */,
+				F3F849D81A7038C00051D047 /* cef_time.h */,
+				F3F849D91A7038C00051D047 /* cef_trace_event_internal.h */,
+				F3F849DA1A7038C00051D047 /* cef_types.h */,
+				F3F849DB1A7038C00051D047 /* cef_types_mac.h */,
+				F3F849DC1A7038C00051D047 /* cef_types_wrappers.h */,
 			);
 			path = internal;
 			sourceTree = "<group>";
 		};
-		F3F847A51A702A0D0051D047 /* wrapper */ = {
+		F3F849DD1A7038C00051D047 /* wrapper */ = {
 			isa = PBXGroup;
 			children = (
-				F3F847A61A702A0D0051D047 /* cef_byte_read_handler.h */,
-				F3F847A71A702A0D0051D047 /* cef_closure_task.h */,
-				F3F847A81A702A0D0051D047 /* cef_helpers.h */,
-				F3F847A91A702A0D0051D047 /* cef_message_router.h */,
-				F3F847AA1A702A0D0051D047 /* cef_stream_resource_handler.h */,
-				F3F847AB1A702A0D0051D047 /* cef_xml_object.h */,
-				F3F847AC1A702A0D0051D047 /* cef_zip_archive.h */,
+				F3F849DE1A7038C00051D047 /* cef_byte_read_handler.h */,
+				F3F849DF1A7038C00051D047 /* cef_closure_task.h */,
+				F3F849E01A7038C00051D047 /* cef_helpers.h */,
+				F3F849E11A7038C00051D047 /* cef_message_router.h */,
+				F3F849E21A7038C00051D047 /* cef_stream_resource_handler.h */,
+				F3F849E31A7038C00051D047 /* cef_xml_object.h */,
+				F3F849E41A7038C00051D047 /* cef_zip_archive.h */,
 			);
 			path = wrapper;
 			sourceTree = "<group>";
 		};
-		F3F847AD1A702A0D0051D047 /* lib */ = {
+		F3F849E51A7038C00051D047 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				F3F847AE1A702A0D0051D047 /* Chromium Embedded Framework.framework */,
-				F3F847AF1A702A0D0051D047 /* libcef_dll_wrapper.a */,
+				F3F849E61A7038C00051D047 /* Chromium Embedded Framework.framework */,
+				F3F849E71A7038C00051D047 /* libcef_dll_wrapper.a */,
 			);
 			path = lib;
 			sourceTree = "<group>";
 		};
-		F3F847B01A702A0D0051D047 /* cefGUI */ = {
+		F3F84A431A7038C00051D047 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				F3F847B11A702A0D0051D047 /* browser_client.cpp */,
-				F3F847B21A702A0D0051D047 /* browser_client.h */,
-				F3F847B31A702A0D0051D047 /* cefgui.cpp */,
-				F3F847B41A702A0D0051D047 /* cefgui.h */,
-				F3F847B51A702A0D0051D047 /* ClientApp.cpp */,
-				F3F847B61A702A0D0051D047 /* ClientApp.h */,
-				F3F847B71A702A0D0051D047 /* ClientV8ExtensionHandler.cpp */,
-				F3F847B81A702A0D0051D047 /* ClientV8ExtensionHandler.h */,
-				F3F847B91A702A0D0051D047 /* process_helper_mac.cpp */,
-				F3F847BA1A702A0D0051D047 /* render_handler.cpp */,
-				F3F847BB1A702A0D0051D047 /* render_handler.h */,
+				F3F84A441A7038C00051D047 /* browser_client.cpp */,
+				F3F84A451A7038C00051D047 /* browser_client.h */,
+				F3F84A461A7038C00051D047 /* cefgui.cpp */,
+				F3F84A471A7038C00051D047 /* cefgui.h */,
+				F3F84A481A7038C00051D047 /* ClientApp.cpp */,
+				F3F84A491A7038C00051D047 /* ClientApp.h */,
+				F3F84A4A1A7038C00051D047 /* ClientV8ExtensionHandler.cpp */,
+				F3F84A4B1A7038C00051D047 /* ClientV8ExtensionHandler.h */,
+				F3F84A4C1A7038C00051D047 /* process_helper_mac.cpp */,
+				F3F84A4D1A7038C00051D047 /* render_handler.cpp */,
+				F3F84A4E1A7038C00051D047 /* render_handler.h */,
 			);
-			name = cefGUI;
-			path = ../../src/cefGUI;
+			path = src;
 			sourceTree = "<group>";
 		};
 		FD2BA20C1A56E1840046DB39 /* Frameworks */ = {
@@ -841,7 +847,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "exec cp -Rf \"../src/CEF/lib/Chromium Embedded Framework.framework\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/Contents/Frameworks/\"\nexit 1";
+			shellScript = "exec cp -Rf \"../CEF/lib/Chromium Embedded Framework.framework\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/Contents/Frameworks/\"\nexit 1";
 		};
 		FD598D481A217A9F00AC729F /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -864,14 +870,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3F847C31A702A0D0051D047 /* render_handler.cpp in Sources */,
+				F3F84A5B1A7038C00051D047 /* ClientV8ExtensionHandler.cpp in Sources */,
+				F3F84A591A7038C00051D047 /* cefgui.cpp in Sources */,
+				F3F84A5A1A7038C00051D047 /* ClientApp.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
-				F3F847C21A702A0D0051D047 /* process_helper_mac.cpp in Sources */,
-				F3F847BF1A702A0D0051D047 /* cefgui.cpp in Sources */,
-				F3F847C11A702A0D0051D047 /* ClientV8ExtensionHandler.cpp in Sources */,
-				F3F847BE1A702A0D0051D047 /* browser_client.cpp in Sources */,
-				F3F847C01A702A0D0051D047 /* ClientApp.cpp in Sources */,
+				F3F84A5D1A7038C00051D047 /* render_handler.cpp in Sources */,
+				F3F84A581A7038C00051D047 /* browser_client.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -879,9 +884,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3F847C61A702A360051D047 /* process_helper_mac.cpp in Sources */,
-				F3F847C41A702A2B0051D047 /* ClientApp.cpp in Sources */,
-				F3F847C51A702A2F0051D047 /* ClientV8ExtensionHandler.cpp in Sources */,
+				F3F84A601A7038FD0051D047 /* process_helper_mac.cpp in Sources */,
+				F3F84A5E1A7038F40051D047 /* ClientApp.cpp in Sources */,
+				F3F84A5F1A7038F80051D047 /* ClientV8ExtensionHandler.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -910,7 +915,7 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
-					"src/CEF/**",
+					"../CEF/**",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CPLUSPLUSFLAGS = (
@@ -946,7 +951,7 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
-					"src/CEF/**",
+					"../CEF/**",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CPLUSPLUSFLAGS = (
@@ -967,8 +972,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-					"$(PROJECT_DIR)/../src/CEF/lib",
-					/Users/hugues/Development/openFrameworks/addons/cefWork/src/CEF/lib,
+					"$(PROJECT_DIR)/../CEF/lib",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -976,7 +980,7 @@
 				GCC_MODEL_TUNING = NONE;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
-					"../src/cef/**",
+					"../cef/**",
 				);
 				ICON = "$(ICON_NAME_DEBUG)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
@@ -1045,8 +1049,7 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
-					"$(PROJECT_DIR)/src/CEF/lib",
-					/Users/hugues/Development/openFrameworks/addons/cefWork/src/CEF/lib,
+					"$(PROJECT_DIR)/../CEF/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)Debug";
 				WRAPPER_EXTENSION = app;
@@ -1061,15 +1064,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-					"$(PROJECT_DIR)/../src/CEF/lib",
-					/Users/hugues/Development/openFrameworks/addons/cefWork/src/CEF/lib,
+					"$(PROJECT_DIR)/../CEF/lib",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = NONE;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
-					"../src/cef/**",
+					"../cef/**",
 				);
 				ICON = "$(ICON_NAME_RELEASE)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
@@ -1138,8 +1140,7 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_49)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
-					"$(PROJECT_DIR)/../src/CEF/lib",
-					/Users/hugues/Development/openFrameworks/addons/cefWork/src/CEF/lib,
+					"$(PROJECT_DIR)/../CEF/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -1166,8 +1167,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../src/CEF/lib",
-					/Users/hugues/Development/openFrameworks/addons/cefWork/src/CEF/lib,
+					"$(PROJECT_DIR)/../CEF/lib",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1186,13 +1186,12 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
-					"../src/cef/**",
+					"../cef/**",
 				);
 				INFOPLIST_FILE = "cefHelper/cefHelper-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../src/CEF/lib",
-					/Users/hugues/Development/openFrameworks/addons/cefWork/src/CEF/lib,
+					"$(PROJECT_DIR)/../CEF/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1223,8 +1222,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../src/CEF/lib",
-					/Users/hugues/Development/openFrameworks/addons/cefWork/src/CEF/lib,
+					"$(PROJECT_DIR)/../CEF/lib",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -1238,13 +1236,12 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
-					"../src/cef/**",
+					"../cef/**",
 				);
 				INFOPLIST_FILE = "cefHelper/cefHelper-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../src/CEF/lib",
-					/Users/hugues/Development/openFrameworks/addons/cefWork/src/CEF/lib,
+					"$(PROJECT_DIR)/../CEF/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
