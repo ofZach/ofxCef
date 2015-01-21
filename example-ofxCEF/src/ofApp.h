@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-#include "cefgui.h"
+#include "ofxCEF.h"
 
 
 class GLFWwindow;
@@ -28,5 +28,5 @@ public:
 
     void gotMessageFromJS(string strMessage);
     
-    Cefgui* cefgui;
+    ofxCEF* cefgui;
 };

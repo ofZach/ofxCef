@@ -19,7 +19,7 @@ void ofApp::setup()
     // add scrolling callback
     glfwSetScrollCallback( ((ofAppGLFWWindow *) ofGetWindowPtr())->getGLFWWindow(), mouseScroll);
     
-    cefgui = initCefgui(argc, argv);
+    cefgui = initofxCEF(argc, argv);
 
     ofSetVerticalSync(false);
     ofDrawBitmapMode mode;

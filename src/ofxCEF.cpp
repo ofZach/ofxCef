@@ -1,14 +1,14 @@
-#include "cefgui.h"
+#include "ofxCEF.h"
 #include "ofMain.h"
 #include "ofAppGLFWWindow.h"
 #include <Cocoa/Cocoa.h>
-#include "ClientApp.h"
+#include "ofxCEFClientApp.h"
 
 //--------------------------------------------------------------
 //--------------------------------------------------------------
 @interface NSNotificationManager: NSObject
 {
-    Cefgui *observer;
+    ofxCEF *observer;
     notificationHandler callback;
 }
 
@@ -18,7 +18,7 @@
 
 @implementation NSNotificationManager
 
-- (id)initWithObserver:(Cefgui *)obs method:(notificationHandler)m;
+- (id)initWithObserver:(ofxCEF *)obs method:(notificationHandler)m;
 {
     self = [super init];
     if (self) {
@@ -42,7 +42,7 @@
 
 //--------------------------------------------------------------
 //--------------------------------------------------------------
-Cefgui* initCefgui(int argc, char** argv)
+ofxCEF* initofxCEF(int argc, char** argv)
 {
     CefMainArgs args(argc, argv);
     //CefExecuteProcess(args, 0, NULL);
@@ -51,15 +51,15 @@ Cefgui* initCefgui(int argc, char** argv)
     settings.background_color = 0xFFFF00FF;
     //settings.single_process = true;
 
-    CefRefPtr<ClientApp> app(new ClientApp);
+    CefRefPtr<ofxCEFClientApp> app(new ofxCEFClientApp);
 
     CefInitialize(args, settings, app.get(), NULL);
 
-    return new Cefgui();
+    return new ofxCEF();
 }
 
 //--------------------------------------------------------------
-Cefgui::Cefgui()
+ofxCEF::ofxCEF()
 {
     
     CefWindowInfo windowInfo;
@@ -72,14 +72,14 @@ Cefgui::Cefgui()
     windowInfo.transparent_painting_enabled = 1;
     //windowInfo.SetAsChild(view, 0, 0, 1000, 1000);
 
-    renderHandler = new RenderHandler();
+    renderHandler = new ofxCEFRenderHandler();
     
     if (renderHandler->bIsRetinaDisplay) {
         ofSetWindowPosition(0, 0);
         ofSetWindowShape(ofGetWidth(), ofGetHeight());
     }
 
-    client = new BrowserClient(renderHandler);
+    client = new ofxCEFBrowserClient(renderHandler);
     browser = CefBrowserHost::CreateBrowserSync(windowInfo, client.get(), "", settings, 0);
     
     if (renderHandler->bIsRetinaDisplay) {
@@ -89,23 +89,23 @@ Cefgui::Cefgui()
     enableEvents();
     
     // Listener to get a notification when the app window switches screen
-    //NSNotificationManager *nsNotificationManager = [[NSNotificationManager alloc] initWithObserver:this method:&Cefgui::notificationHandler];
+    //NSNotificationManager *nsNotificationManager = [[NSNotificationManager alloc] initWithObserver:this method:&ofxCEF::notificationHandler];
 }
 
 //--------------------------------------------------------------
-Cefgui::~Cefgui()
+ofxCEF::~ofxCEF()
 {
 }
 
 //--------------------------------------------------------------
-void Cefgui::enableEvents()
+void ofxCEF::enableEvents()
 {
-    ofAddListener(ofEvents().keyPressed, this, &Cefgui::keyPressed);
-    ofAddListener(ofEvents().keyReleased, this, &Cefgui::keyReleased);
+    ofAddListener(ofEvents().keyPressed, this, &ofxCEF::keyPressed);
+    ofAddListener(ofEvents().keyReleased, this, &ofxCEF::keyReleased);
 }
 
 //--------------------------------------------------------------
-void Cefgui::load(const char* url)
+void ofxCEF::load(const char* url)
 {
     if (!renderHandler->initialized) {
         renderHandler->init();
@@ -115,10 +115,10 @@ void Cefgui::load(const char* url)
 }
 
 //--------------------------------------------------------------
-void Cefgui::draw(void)
+void ofxCEF::draw(void)
 {
     
-//    cout << "Cefgui::draw "<< endl;
+//    cout << "ofxCEF::draw "<< endl;
 //    CefDoMessageLoopWork();
     
     // Alpha blending style. Texture values have premultiplied alpha.
@@ -153,11 +153,11 @@ void Cefgui::draw(void)
 }
 
 //--------------------------------------------------------------
-void Cefgui::notificationHandler()
+void ofxCEF::notificationHandler()
 {
     float displayScale = [[NSScreen mainScreen] backingScaleFactor];
     
-    cout << " ======= Cefgui::notificationHandler =========" << endl;
+    cout << " ======= ofxCEF::notificationHandler =========" << endl;
     cout << "OF window size: " << ofGetWidth() << " - " << ofGetHeight() << endl;
     cout << "Changed Screen / displayScale :: " << displayScale << " ::/ frame orig : " << [NSScreen mainScreen].frame.origin.x << " - " << [NSScreen mainScreen].frame.origin.y << " ::/ size " << [NSScreen mainScreen].frame.size.width << " - " << [NSScreen mainScreen].frame.size.height << endl;
     
@@ -191,7 +191,7 @@ void Cefgui::notificationHandler()
 }
 
 //--------------------------------------------------------------
-void Cefgui::reshape(int w, int h)
+void ofxCEF::reshape(int w, int h)
 {
     cout << "Reshape: " << w << " - " << h << endl;
     renderHandler->reshape(w, h);
@@ -199,7 +199,7 @@ void Cefgui::reshape(int w, int h)
 }
 
 //--------------------------------------------------------------
-void Cefgui::mouseMove(int x, int y)
+void ofxCEF::mouseMove(int x, int y)
 {
     if (renderHandler->bIsRetinaDisplay){
         x/=2;
@@ -218,7 +218,7 @@ void Cefgui::mouseMove(int x, int y)
 }
 
 //--------------------------------------------------------------
-void Cefgui::mouseWheel(int x, int y)
+void ofxCEF::mouseWheel(int x, int y)
 {
     CefMouseEvent mouse_event;
     mouse_event.x = mouse_event.y = 1;
@@ -228,7 +228,7 @@ void Cefgui::mouseWheel(int x, int y)
 }
 
 //--------------------------------------------------------------
-void Cefgui::mousePressed(int x, int y)
+void ofxCEF::mousePressed(int x, int y)
 {
     
     browser->GetHost()->SendFocusEvent(true);
@@ -248,7 +248,7 @@ void Cefgui::mousePressed(int x, int y)
 }
 
 //--------------------------------------------------------------
-void Cefgui::mouseReleased(int x, int y)
+void ofxCEF::mouseReleased(int x, int y)
 {
     if (renderHandler->bIsRetinaDisplay){
         x/=2;
@@ -266,7 +266,7 @@ void Cefgui::mouseReleased(int x, int y)
 }
 
 //--------------------------------------------------------------
-void Cefgui::keyPressed(ofKeyEventArgs &e)
+void ofxCEF::keyPressed(ofKeyEventArgs &e)
 {
     //cout << "KEY:: " << e.key << " - KEYCODE:: " <<  e.keycode << " - SCANCODE::" << e.scancode << endl;
     
@@ -290,7 +290,7 @@ void Cefgui::keyPressed(ofKeyEventArgs &e)
 }
 
 //--------------------------------------------------------------
-void Cefgui::keyReleased(ofKeyEventArgs &e)
+void ofxCEF::keyReleased(ofKeyEventArgs &e)
 {
     CefKeyEvent event;
     
@@ -313,7 +313,7 @@ void Cefgui::keyReleased(ofKeyEventArgs &e)
 
 
 //--------------------------------------------------------------
-void Cefgui::executeJS(const char* command)
+void ofxCEF::executeJS(const char* command)
 {
     CefRefPtr<CefFrame> frame = browser->GetMainFrame();
     frame->ExecuteJavaScript(command, frame->GetURL(), 0);

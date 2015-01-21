@@ -1,6 +1,6 @@
 
 #include <fstream>
-#include "render_handler.h"
+#include "ofxCEFRenderHandler.h"
 #include "ofMain.h"
 #include "ofApp.h"
 #include "ofAppGLFWWindow.h"
@@ -49,7 +49,7 @@ static CefRect convertRect(const NSRect& target, const NSRect& frame) {
 
 
 //--------------------------------------------------------------
-RenderHandler::RenderHandler(){
+ofxCEFRenderHandler::ofxCEFRenderHandler(){
   transparent_ = true;
   initialized = false;
   
@@ -80,7 +80,7 @@ RenderHandler::RenderHandler(){
 }
 
 //--------------------------------------------------------------
-void RenderHandler::init(void){
+void ofxCEFRenderHandler::init(void){
     
     initialized = true;
     
@@ -108,14 +108,14 @@ void RenderHandler::init(void){
 }
 
 //--------------------------------------------------------------
-void RenderHandler::reshape(int w_, int h_){
+void ofxCEFRenderHandler::reshape(int w_, int h_){
   w = w_;
   h = h_;
  
 }
 
 //--------------------------------------------------------------
-void RenderHandler::OnPopupShow(CefRefPtr<CefBrowser> browser,
+void ofxCEFRenderHandler::OnPopupShow(CefRefPtr<CefBrowser> browser,
                                    bool show) {
     if (!show) {
         // Clear the popup rectangle.
@@ -124,7 +124,7 @@ void RenderHandler::OnPopupShow(CefRefPtr<CefBrowser> browser,
 }
 
 //--------------------------------------------------------------
-void RenderHandler::OnPopupSize(CefRefPtr<CefBrowser> browser,
+void ofxCEFRenderHandler::OnPopupSize(CefRefPtr<CefBrowser> browser,
                                    const CefRect& rect) {
     if (rect.width <= 0 || rect.height <= 0)
         return;
@@ -133,7 +133,7 @@ void RenderHandler::OnPopupSize(CefRefPtr<CefBrowser> browser,
 }
 
 //--------------------------------------------------------------
-CefRect RenderHandler::GetPopupRectInWebView(const CefRect& original_rect) {
+CefRect ofxCEFRenderHandler::GetPopupRectInWebView(const CefRect& original_rect) {
     CefRect rc(original_rect);
     // if x or y are negative, move them to 0.
     if (rc.x < 0)
@@ -154,13 +154,13 @@ CefRect RenderHandler::GetPopupRectInWebView(const CefRect& original_rect) {
 }
 
 //--------------------------------------------------------------
-void RenderHandler::ClearPopupRects() {
+void ofxCEFRenderHandler::ClearPopupRects() {
     popup_rect_.Set(0, 0, 0, 0);
     original_popup_rect_.Set(0, 0, 0, 0);
 }
 
 //--------------------------------------------------------------
-bool RenderHandler::GetScreenInfo(CefRefPtr<CefBrowser> browser,
+bool ofxCEFRenderHandler::GetScreenInfo(CefRefPtr<CefBrowser> browser,
                    CefScreenInfo& screen_info) {
 
     NSWindow* mainWnd =  (NSWindow *) ((ofAppGLFWWindow *) ofGetWindowPtr())->getCocoaWindow();
@@ -193,7 +193,7 @@ bool RenderHandler::GetScreenInfo(CefRefPtr<CefBrowser> browser,
 }
 
 //--------------------------------------------------------------
-bool RenderHandler::GetViewRect(CefRefPtr<CefBrowser> browser, CefRect &rect)
+bool ofxCEFRenderHandler::GetViewRect(CefRefPtr<CefBrowser> browser, CefRect &rect)
 {
     if (bIsRetinaDisplay){
         rect = CefRect(0,0, ofGetWidth()*0.5, ofGetHeight()*0.5);
@@ -205,7 +205,7 @@ bool RenderHandler::GetViewRect(CefRefPtr<CefBrowser> browser, CefRect &rect)
 }
 
 //--------------------------------------------------------------
-void RenderHandler::render() {
+void ofxCEFRenderHandler::render() {
     
     //return;
     
@@ -321,7 +321,7 @@ void RenderHandler::render() {
 }
 
 //--------------------------------------------------------------
-void RenderHandler::OnPaint(CefRefPtr<CefBrowser> browser,
+void ofxCEFRenderHandler::OnPaint(CefRefPtr<CefBrowser> browser,
                             PaintElementType type,
                             const RectList &dirtyRects,
                             const void* buffer,

@@ -5,10 +5,10 @@
 #include "include/cef_client.h"
 
 //--------------------------------------------------------------
-class ClientApp : public CefApp, public CefRenderProcessHandler
+class ofxCEFClientApp : public CefApp, public CefRenderProcessHandler
 {
 public:
-    ClientApp();
+    ofxCEFClientApp();
 
     CefRefPtr<CefRenderProcessHandler> GetRenderProcessHandler() OVERRIDE
     {
@@ -17,7 +17,7 @@ public:
 
     void OnWebKitInitialized() OVERRIDE;
 
-    IMPLEMENT_REFCOUNTING(ClientApp);
+    IMPLEMENT_REFCOUNTING(ofxCEFClientApp);
 };
 
 #endif

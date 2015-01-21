@@ -1,14 +1,14 @@
-﻿#include "ClientApp.h"
+﻿#include "ofxCEFClientApp.h"
 
-#include "ClientV8ExtensionHandler.h"
+#include "ofxCEFV8ExtensionHandler.h"
 
 //--------------------------------------------------------------
-ClientApp::ClientApp()
+ofxCEFClientApp::ofxCEFClientApp()
 {
 }
 
 //--------------------------------------------------------------
-void ClientApp::OnWebKitInitialized()
+void ofxCEFClientApp::OnWebKitInitialized()
 {    
     std::string app_code =
         "var app;"
@@ -21,5 +21,5 @@ void ClientApp::OnWebKitInitialized()
         "    };"
         "})();;";
 
-    CefRegisterExtension( "v8/app", app_code, new ClientV8ExtensionHandler(this) );
+    CefRegisterExtension( "v8/app", app_code, new ofxCEFV8ExtensionHandler(this) );
 }

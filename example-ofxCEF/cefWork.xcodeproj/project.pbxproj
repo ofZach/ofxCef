@@ -28,13 +28,13 @@
 		F3F846FD1A7029930051D047 /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F846F81A7028CB0051D047 /* openFrameworksDebug.a */; };
 		F3F84A4F1A7038C00051D047 /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F849E61A7038C00051D047 /* Chromium Embedded Framework.framework */; };
 		F3F84A501A7038C00051D047 /* libcef_dll_wrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F849E71A7038C00051D047 /* libcef_dll_wrapper.a */; };
-		F3F84A581A7038C00051D047 /* browser_client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F84A441A7038C00051D047 /* browser_client.cpp */; };
-		F3F84A591A7038C00051D047 /* cefgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F84A461A7038C00051D047 /* cefgui.cpp */; };
-		F3F84A5A1A7038C00051D047 /* ClientApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F84A481A7038C00051D047 /* ClientApp.cpp */; };
-		F3F84A5B1A7038C00051D047 /* ClientV8ExtensionHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F84A4A1A7038C00051D047 /* ClientV8ExtensionHandler.cpp */; };
-		F3F84A5D1A7038C00051D047 /* render_handler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F84A4D1A7038C00051D047 /* render_handler.cpp */; };
-		F3F84A5E1A7038F40051D047 /* ClientApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F84A481A7038C00051D047 /* ClientApp.cpp */; };
-		F3F84A5F1A7038F80051D047 /* ClientV8ExtensionHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F84A4A1A7038C00051D047 /* ClientV8ExtensionHandler.cpp */; };
+		F3F84A581A7038C00051D047 /* ofxCEFBrowserClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F84A441A7038C00051D047 /* ofxCEFBrowserClient.cpp */; };
+		F3F84A591A7038C00051D047 /* ofxCEF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F84A461A7038C00051D047 /* ofxCEF.cpp */; };
+		F3F84A5A1A7038C00051D047 /* ofxCEFClientApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F84A481A7038C00051D047 /* ofxCEFClientApp.cpp */; };
+		F3F84A5B1A7038C00051D047 /* ofxCEFV8ExtensionHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F84A4A1A7038C00051D047 /* ofxCEFV8ExtensionHandler.cpp */; };
+		F3F84A5D1A7038C00051D047 /* ofxCEFRenderHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F84A4D1A7038C00051D047 /* ofxCEFRenderHandler.cpp */; };
+		F3F84A5E1A7038F40051D047 /* ofxCEFClientApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F84A481A7038C00051D047 /* ofxCEFClientApp.cpp */; };
+		F3F84A5F1A7038F80051D047 /* ofxCEFV8ExtensionHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F84A4A1A7038C00051D047 /* ofxCEFV8ExtensionHandler.cpp */; };
 		F3F84A601A7038FD0051D047 /* process_helper_mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F84A4C1A7038C00051D047 /* process_helper_mac.cpp */; };
 		F3F84A641A703C260051D047 /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F849E61A7038C00051D047 /* Chromium Embedded Framework.framework */; };
 		F3F84A651A703C260051D047 /* libcef_dll_wrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F849E71A7038C00051D047 /* libcef_dll_wrapper.a */; };
@@ -266,17 +266,17 @@
 		F3F849E41A7038C00051D047 /* cef_zip_archive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cef_zip_archive.h; sourceTree = "<group>"; };
 		F3F849E61A7038C00051D047 /* Chromium Embedded Framework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Chromium Embedded Framework.framework"; sourceTree = "<group>"; };
 		F3F849E71A7038C00051D047 /* libcef_dll_wrapper.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcef_dll_wrapper.a; sourceTree = "<group>"; };
-		F3F84A441A7038C00051D047 /* browser_client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = browser_client.cpp; sourceTree = "<group>"; };
-		F3F84A451A7038C00051D047 /* browser_client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = browser_client.h; sourceTree = "<group>"; };
-		F3F84A461A7038C00051D047 /* cefgui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = cefgui.cpp; sourceTree = "<group>"; };
-		F3F84A471A7038C00051D047 /* cefgui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cefgui.h; sourceTree = "<group>"; };
-		F3F84A481A7038C00051D047 /* ClientApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClientApp.cpp; sourceTree = "<group>"; };
-		F3F84A491A7038C00051D047 /* ClientApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientApp.h; sourceTree = "<group>"; };
-		F3F84A4A1A7038C00051D047 /* ClientV8ExtensionHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClientV8ExtensionHandler.cpp; sourceTree = "<group>"; };
-		F3F84A4B1A7038C00051D047 /* ClientV8ExtensionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientV8ExtensionHandler.h; sourceTree = "<group>"; };
+		F3F84A441A7038C00051D047 /* ofxCEFBrowserClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCEFBrowserClient.cpp; sourceTree = "<group>"; };
+		F3F84A451A7038C00051D047 /* ofxCEFBrowserClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCEFBrowserClient.h; sourceTree = "<group>"; };
+		F3F84A461A7038C00051D047 /* ofxCEF.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = ofxCEF.cpp; sourceTree = "<group>"; };
+		F3F84A471A7038C00051D047 /* ofxCEF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCEF.h; sourceTree = "<group>"; };
+		F3F84A481A7038C00051D047 /* ofxCEFClientApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCEFClientApp.cpp; sourceTree = "<group>"; };
+		F3F84A491A7038C00051D047 /* ofxCEFClientApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCEFClientApp.h; sourceTree = "<group>"; };
+		F3F84A4A1A7038C00051D047 /* ofxCEFV8ExtensionHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCEFV8ExtensionHandler.cpp; sourceTree = "<group>"; };
+		F3F84A4B1A7038C00051D047 /* ofxCEFV8ExtensionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCEFV8ExtensionHandler.h; sourceTree = "<group>"; };
 		F3F84A4C1A7038C00051D047 /* process_helper_mac.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = process_helper_mac.cpp; sourceTree = "<group>"; };
-		F3F84A4D1A7038C00051D047 /* render_handler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = render_handler.cpp; sourceTree = "<group>"; };
-		F3F84A4E1A7038C00051D047 /* render_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = render_handler.h; sourceTree = "<group>"; };
+		F3F84A4D1A7038C00051D047 /* ofxCEFRenderHandler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = ofxCEFRenderHandler.cpp; sourceTree = "<group>"; };
+		F3F84A4E1A7038C00051D047 /* ofxCEFRenderHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCEFRenderHandler.h; sourceTree = "<group>"; };
 		FD2BA20D1A56E1840046DB39 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		FD2BA2101A56E1840046DB39 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		FD2BA2111A56E1840046DB39 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -659,17 +659,17 @@
 		F3F84A431A7038C00051D047 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				F3F84A441A7038C00051D047 /* browser_client.cpp */,
-				F3F84A451A7038C00051D047 /* browser_client.h */,
-				F3F84A461A7038C00051D047 /* cefgui.cpp */,
-				F3F84A471A7038C00051D047 /* cefgui.h */,
-				F3F84A481A7038C00051D047 /* ClientApp.cpp */,
-				F3F84A491A7038C00051D047 /* ClientApp.h */,
-				F3F84A4A1A7038C00051D047 /* ClientV8ExtensionHandler.cpp */,
-				F3F84A4B1A7038C00051D047 /* ClientV8ExtensionHandler.h */,
+				F3F84A441A7038C00051D047 /* ofxCEFBrowserClient.cpp */,
+				F3F84A451A7038C00051D047 /* ofxCEFBrowserClient.h */,
+				F3F84A461A7038C00051D047 /* ofxCEF.cpp */,
+				F3F84A471A7038C00051D047 /* ofxCEF.h */,
+				F3F84A481A7038C00051D047 /* ofxCEFClientApp.cpp */,
+				F3F84A491A7038C00051D047 /* ofxCEFClientApp.h */,
+				F3F84A4A1A7038C00051D047 /* ofxCEFV8ExtensionHandler.cpp */,
+				F3F84A4B1A7038C00051D047 /* ofxCEFV8ExtensionHandler.h */,
 				F3F84A4C1A7038C00051D047 /* process_helper_mac.cpp */,
-				F3F84A4D1A7038C00051D047 /* render_handler.cpp */,
-				F3F84A4E1A7038C00051D047 /* render_handler.h */,
+				F3F84A4D1A7038C00051D047 /* ofxCEFRenderHandler.cpp */,
+				F3F84A4E1A7038C00051D047 /* ofxCEFRenderHandler.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -870,13 +870,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3F84A5B1A7038C00051D047 /* ClientV8ExtensionHandler.cpp in Sources */,
-				F3F84A591A7038C00051D047 /* cefgui.cpp in Sources */,
-				F3F84A5A1A7038C00051D047 /* ClientApp.cpp in Sources */,
+				F3F84A5B1A7038C00051D047 /* ofxCEFV8ExtensionHandler.cpp in Sources */,
+				F3F84A591A7038C00051D047 /* ofxCEF.cpp in Sources */,
+				F3F84A5A1A7038C00051D047 /* ofxCEFClientApp.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
-				F3F84A5D1A7038C00051D047 /* render_handler.cpp in Sources */,
-				F3F84A581A7038C00051D047 /* browser_client.cpp in Sources */,
+				F3F84A5D1A7038C00051D047 /* ofxCEFRenderHandler.cpp in Sources */,
+				F3F84A581A7038C00051D047 /* ofxCEFBrowserClient.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -885,8 +885,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3F84A601A7038FD0051D047 /* process_helper_mac.cpp in Sources */,
-				F3F84A5E1A7038F40051D047 /* ClientApp.cpp in Sources */,
-				F3F84A5F1A7038F80051D047 /* ClientV8ExtensionHandler.cpp in Sources */,
+				F3F84A5E1A7038F40051D047 /* ofxCEFClientApp.cpp in Sources */,
+				F3F84A5F1A7038F80051D047 /* ofxCEFV8ExtensionHandler.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

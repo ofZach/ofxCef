@@ -1,15 +1,15 @@
 #include "cef_client.h"
 
-#include "render_handler.h"
+#include "ofxCEFRenderHandler.h"
 
 #ifndef BROWSER_CLIENT_H
 #define BROWSER_CLIENT_H
 
 //--------------------------------------------------------------
-class BrowserClient : public CefClient
+class ofxCEFBrowserClient : public CefClient
 {
 public:
-    BrowserClient(RenderHandler*);
+    ofxCEFBrowserClient(ofxCEFRenderHandler*);
 
     virtual CefRefPtr<CefRenderHandler> GetRenderHandler();
 
@@ -20,7 +20,7 @@ public:
 private:
     CefRefPtr<CefRenderHandler> handler;
 
-    IMPLEMENT_REFCOUNTING(BrowserClient);
+    IMPLEMENT_REFCOUNTING(ofxCEFBrowserClient);
 
 };
 

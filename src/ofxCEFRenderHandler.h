@@ -6,12 +6,12 @@
 #define RENDER_HANDLER_H
 
 //--------------------------------------------------------------
-class RenderHandler : public CefRenderHandler
+class ofxCEFRenderHandler : public CefRenderHandler
 {
   
 public:
     
-    RenderHandler();
+    ofxCEFRenderHandler();
 
     bool initialized;
     bool bIsRetinaDisplay;
@@ -52,7 +52,7 @@ public:
     CefRect update_rect_;
     
 
-    IMPLEMENT_REFCOUNTING(RenderHandler);
+    IMPLEMENT_REFCOUNTING(ofxCEFRenderHandler);
 
 };
 

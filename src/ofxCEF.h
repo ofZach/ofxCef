@@ -1,22 +1,22 @@
 #include "cef_app.h"
 
-#include "browser_client.h"
-#include "render_handler.h"
+#include "ofxCEFBrowserClient.h"
+#include "ofxCEFRenderHandler.h"
 
 #ifndef CEFGUI_H
 #define CEFGUI_H
 
 //--------------------------------------------------------------
-class Cefgui;
+class ofxCEF;
 
-Cefgui* initCefgui(int argc, char** argv);
+ofxCEF* initofxCEF(int argc, char** argv);
 
 //--------------------------------------------------------------
-class Cefgui
+class ofxCEF
 {
 public:
-    Cefgui();
-    ~Cefgui();
+    ofxCEF();
+    ~ofxCEF();
     
     void load(const char*);
     void draw(void);
@@ -38,12 +38,12 @@ public:
     int mouseX, mouseY;
 
     CefRefPtr<CefBrowser> browser;
-    CefRefPtr<BrowserClient> client;
+    CefRefPtr<ofxCEFBrowserClient> client;
 
-    RenderHandler* renderHandler;
+    ofxCEFRenderHandler* renderHandler;
 
 };
 
-typedef void (Cefgui::*notificationHandler)();
+typedef void (ofxCEF::*notificationHandler)();
 
 #endif

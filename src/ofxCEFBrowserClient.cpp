@@ -1,20 +1,20 @@
-#include "browser_client.h"
+#include "ofxCEFBrowserClient.h"
 #include "ofApp.h"
 
 //--------------------------------------------------------------
-BrowserClient::BrowserClient(RenderHandler* renderHandler)
+ofxCEFBrowserClient::ofxCEFBrowserClient(ofxCEFRenderHandler* renderHandler)
 {
     handler = renderHandler;
 }
 
 //--------------------------------------------------------------
-CefRefPtr<CefRenderHandler> BrowserClient::GetRenderHandler()
+CefRefPtr<CefRenderHandler> ofxCEFBrowserClient::GetRenderHandler()
 {
     return handler;
 }
 
 //--------------------------------------------------------------
-bool BrowserClient::OnProcessMessageReceived(CefRefPtr<CefBrowser> browser,
+bool ofxCEFBrowserClient::OnProcessMessageReceived(CefRefPtr<CefBrowser> browser,
                                              CefProcessId source_process,
                                              CefRefPtr<CefProcessMessage> message)
 {

@@ -1,13 +1,13 @@
-﻿#include "ClientV8ExtensionHandler.h"
+﻿#include "ofxCEFV8ExtensionHandler.h"
 
 //--------------------------------------------------------------
-ClientV8ExtensionHandler::ClientV8ExtensionHandler(CefRefPtr<CefApp> app)
+ofxCEFV8ExtensionHandler::ofxCEFV8ExtensionHandler(CefRefPtr<CefApp> app)
 {
     this->app = app;
 }
 
 //--------------------------------------------------------------
-bool ClientV8ExtensionHandler::Execute(const CefString &name,
+bool ofxCEFV8ExtensionHandler::Execute(const CefString &name,
                                        CefRefPtr<CefV8Value> object,
                                        const CefV8ValueList &arguments,
                                        CefRefPtr<CefV8Value> &retval,
