@@ -697,9 +697,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E4B69B5A0A3A1756003C02F2 /* cefWork */ = {
+		E4B69B5A0A3A1756003C02F2 /* example-ofxCEF */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "cefWork" */;
+			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "example-ofxCEF" */;
 			buildPhases = (
 				FD598D441A21798300AC729F /* CopyFiles */,
 				E4B69B580A3A1756003C02F2 /* Sources */,
@@ -715,7 +715,7 @@
 			);
 			dependencies = (
 			);
-			name = cefWork;
+			name = "example-ofxCEF";
 			productName = myOFApp;
 			productReference = FD4AF9181A5709530054EB33 /* cefWorkDebug.app */;
 			productType = "com.apple.product-type.application";
@@ -745,7 +745,7 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 			};
-			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "cefWork" */;
+			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "example-ofxCEF" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -768,7 +768,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				E4B69B5A0A3A1756003C02F2 /* cefWork */,
+				E4B69B5A0A3A1756003C02F2 /* example-ofxCEF */,
 				FD2BA20A1A56E1840046DB39 /* cefHelper */,
 			);
 		};
@@ -1051,7 +1051,7 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
 					"$(PROJECT_DIR)/../CEF/lib",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)Debug";
+				PRODUCT_NAME = "example-ofxCEFDebug";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1142,7 +1142,7 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 					"$(PROJECT_DIR)/../CEF/lib",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "example-ofxCEF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1253,7 +1253,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "cefWork" */ = {
+		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "example-ofxCEF" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4B69B4E0A3A1720003C02F2 /* Debug */,
@@ -1262,7 +1262,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "cefWork" */ = {
+		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "example-ofxCEF" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4B69B600A3A1757003C02F2 /* Debug */,
