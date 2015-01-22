@@ -283,7 +283,7 @@
 		FD2BA2121A56E1840046DB39 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FD2BA22C1A56E1840046DB39 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		FD2BA2501A56E2860046DB39 /* cefHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cefHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD4AF9181A5709530054EB33 /* cefWorkDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = cefWorkDebug.app; path = "example-ofxCEFDebug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD4AF9181A5709530054EB33 /* example-ofxCEFDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "example-ofxCEFDebug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,7 +382,7 @@
 				E45BE5980E8CC70C009D7055 /* frameworks */,
 				FD2BA20C1A56E1840046DB39 /* Frameworks */,
 				FD2BA2501A56E2860046DB39 /* cefHelper.app */,
-				FD4AF9181A5709530054EB33 /* cefWorkDebug.app */,
+				FD4AF9181A5709530054EB33 /* example-ofxCEFDebug.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -717,7 +717,7 @@
 			);
 			name = "example-ofxCEF";
 			productName = myOFApp;
-			productReference = FD4AF9181A5709530054EB33 /* cefWorkDebug.app */;
+			productReference = FD4AF9181A5709530054EB33 /* example-ofxCEFDebug.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FD2BA20A1A56E1840046DB39 /* cefHelper */ = {
