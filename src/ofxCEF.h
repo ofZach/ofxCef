@@ -19,6 +19,7 @@ public:
     ~ofxCEF();
     
     void load(const char*);
+    void update();
     void draw(void);
     void reshape(int, int);
 

@@ -115,6 +115,31 @@ void ofxCEF::load(const char* url)
 }
 
 //--------------------------------------------------------------
+void ofxCEF::update()
+{
+    GLint swapbytes, lsbfirst, rowlength, skiprows, skippixels, alignment;
+    /* Save current pixel store state. */
+    
+    glGetIntegerv(GL_UNPACK_SWAP_BYTES, &swapbytes);
+    glGetIntegerv(GL_UNPACK_LSB_FIRST, &lsbfirst);
+    glGetIntegerv(GL_UNPACK_ROW_LENGTH, &rowlength);
+    glGetIntegerv(GL_UNPACK_SKIP_ROWS, &skiprows);
+    glGetIntegerv(GL_UNPACK_SKIP_PIXELS, &skippixels);
+    glGetIntegerv(GL_UNPACK_ALIGNMENT, &alignment);
+    
+    CefDoMessageLoopWork();
+    //CefRunMessageLoop();
+    
+    /* Restore current pixel store state. */
+    glPixelStorei(GL_UNPACK_SWAP_BYTES, swapbytes);
+    glPixelStorei(GL_UNPACK_LSB_FIRST, lsbfirst);
+    glPixelStorei(GL_UNPACK_ROW_LENGTH, rowlength);
+    glPixelStorei(GL_UNPACK_SKIP_ROWS, skiprows);
+    glPixelStorei(GL_UNPACK_SKIP_PIXELS, skippixels);
+    glPixelStorei(GL_UNPACK_ALIGNMENT, alignment);
+}
+
+//--------------------------------------------------------------
 void ofxCEF::draw(void)
 {
     

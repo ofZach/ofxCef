@@ -59,8 +59,8 @@ void ofApp::exit()
 //--------------------------------------------------------------
 void ofApp::update()
 {
-    CefDoMessageLoopWork();
-    //CefRunMessageLoop();
+    
+    cefgui->update();
 
     if (ofGetFrameNum() == 1){
         string path = "file://" + ofToDataPath("html/index.html", true);
