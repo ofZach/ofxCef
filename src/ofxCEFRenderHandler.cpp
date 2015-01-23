@@ -336,6 +336,9 @@ void ofxCEFRenderHandler::OnPaint(CefRefPtr<CefBrowser> browser,
         glEnable(GL_BLEND); VERIFY_NO_ERROR;
     }
     
+    // Necessary for non-power-of-2 textures to render correctly.
+    glPixelStorei(GL_UNPACK_ALIGNMENT, 1); VERIFY_NO_ERROR;
+    
     // Enable 2D textures.
     glEnable(GL_TEXTURE_2D); VERIFY_NO_ERROR;
     
