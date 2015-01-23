@@ -24,6 +24,30 @@ void ofApp::setup()
     ofSetVerticalSync(false);
     ofDrawBitmapMode mode;
     ofSetDrawBitmapMode(OF_BITMAPMODE_MODEL );
+    
+    
+    camWidth 		= 320;	// try to grab at this size.
+    camHeight 		= 240;
+    
+    //we can now get back a list of devices.
+    vector<ofVideoDevice> devices = vidGrabber.listDevices();
+    
+    for(int i = 0; i < devices.size(); i++){
+        cout << devices[i].id << ": " << devices[i].deviceName;
+        if( devices[i].bAvailable ){
+            cout << endl;
+        }else{
+            cout << " - unavailable " << endl;
+        }
+    }
+    
+    vidGrabber.setDeviceID(0);
+    vidGrabber.setDesiredFrameRate(60);
+    vidGrabber.initGrabber(camWidth,camHeight);
+    
+    videoInverted 	= new unsigned char[camWidth*camHeight*3];
+    videoTexture.allocate(camWidth,camHeight, GL_RGB);
+    
 }
 
 //--------------------------------------------------------------
@@ -51,12 +75,29 @@ void ofApp::update()
         string command = "sendMessageToJS('This is OF talking to you! (sent on frame number 100)')";
         cefgui->executeJS((const char*) command.c_str());
     }
+        
+    vidGrabber.update();
+        
+    if (vidGrabber.isFrameNew()){
+        int totalPixels = camWidth*camHeight*3;
+        unsigned char * pixels = vidGrabber.getPixels();
+        for (int i = 0; i < totalPixels; i++){
+            videoInverted[i] = 255 - pixels[i];
+        }
+        videoTexture.loadData(videoInverted, camWidth, camHeight, GL_RGB);
+    }
+
 }
 
 //--------------------------------------------------------------
 void ofApp::draw()
 {
     ofBackground(255,0,255);
+    
+    ofSetHexColor(0xffffff);
+    vidGrabber.draw(300,300);
+    videoTexture.draw(300+camWidth,300,camWidth*2,camHeight*2);
+    
     cefgui->draw();
     
 //    ofPushMatrix();
