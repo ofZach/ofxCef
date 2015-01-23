@@ -659,10 +659,10 @@
 		F3F84A431A7038C00051D047 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				F3F84A441A7038C00051D047 /* ofxCEFBrowserClient.cpp */,
-				F3F84A451A7038C00051D047 /* ofxCEFBrowserClient.h */,
 				F3F84A461A7038C00051D047 /* ofxCEF.cpp */,
 				F3F84A471A7038C00051D047 /* ofxCEF.h */,
+				F3F84A441A7038C00051D047 /* ofxCEFBrowserClient.cpp */,
+				F3F84A451A7038C00051D047 /* ofxCEFBrowserClient.h */,
 				F3F84A481A7038C00051D047 /* ofxCEFClientApp.cpp */,
 				F3F84A491A7038C00051D047 /* ofxCEFClientApp.h */,
 				F3F84A4A1A7038C00051D047 /* ofxCEFV8ExtensionHandler.cpp */,

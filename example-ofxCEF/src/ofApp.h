@@ -29,4 +29,11 @@ public:
     void gotMessageFromJS(string strMessage);
     
     ofxCEF* cefgui;
+    
+    
+    ofVideoGrabber 		vidGrabber;
+    unsigned char * 	videoInverted;
+    ofTexture			videoTexture;
+    int 				camWidth;
+    int 				camHeight;
 };
