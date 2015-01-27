@@ -1,13 +1,8 @@
 $(document).ready(function() {
   $('#toOF').on('change', function() { 
-    app.sendDataToOF($('#toOF').val()); 
+    sendDataToOF('User input from JS', parseInt($('#toOF').val()));
   });
 });
-
-function sendMessageToJS(strMessage) {
-  $("#fromOF").val(strMessage);
-}
-
 
 // Some general UI pack related JS
 // Extend JS String with repeat method

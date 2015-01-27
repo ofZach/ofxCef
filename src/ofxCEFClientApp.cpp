@@ -15,9 +15,13 @@ void ofxCEFClientApp::OnWebKitInitialized()
         "if (!app)"
         "    app = {};"
         "(function() {"
-        "    app.sendDataToOF = function(text) {"
-        "        native function sendDataToOF(text);"
-        "        return sendDataToOF(text);"
+        "    app.sendMessageWithTypeToOF = function(type, name, value) {"
+        "        native function sendMessageWithTypeToOF();"
+        "        return sendMessageWithTypeToOF(type, name, value);"
+        "    };"
+        "    app.sendMessageToOF = function(name, value) {"
+        "        native function sendMessageToOF();"
+        "        return sendMessageToOF(name, value);"
         "    };"
         "})();;";
 

@@ -67,9 +67,27 @@ void ofApp::draw()
 }
 
 //--------------------------------------------------------------
-void ofApp::gotMessageFromJS(string strMessage)
+void ofApp::gotMessageFromJS(string name, string value)
 {
-    cout << "Got a message from JS: " << strMessage << endl;
+    cout << "Got a message of type string from JS - name: " << name << " - value: " << value << endl;
+}
+
+//--------------------------------------------------------------
+void ofApp::gotMessageFromJS(string name, double value)
+{
+    cout << "Got a message of type double from JS - name: " << name << " - value: " << value << endl;
+}
+
+//--------------------------------------------------------------
+void ofApp::gotMessageFromJS(string name, int value)
+{
+    cout << "Got a message of type int from JS - name: " << name << " - value: " << value << endl;
+}
+
+//--------------------------------------------------------------
+void ofApp::gotMessageFromJS(string name, bool value)
+{
+    cout << "Got a message of type bool from JS - name: " << name << " - value: " << value << endl;
 }
 
 //--------------------------------------------------------------

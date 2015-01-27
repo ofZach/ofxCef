@@ -22,10 +22,30 @@ bool ofxCEFBrowserClient::OnProcessMessageReceived(CefRefPtr<CefBrowser> browser
     CefRefPtr<CefListValue> args = message->GetArgumentList();
 
     // Retrieve the argument values.
-    CefString valStr = args->GetString(0);
-
+    CefString type = message->GetName();
+    string name = args->GetString(0).ToString();
+    
     // Forward the message argument value to OF.
     ofApp* ofHostApp = (ofApp*)ofGetAppPtr();
-    ofHostApp->gotMessageFromJS(valStr.ToString());
+    
+    if (type == "string") {
+        ofHostApp->gotMessageFromJS(name, args->GetString(1).ToString());
+    }
+    else if (type == "double") {
+        ofHostApp->gotMessageFromJS(name, args->GetDouble(1));
+    }
+    else if (type == "int") {
+        ofHostApp->gotMessageFromJS(name, args->GetInt(1));
+    }
+    else if (type == "bool") {
+        ofHostApp->gotMessageFromJS(name, args->GetBool(1));
+    }
+    else {
+        std::cout << "ofxCEFBrowserClient received a message of unknown type." << std::endl;
+        return false;
+    }
+
+
+    
     return true;
 }
