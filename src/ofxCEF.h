@@ -23,14 +23,21 @@ public:
     void draw(void);
     void reshape(int, int);
 
-    void mouseMove(int, int);
-    void mousePressed(int, int);
-    void mouseReleased(int, int);
     void mouseWheel(int, int);
+    
+    void mousePressed(ofMouseEventArgs &e);
+    void mouseReleased(ofMouseEventArgs &e);
+    void mouseMoved(ofMouseEventArgs &e);
+    void mouseDragged(ofMouseEventArgs &e);
+    
     void keyPressed(ofKeyEventArgs &e);
     void keyReleased(ofKeyEventArgs &e);
     
+    void windowResized(ofResizeEventArgs &e);
+    
     void enableEvents();
+    void disableEvents();
+    
     void executeJS(const char*);
 
     void notificationHandler();
