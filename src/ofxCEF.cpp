@@ -100,8 +100,29 @@ ofxCEF::~ofxCEF()
 //--------------------------------------------------------------
 void ofxCEF::enableEvents()
 {
+    ofAddListener(ofEvents().mousePressed, this, &ofxCEF::mousePressed);
+    ofAddListener(ofEvents().mouseMoved, this, &ofxCEF::mouseMoved);
+    ofAddListener(ofEvents().mouseDragged, this, &ofxCEF::mouseDragged);
+    ofAddListener(ofEvents().mouseReleased, this, &ofxCEF::mouseReleased);
+    
     ofAddListener(ofEvents().keyPressed, this, &ofxCEF::keyPressed);
     ofAddListener(ofEvents().keyReleased, this, &ofxCEF::keyReleased);
+    
+    ofAddListener(ofEvents().windowResized, this, &ofxCEF::windowResized);
+}
+
+//--------------------------------------------------------------
+void ofxCEF::disableEvents()
+{
+    ofRemoveListener(ofEvents().mousePressed, this, &ofxCEF::mousePressed);
+    ofRemoveListener(ofEvents().mouseMoved, this, &ofxCEF::mouseMoved);
+    ofRemoveListener(ofEvents().mouseDragged, this, &ofxCEF::mouseDragged);
+    ofRemoveListener(ofEvents().mouseReleased, this, &ofxCEF::mouseReleased);
+    
+    ofRemoveListener(ofEvents().keyPressed, this, &ofxCEF::keyPressed);
+    ofRemoveListener(ofEvents().keyReleased, this, &ofxCEF::keyReleased);
+    
+    ofRemoveListener(ofEvents().windowResized, this, &ofxCEF::windowResized);
 }
 
 //--------------------------------------------------------------
@@ -225,37 +246,10 @@ void ofxCEF::reshape(int w, int h)
 }
 
 //--------------------------------------------------------------
-void ofxCEF::mouseMove(int x, int y)
+void ofxCEF::mousePressed(ofMouseEventArgs &e)
 {
-    if (renderHandler->bIsRetinaDisplay){
-        x/=2;
-        y/=2;
-    }
-
-    mouseX = x;
-    mouseY = y;
-
-    CefMouseEvent event;
-    event.x = x;
-    event.y = y;
-
-    browser->GetHost()->SendMouseMoveEvent(event, false);
-    
-}
-
-//--------------------------------------------------------------
-void ofxCEF::mouseWheel(int x, int y)
-{
-    CefMouseEvent mouse_event;
-    mouse_event.x = mouse_event.y = 1;
-    mouse_event.modifiers = 0;
-    browser->GetHost()->SendMouseWheelEvent(mouse_event, x,y);
-    
-}
-
-//--------------------------------------------------------------
-void ofxCEF::mousePressed(int x, int y)
-{
+    int x = e.x;
+    int y = e.y;
     
     browser->GetHost()->SendFocusEvent(true);
 
@@ -274,8 +268,11 @@ void ofxCEF::mousePressed(int x, int y)
 }
 
 //--------------------------------------------------------------
-void ofxCEF::mouseReleased(int x, int y)
+void ofxCEF::mouseReleased(ofMouseEventArgs &e)
 {
+    int x = e.x;
+    int y = e.y;
+    
     if (renderHandler->bIsRetinaDisplay){
         x/=2;
         y/=2;
@@ -289,6 +286,44 @@ void ofxCEF::mouseReleased(int x, int y)
     CefBrowserHost::MouseButtonType btnType = MBT_LEFT;
     browser->GetHost()->SendMouseClickEvent(event, btnType, true, 1);
 
+}
+
+//--------------------------------------------------------------
+void ofxCEF::mouseMoved(ofMouseEventArgs &e)
+{
+    int x = e.x;
+    int y = e.y;
+    
+    if (renderHandler->bIsRetinaDisplay){
+        x/=2;
+        y/=2;
+    }
+    
+    mouseX = x;
+    mouseY = y;
+    
+    CefMouseEvent event;
+    event.x = x;
+    event.y = y;
+    
+    browser->GetHost()->SendMouseMoveEvent(event, false);
+    
+}
+
+//--------------------------------------------------------------
+void ofxCEF::mouseDragged(ofMouseEventArgs &e)
+{
+    mouseMoved(e);
+}
+
+//--------------------------------------------------------------
+void ofxCEF::mouseWheel(int x, int y)
+{
+    CefMouseEvent mouse_event;
+    mouse_event.x = mouse_event.y = 1;
+    mouse_event.modifiers = 0;
+    browser->GetHost()->SendMouseWheelEvent(mouse_event, x,y);
+    
 }
 
 //--------------------------------------------------------------
@@ -335,6 +370,14 @@ void ofxCEF::keyReleased(ofKeyEventArgs &e)
         event.type = KEYEVENT_KEYUP;
         browser->GetHost()->SendKeyEvent(event);
     }
+}
+
+//--------------------------------------------------------------
+void ofxCEF::windowResized(ofResizeEventArgs &e)
+{
+    reshape(e.width, e.height);
+    renderHandler->init();
+    //cefgui->browser->Reload();
 }
 
 
