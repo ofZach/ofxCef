@@ -110,45 +110,26 @@ void ofApp::keyReleased(int key)
 //--------------------------------------------------------------
 void ofApp::mouseMoved(int x, int y )
 {
-    if (cefgui!= NULL){
-        cefgui->mouseMove(x, y);
-    }
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button)
 {
-    if (cefgui!= NULL){
-        cefgui->mouseMove(x, y);
-    }
 }
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button)
 {
-    if (cefgui!= NULL){
-        cefgui->mousePressed(x, y);
-        //--------------------------------------------------------------
-    }
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button)
 {
-    if (cefgui!= NULL){
-        cefgui->mouseReleased(x, y);
-    }
 }
 
 //--------------------------------------------------------------
 void ofApp::windowResized(int w, int h)
 {
-    if (cefgui!= NULL){
-        cefgui->reshape(w,h);
-        cefgui->renderHandler->init();
-        cefgui->browser->Reload();
-    }
-    // this is failing
 }
 
 //--------------------------------------------------------------
