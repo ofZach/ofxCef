@@ -69,7 +69,7 @@ ofxCEF::ofxCEF()
     NSView * view =  [ cocoaWindow contentView];
 
     windowInfo.SetAsWindowless(view, true);
-    windowInfo.transparent_painting_enabled = 1;
+    windowInfo.transparent_painting_enabled = STATE_ENABLED;
     //windowInfo.SetAsChild(view, 0, 0, 1000, 1000);
 
     renderHandler = new ofxCEFRenderHandler();
