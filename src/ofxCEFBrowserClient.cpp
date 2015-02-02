@@ -14,6 +14,25 @@ CefRefPtr<CefRenderHandler> ofxCEFBrowserClient::GetRenderHandler()
 }
 
 //--------------------------------------------------------------
+CefRefPtr<CefLoadHandler> ofxCEFBrowserClient::GetLoadHandler()
+{
+    return this;
+}
+
+//--------------------------------------------------------------
+void ofxCEFBrowserClient::OnLoadStart(CefRefPtr<CefBrowser> browser, CefRefPtr<CefFrame> frame)
+{
+    _parent->onLoadStart();
+}
+
+
+//--------------------------------------------------------------
+void ofxCEFBrowserClient::OnLoadEnd(CefRefPtr<CefBrowser> browser, CefRefPtr<CefFrame> frame, int httpStatusCode)
+{
+    _parent->onLoadEnd(httpStatusCode);
+}
+
+//--------------------------------------------------------------
 bool ofxCEFBrowserClient::OnProcessMessageReceived(CefRefPtr<CefBrowser> browser,
                                              CefProcessId source_process,
                                              CefRefPtr<CefProcessMessage> message)
