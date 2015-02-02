@@ -7,6 +7,24 @@
 #define CEFGUI_H
 
 //--------------------------------------------------------------
+class ofxCEFMessageArgs : public ofEventArgs{
+public:
+    string name;
+    string type;
+    string value;
+};
+
+//--------------------------------------------------------------
+class ofxCEFEventArgs : public ofEventArgs{
+public:
+    enum Type{
+        onLoadStart,
+        onLoadEnd
+    } type;
+    int httpStatusCode;
+};
+
+//--------------------------------------------------------------
 class ofxCEF;
 
 ofxCEF* initofxCEF(int argc, char** argv);
@@ -41,6 +59,14 @@ public:
     void executeJS(const char*);
 
     void notificationHandler();
+    
+    void onLoadStart();
+    void onLoadEnd(int httpStatusCode);
+    
+    void gotMessageFromJS(string name, string type, string value);
+
+    ofEvent<ofxCEFMessageArgs> messageFromJS;
+    ofEvent<ofxCEFEventArgs> eventFromCEF;
 
  // private:
     int mouseX, mouseY;

@@ -64,6 +64,7 @@ ofxCEF::ofxCEF()
     
     CefWindowInfo windowInfo;
     CefBrowserSettings settings;
+    settings.web_security = STATE_DISABLED;
 
     NSWindow * cocoaWindow =  (NSWindow *) ((ofAppGLFWWindow *) ofGetWindowPtr())->getCocoaWindow();
     NSView * view =  [ cocoaWindow contentView];
@@ -79,7 +80,7 @@ ofxCEF::ofxCEF()
         ofSetWindowShape(ofGetWidth(), ofGetHeight());
     }
 
-    client = new ofxCEFBrowserClient(renderHandler);
+    client = new ofxCEFBrowserClient(this, renderHandler);
     browser = CefBrowserHost::CreateBrowserSync(windowInfo, client.get(), "", settings, 0);
     
     if (renderHandler->bIsRetinaDisplay) {
@@ -197,6 +198,37 @@ void ofxCEF::draw(void)
 
     
     ofEnableAlphaBlending();
+}
+
+//--------------------------------------------------------------
+void ofxCEF::onLoadStart()
+{
+    ofxCEFEventArgs evt;
+    evt.type = ofxCEFEventArgs::onLoadStart;
+    evt.httpStatusCode = -1;
+    
+    ofNotifyEvent(eventFromCEF, evt, this);
+}
+
+//--------------------------------------------------------------
+void ofxCEF::onLoadEnd(int httpStatusCode)
+{
+    ofxCEFEventArgs evt;
+    evt.type = ofxCEFEventArgs::onLoadEnd;
+    evt.httpStatusCode = httpStatusCode;
+    
+    ofNotifyEvent(eventFromCEF, evt, this);
+}
+
+//--------------------------------------------------------------
+void ofxCEF::gotMessageFromJS(string name, string type, string value)
+{
+    ofxCEFMessageArgs msg;
+    msg.type = type;
+    msg.name = name;
+    msg.value = value;
+    
+    ofNotifyEvent(messageFromJS, msg, this);
 }
 
 //--------------------------------------------------------------

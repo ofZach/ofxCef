@@ -1,9 +1,10 @@
 #include "ofxCEFBrowserClient.h"
-#include "ofApp.h"
+#include "ofxCEF.h"
 
 //--------------------------------------------------------------
-ofxCEFBrowserClient::ofxCEFBrowserClient(ofxCEFRenderHandler* renderHandler)
+ofxCEFBrowserClient::ofxCEFBrowserClient(ofxCEF* parent, ofxCEFRenderHandler* renderHandler)
 {
+    _parent = parent;
     handler = renderHandler;
 }
 
@@ -44,20 +45,19 @@ bool ofxCEFBrowserClient::OnProcessMessageReceived(CefRefPtr<CefBrowser> browser
     CefString type = message->GetName();
     string name = args->GetString(0).ToString();
     
-    // Forward the message argument value to OF.
-    ofApp* ofHostApp = (ofApp*)ofGetAppPtr();
     
+    // Forward the message argument value to the parent (instance of ofxCEF).    
     if (type == "string") {
-        ofHostApp->gotMessageFromJS(name, args->GetString(1).ToString());
+        _parent->gotMessageFromJS(name, type, args->GetString(1).ToString());
     }
     else if (type == "double") {
-        ofHostApp->gotMessageFromJS(name, args->GetDouble(1));
+        _parent->gotMessageFromJS(name, type, ofToString(args->GetDouble(1)));
     }
     else if (type == "int") {
-        ofHostApp->gotMessageFromJS(name, args->GetInt(1));
+        _parent->gotMessageFromJS(name, type, ofToString(args->GetInt(1)));
     }
     else if (type == "bool") {
-        ofHostApp->gotMessageFromJS(name, args->GetBool(1));
+        _parent->gotMessageFromJS(name, type, ofToString(args->GetBool(1)));
     }
     else {
         std::cout << "ofxCEFBrowserClient received a message of unknown type." << std::endl;

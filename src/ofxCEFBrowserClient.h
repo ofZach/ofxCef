@@ -5,11 +5,13 @@
 #ifndef BROWSER_CLIENT_H
 #define BROWSER_CLIENT_H
 
+class ofxCEF;
+
 //--------------------------------------------------------------
 class ofxCEFBrowserClient : public CefClient, public CefLoadHandler
 {
 public:
-    ofxCEFBrowserClient(ofxCEFRenderHandler*);
+    ofxCEFBrowserClient(ofxCEF* parent, ofxCEFRenderHandler* renderHandler);
 
     virtual CefRefPtr<CefRenderHandler> GetRenderHandler();
     
@@ -29,7 +31,8 @@ public:
 
 private:
     CefRefPtr<CefRenderHandler> handler;
-
+    ofxCEF* _parent;
+    
     IMPLEMENT_REFCOUNTING(ofxCEFBrowserClient);
 
 };
