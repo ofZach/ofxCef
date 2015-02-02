@@ -26,10 +26,8 @@ public:
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
 
-    void gotMessageFromJS(string name, string value);
-    void gotMessageFromJS(string name, double value);
-    void gotMessageFromJS(string name, int value);
-    void gotMessageFromJS(string name, bool value);
+    void gotMessageFromJS(ofxCEFMessageArgs& msg);
+    void eventFromCEF(ofxCEFEventArgs& evt);
     
     ofxCEF* cefgui;
 };

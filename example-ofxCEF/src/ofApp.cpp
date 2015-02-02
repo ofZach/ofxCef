@@ -20,7 +20,11 @@ void ofApp::setup()
     glfwSetScrollCallback( ((ofAppGLFWWindow *) ofGetWindowPtr())->getGLFWWindow(), mouseScroll);
     
     cefgui = initofxCEF(argc, argv);
-
+    
+    // Register event listener
+    ofAddListener(cefgui->messageFromJS, this, &ofApp::gotMessageFromJS);
+    ofAddListener(cefgui->eventFromCEF, this, &ofApp::eventFromCEF);
+    
     ofSetVerticalSync(false);
     ofDrawBitmapMode mode;
     ofSetDrawBitmapMode(OF_BITMAPMODE_MODEL );
@@ -67,27 +71,19 @@ void ofApp::draw()
 }
 
 //--------------------------------------------------------------
-void ofApp::gotMessageFromJS(string name, string value)
+void ofApp::eventFromCEF(ofxCEFEventArgs& evt)
 {
-    cout << "Got a message of type string from JS - name: " << name << " - value: " << value << endl;
+    if (evt.type == ofxCEFEventArgs::onLoadStart) {
+        cout << "Receive an event from CEF > Content loading..." << endl;
+    } else if (evt.type == ofxCEFEventArgs::onLoadEnd) {
+        cout << "Receive an event from CEF > Content loaded with HTTP Status Code: " << evt.httpStatusCode << endl;
+    }
 }
 
 //--------------------------------------------------------------
-void ofApp::gotMessageFromJS(string name, double value)
+void ofApp::gotMessageFromJS(ofxCEFMessageArgs& msg)
 {
-    cout << "Got a message of type double from JS - name: " << name << " - value: " << value << endl;
-}
-
-//--------------------------------------------------------------
-void ofApp::gotMessageFromJS(string name, int value)
-{
-    cout << "Got a message of type int from JS - name: " << name << " - value: " << value << endl;
-}
-
-//--------------------------------------------------------------
-void ofApp::gotMessageFromJS(string name, bool value)
-{
-    cout << "Got a message of type bool from JS - name: " << name << " - value: " << value << endl;
+    cout << "Got a message of type string from JS - type: " << msg.type << " - name:: " << msg.name << " - value :: " << msg.value << endl;
 }
 
 //--------------------------------------------------------------
