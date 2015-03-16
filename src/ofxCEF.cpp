@@ -50,6 +50,7 @@ ofxCEF* initofxCEF(int argc, char** argv)
     CefSettings settings;
     settings.background_color = 0xFFFF00FF;
     //settings.single_process = true;
+    settings.windowless_rendering_enabled = true;
 
     CefRefPtr<ofxCEFClientApp> app(new ofxCEFClientApp);
 
@@ -65,6 +66,7 @@ ofxCEF::ofxCEF()
     CefWindowInfo windowInfo;
     CefBrowserSettings settings;
     settings.web_security = STATE_DISABLED;
+    settings.webgl = STATE_ENABLED;
 
     NSWindow * cocoaWindow =  (NSWindow *) ((ofAppGLFWWindow *) ofGetWindowPtr())->getCocoaWindow();
     NSView * view =  [ cocoaWindow contentView];
