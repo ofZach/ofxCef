@@ -50,6 +50,7 @@ ofxCEF* initofxCEF(int argc, char** argv)
     CefSettings settings;
     settings.background_color = 0xFFFF00FF;
     //settings.single_process = true;
+    settings.windowless_rendering_enabled = true;
 
     CefRefPtr<ofxCEFClientApp> app(new ofxCEFClientApp);
 
