@@ -196,8 +196,7 @@ bool ofxCEFRenderHandler::GetScreenInfo(CefRefPtr<CefBrowser> browser,
 }
 
 //--------------------------------------------------------------
-bool ofxCEFRenderHandler::GetViewRect(CefRefPtr<CefBrowser> browser, CefRect &rect)
-{
+bool ofxCEFRenderHandler::GetViewRect(CefRefPtr<CefBrowser> browser, CefRect &rect){
     
     if (bIsShuttingDown) return false;
     

@@ -3,13 +3,11 @@
 #include "ofxCEFV8ExtensionHandler.h"
 
 //--------------------------------------------------------------
-ofxCEFClientApp::ofxCEFClientApp()
-{
+ofxCEFClientApp::ofxCEFClientApp(){
 }
 
 //--------------------------------------------------------------
-void ofxCEFClientApp::OnWebKitInitialized()
-{    
+void ofxCEFClientApp::OnWebKitInitialized(){    
     std::string app_code =
         "var app;"
         "if (!app)"

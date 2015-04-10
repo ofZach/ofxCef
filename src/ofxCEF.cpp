@@ -44,8 +44,7 @@
 
 //--------------------------------------------------------------
 //--------------------------------------------------------------
-ofxCEF* initofxCEF(int argc, char** argv)
-{
+ofxCEF* initofxCEF(int argc, char** argv){
     
     CefMainArgs args(argc, argv);
     //CefExecuteProcess(args, 0, NULL);
@@ -101,18 +100,15 @@ void ofxCEF::setup(){
 }
 
 //--------------------------------------------------------------
-ofxCEF::ofxCEF()
-{
+ofxCEF::ofxCEF(){
 }
 
 //--------------------------------------------------------------
-ofxCEF::~ofxCEF()
-{
+ofxCEF::~ofxCEF(){
 }
 
 //--------------------------------------------------------------
-void ofxCEF::enableEvents()
-{
+void ofxCEF::enableEvents(){
     ofAddListener(ofEvents().mousePressed, this, &ofxCEF::mousePressed);
     ofAddListener(ofEvents().mouseMoved, this, &ofxCEF::mouseMoved);
     ofAddListener(ofEvents().mouseDragged, this, &ofxCEF::mouseDragged);
@@ -125,8 +121,7 @@ void ofxCEF::enableEvents()
 }
 
 //--------------------------------------------------------------
-void ofxCEF::disableEvents()
-{
+void ofxCEF::disableEvents(){
     ofRemoveListener(ofEvents().mousePressed, this, &ofxCEF::mousePressed);
     ofRemoveListener(ofEvents().mouseMoved, this, &ofxCEF::mouseMoved);
     ofRemoveListener(ofEvents().mouseDragged, this, &ofxCEF::mouseDragged);
@@ -139,8 +134,7 @@ void ofxCEF::disableEvents()
 }
 
 //--------------------------------------------------------------
-void ofxCEF::load(const char* url)
-{
+void ofxCEF::load(const char* url){
     if (!renderHandler->initialized) {
         renderHandler->init();
     }
@@ -149,8 +143,7 @@ void ofxCEF::load(const char* url)
 }
 
 //--------------------------------------------------------------
-void ofxCEF::update()
-{
+void ofxCEF::update(){
     GLint swapbytes, lsbfirst, rowlength, skiprows, skippixels, alignment;
     /* Save current pixel store state. */
     
@@ -174,8 +167,7 @@ void ofxCEF::update()
 }
 
 //--------------------------------------------------------------
-void ofxCEF::draw(void)
-{
+void ofxCEF::draw(void){
     
 //    cout << "ofxCEF::draw "<< endl;
 //    CefDoMessageLoopWork();
@@ -213,8 +205,7 @@ void ofxCEF::draw(void)
 }
 
 //--------------------------------------------------------------
-void ofxCEF::onLoadStart()
-{
+void ofxCEF::onLoadStart(){
     ofxCEFEventArgs evt;
     evt.type = ofxCEFEventArgs::onLoadStart;
     evt.httpStatusCode = -1;
@@ -223,8 +214,7 @@ void ofxCEF::onLoadStart()
 }
 
 //--------------------------------------------------------------
-void ofxCEF::onLoadEnd(int httpStatusCode)
-{
+void ofxCEF::onLoadEnd(int httpStatusCode){
     ofxCEFEventArgs evt;
     evt.type = ofxCEFEventArgs::onLoadEnd;
     evt.httpStatusCode = httpStatusCode;
@@ -233,8 +223,7 @@ void ofxCEF::onLoadEnd(int httpStatusCode)
 }
 
 //--------------------------------------------------------------
-void ofxCEF::gotMessageFromJS(string name, string type, string value)
-{
+void ofxCEF::gotMessageFromJS(string name, string type, string value){
     ofxCEFMessageArgs msg;
     msg.type = type;
     msg.name = name;
@@ -244,8 +233,7 @@ void ofxCEF::gotMessageFromJS(string name, string type, string value)
 }
 
 //--------------------------------------------------------------
-void ofxCEF::notificationHandler()
-{
+void ofxCEF::notificationHandler(){
     float displayScale = [[NSScreen mainScreen] backingScaleFactor];
     
     cout << " ======= ofxCEF::notificationHandler =========" << endl;
@@ -282,16 +270,14 @@ void ofxCEF::notificationHandler()
 }
 
 //--------------------------------------------------------------
-void ofxCEF::reshape(int w, int h)
-{
+void ofxCEF::reshape(int w, int h){
     cout << "Reshape: " << w << " - " << h << endl;
     renderHandler->reshape(w, h);
     browser->GetHost()->WasResized();
 }
 
 //--------------------------------------------------------------
-void ofxCEF::mousePressed(ofMouseEventArgs &e)
-{
+void ofxCEF::mousePressed(ofMouseEventArgs &e){
     int x = e.x;
     int y = e.y;
     
@@ -312,8 +298,7 @@ void ofxCEF::mousePressed(ofMouseEventArgs &e)
 }
 
 //--------------------------------------------------------------
-void ofxCEF::mouseReleased(ofMouseEventArgs &e)
-{
+void ofxCEF::mouseReleased(ofMouseEventArgs &e){
     int x = e.x;
     int y = e.y;
     
@@ -333,8 +318,7 @@ void ofxCEF::mouseReleased(ofMouseEventArgs &e)
 }
 
 //--------------------------------------------------------------
-void ofxCEF::mouseMoved(ofMouseEventArgs &e)
-{
+void ofxCEF::mouseMoved(ofMouseEventArgs &e){
     int x = e.x;
     int y = e.y;
     
@@ -355,14 +339,12 @@ void ofxCEF::mouseMoved(ofMouseEventArgs &e)
 }
 
 //--------------------------------------------------------------
-void ofxCEF::mouseDragged(ofMouseEventArgs &e)
-{
+void ofxCEF::mouseDragged(ofMouseEventArgs &e){
     mouseMoved(e);
 }
 
 //--------------------------------------------------------------
-void ofxCEF::mouseWheel(int x, int y)
-{
+void ofxCEF::mouseWheel(int x, int y){
     CefMouseEvent mouse_event;
     mouse_event.x = mouse_event.y = 1;
     mouse_event.modifiers = 0;
@@ -371,8 +353,7 @@ void ofxCEF::mouseWheel(int x, int y)
 }
 
 //--------------------------------------------------------------
-void ofxCEF::keyPressed(ofKeyEventArgs &e)
-{
+void ofxCEF::keyPressed(ofKeyEventArgs &e){
     //cout << "KEY:: " << e.key << " - KEYCODE:: " <<  e.keycode << " - SCANCODE::" << e.scancode << endl;
     
     CefKeyEvent event;
@@ -395,8 +376,7 @@ void ofxCEF::keyPressed(ofKeyEventArgs &e)
 }
 
 //--------------------------------------------------------------
-void ofxCEF::keyReleased(ofKeyEventArgs &e)
-{
+void ofxCEF::keyReleased(ofKeyEventArgs &e){
     CefKeyEvent event;
     
     if (e.key == OF_KEY_LEFT || e.key == OF_KEY_UP
@@ -417,8 +397,7 @@ void ofxCEF::keyReleased(ofKeyEventArgs &e)
 }
 
 //--------------------------------------------------------------
-void ofxCEF::windowResized(ofResizeEventArgs &e)
-{
+void ofxCEF::windowResized(ofResizeEventArgs &e){
     reshape(e.width, e.height);
     renderHandler->init();
     //cefgui->browser->Reload();
@@ -426,8 +405,7 @@ void ofxCEF::windowResized(ofResizeEventArgs &e)
 
 
 //--------------------------------------------------------------
-void ofxCEF::executeJS(const char* command)
-{
+void ofxCEF::executeJS(const char* command){
     CefRefPtr<CefFrame> frame = browser->GetMainFrame();
     frame->ExecuteJavaScript(command, frame->GetURL(), 0);
 

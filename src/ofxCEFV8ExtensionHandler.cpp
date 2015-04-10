@@ -4,8 +4,7 @@
 #include <string>
 
 //--------------------------------------------------------------
-ofxCEFV8ExtensionHandler::ofxCEFV8ExtensionHandler(CefRefPtr<CefApp> app)
-{
+ofxCEFV8ExtensionHandler::ofxCEFV8ExtensionHandler(CefRefPtr<CefApp> app){
     this->app = app;
 }
 
@@ -14,8 +13,7 @@ bool ofxCEFV8ExtensionHandler::Execute(const CefString &name,
                                        CefRefPtr<CefV8Value> object,
                                        const CefV8ValueList &arguments,
                                        CefRefPtr<CefV8Value> &retval,
-                                       CefString &exception)
-{
+                                       CefString &exception){
     if (name == "sendMessageToOF") {
         if (arguments.size() == 2 && arguments[0]->IsString()) {
             CefString type;

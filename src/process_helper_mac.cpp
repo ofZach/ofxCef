@@ -7,8 +7,7 @@
 
 //--------------------------------------------------------------
 // Entry point function for sub-processes.
-int main(int argc, char* argv[])
-{
+int main(int argc, char* argv[]){
     // Provide CEF with command-line arguments.
     CefMainArgs main_args(argc, argv);
 

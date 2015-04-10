@@ -2,42 +2,36 @@
 #include "ofxCEF.h"
 
 //--------------------------------------------------------------
-ofxCEFBrowserClient::ofxCEFBrowserClient(ofxCEF* parent, ofxCEFRenderHandler* renderHandler)
-{
+ofxCEFBrowserClient::ofxCEFBrowserClient(ofxCEF* parent, ofxCEFRenderHandler* renderHandler){
     _parent = parent;
     handler = renderHandler;
 }
 
 //--------------------------------------------------------------
-CefRefPtr<CefRenderHandler> ofxCEFBrowserClient::GetRenderHandler()
-{
+CefRefPtr<CefRenderHandler> ofxCEFBrowserClient::GetRenderHandler(){
     return handler;
 }
 
 //--------------------------------------------------------------
-CefRefPtr<CefLoadHandler> ofxCEFBrowserClient::GetLoadHandler()
-{
+CefRefPtr<CefLoadHandler> ofxCEFBrowserClient::GetLoadHandler(){
     return this;
 }
 
 //--------------------------------------------------------------
-void ofxCEFBrowserClient::OnLoadStart(CefRefPtr<CefBrowser> browser, CefRefPtr<CefFrame> frame)
-{
+void ofxCEFBrowserClient::OnLoadStart(CefRefPtr<CefBrowser> browser, CefRefPtr<CefFrame> frame){
     _parent->onLoadStart();
 }
 
 
 //--------------------------------------------------------------
-void ofxCEFBrowserClient::OnLoadEnd(CefRefPtr<CefBrowser> browser, CefRefPtr<CefFrame> frame, int httpStatusCode)
-{
+void ofxCEFBrowserClient::OnLoadEnd(CefRefPtr<CefBrowser> browser, CefRefPtr<CefFrame> frame, int httpStatusCode){
     _parent->onLoadEnd(httpStatusCode);
 }
 
 //--------------------------------------------------------------
 bool ofxCEFBrowserClient::OnProcessMessageReceived(CefRefPtr<CefBrowser> browser,
                                              CefProcessId source_process,
-                                             CefRefPtr<CefProcessMessage> message)
-{
+                                             CefRefPtr<CefProcessMessage> message){
     // Retrieve the argument list object.
     CefRefPtr<CefListValue> args = message->GetArgumentList();
 
