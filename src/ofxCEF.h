@@ -40,7 +40,9 @@ public:
     void update();
     void draw(void);
     void reshape(int, int);
-
+    
+    void setup();
+    
     void mouseWheel(int, int);
     
     void mousePressed(ofMouseEventArgs &e);

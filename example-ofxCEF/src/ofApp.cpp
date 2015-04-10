@@ -3,23 +3,19 @@
 #include "ofAppGLFWWindow.h"
 
 //--------------------------------------------------------------
-void mouseScroll(GLFWwindow* window, double x, double y)
-{
+void mouseScroll(GLFWwindow* window, double x, double y){
     
     ((ofApp *)ofGetAppPtr())->cefgui->mouseWheel(x*10, y*10);
 }
 
 //--------------------------------------------------------------
 //--------------------------------------------------------------
-void ofApp::setup()
-{
-    int argc = 0;
-    char** argv;
+void ofApp::setup(){
     
     // add scrolling callback
     glfwSetScrollCallback( ((ofAppGLFWWindow *) ofGetWindowPtr())->getGLFWWindow(), mouseScroll);
     
-    cefgui = initofxCEF(argc, argv);
+    cefgui->setup();
     
     // Register event listener
     ofAddListener(cefgui->messageFromJS, this, &ofApp::gotMessageFromJS);
@@ -31,21 +27,21 @@ void ofApp::setup()
 }
 
 //--------------------------------------------------------------
-void ofApp::exit()
-{
-    delete cefgui;
+void ofApp::exit(){
+    cefgui->renderHandler->bIsShuttingDown = true;
+    cefgui->disableEvents();
+    cefgui->browser->GetHost()->CloseBrowser(false);
 }
 
 //--------------------------------------------------------------
-void ofApp::update()
-{
+void ofApp::update(){
     
     cefgui->update();
 
     if (ofGetFrameNum() == 1){
         string path = "file://" + ofToDataPath("html/index.html", true);
 //        path = "http://haikusinteractifs.com/";
-//        path = "http://mrdoob.com/#/137/voxels_liquid";
+        path = "http://mrdoob.com/#/137/voxels_liquid";
 //        path = "http://threejs.org/examples/";
         //path = "http://www.thefamilyfarmer.com";
 
@@ -58,8 +54,7 @@ void ofApp::update()
 }
 
 //--------------------------------------------------------------
-void ofApp::draw()
-{
+void ofApp::draw(){
     ofBackground(255,0,255);
     cefgui->draw();
     
@@ -71,8 +66,7 @@ void ofApp::draw()
 }
 
 //--------------------------------------------------------------
-void ofApp::eventFromCEF(ofxCEFEventArgs& evt)
-{
+void ofApp::eventFromCEF(ofxCEFEventArgs& evt){
     if (evt.type == ofxCEFEventArgs::onLoadStart) {
         cout << "Receive an event from CEF > Content loading..." << endl;
     } else if (evt.type == ofxCEFEventArgs::onLoadEnd) {
@@ -81,14 +75,12 @@ void ofApp::eventFromCEF(ofxCEFEventArgs& evt)
 }
 
 //--------------------------------------------------------------
-void ofApp::gotMessageFromJS(ofxCEFMessageArgs& msg)
-{
+void ofApp::gotMessageFromJS(ofxCEFMessageArgs& msg){
     cout << "Got a message of type string from JS - type: " << msg.type << " - name:: " << msg.name << " - value :: " << msg.value << endl;
 }
 
 //--------------------------------------------------------------
-void ofApp::keyPressed(int key)
-{
+void ofApp::keyPressed(int key){
     if (key == OF_KEY_UP){
         string message = ofSystemTextBoxDialog("url to load");
         if (message.length() > 0){
@@ -98,44 +90,33 @@ void ofApp::keyPressed(int key)
 }
 
 //--------------------------------------------------------------
-void ofApp::keyReleased(int key)
-{
-
+void ofApp::keyReleased(int key){
 }
 
 //--------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y )
-{
+void ofApp::mouseMoved(int x, int y ){
 }
 
 //--------------------------------------------------------------
-void ofApp::mouseDragged(int x, int y, int button)
-{
+void ofApp::mouseDragged(int x, int y, int button){
 }
 
 //--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button)
-{
+void ofApp::mousePressed(int x, int y, int button){
 }
 
 //--------------------------------------------------------------
-void ofApp::mouseReleased(int x, int y, int button)
-{
+void ofApp::mouseReleased(int x, int y, int button){
 }
 
 //--------------------------------------------------------------
-void ofApp::windowResized(int w, int h)
-{
+void ofApp::windowResized(int w, int h){
 }
 
 //--------------------------------------------------------------
-void ofApp::gotMessage(ofMessage msg)
-{
-
+void ofApp::gotMessage(ofMessage msg){
 }
 
 //--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo)
-{
-
+void ofApp::dragEvent(ofDragInfo dragInfo){
 }

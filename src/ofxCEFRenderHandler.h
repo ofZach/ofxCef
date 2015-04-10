@@ -15,6 +15,9 @@ public:
 
     bool initialized;
     bool bIsRetinaDisplay;
+    
+    bool bIsShuttingDown;
+    
 
     void init(void);
     void draw(void);

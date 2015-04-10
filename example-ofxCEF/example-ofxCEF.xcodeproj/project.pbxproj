@@ -710,6 +710,7 @@
 				FD598D481A217A9F00AC729F /* Run Script */,
 				FD2BA2571A56E9520046DB39 /* ShellScript */,
 				FD4AF9491A58389A0054EB33 /* ShellScript */,
+				FD05AB041AD82C29004871C5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -808,6 +809,19 @@
 			shellPath = /bin/sh;
 			shellScript = "cp -f ../../../libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/libfmodex.dylib\"; install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\nmkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\ncp -f \"$ICON_FILE\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n\n\n\n\n\n\n\n\n";
 		};
+		FD05AB041AD82C29004871C5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "exec install_name_tool -change \"./libfmodex.dylib\" \"@executable_path/../../../../MacOS/libfmodex.dylib\"  \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/$PRODUCT_NAME Helper.app/Contents/MacOS/$PRODUCT_NAME Helper\"\nexec install_name_tool -change \"./libfmodex.dylib\" \"@executable_path/../../../../MacOS/libfmodex.dylib\"  \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/$PRODUCT_NAME Helper.app/Contents/MacOS/$PRODUCT_NAME Helper EH\"\nexec install_name_tool -change \"./libfmodex.dylib\" \"@executable_path/../../../../MacOS/libfmodex.dylib\"  \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/$PRODUCT_NAME Helper.app/Contents/MacOS/$PRODUCT_NAME Helper NP\"";
+		};
 		FD2BA2571A56E9520046DB39 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -819,7 +833,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp -Rf \"$TARGET_BUILD_DIR/cefHelper.app\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/\"\nmv \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/cefHelper.app/Contents/MacOS/cefHelper\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/cefHelper.app/Contents/MacOS/$PRODUCT_NAME Helper\"\nrm -rf \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/$PRODUCT_NAME Helper.app\"\nmv \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/cefHelper.app\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/$PRODUCT_NAME Helper.app\"\nexec install_name_tool -change \"@executable_path/Chromium Embedded Framework\" \"@executable_path/../../../../Frameworks/Chromium Embedded Framework.framework/Chromium Embedded Framework\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/$PRODUCT_NAME Helper.app/Contents/MacOS/$PRODUCT_NAME Helper\"\nexec install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/$PRODUCT_NAME Helper.app/Contents/MacOS/$PRODUCT_NAME Helper\";\n\n\n";
+			shellScript = "cp -Rf \"$TARGET_BUILD_DIR/cefHelper.app\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/\"\nmv \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/cefHelper.app/Contents/MacOS/cefHelper\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/cefHelper.app/Contents/MacOS/$PRODUCT_NAME Helper\"\nrm -rf \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/$PRODUCT_NAME Helper.app\"\nmv \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/cefHelper.app\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/$PRODUCT_NAME Helper.app\"\nexec install_name_tool -change \"@executable_path/Chromium Embedded Framework\" \"@executable_path/../../../../Frameworks/Chromium Embedded Framework.framework/Chromium Embedded Framework\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/$PRODUCT_NAME Helper.app/Contents/MacOS/$PRODUCT_NAME Helper\"\n";
 		};
 		FD4AF9491A58389A0054EB33 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;

@@ -50,20 +50,20 @@ static CefRect convertRect(const NSRect& target, const NSRect& frame) {
 
 //--------------------------------------------------------------
 ofxCEFRenderHandler::ofxCEFRenderHandler(){
-  transparent_ = true;
-  initialized = false;
-  
+    transparent_ = true;
+    initialized = false;
+    bIsShuttingDown = false;
     /*
-    //http://stackoverflow.com/questions/11067066/mac-os-x-best-way-to-do-runtime-check-for-retina-display
-    float displayScale = 1;
-    if ([[NSScreen mainScreen] respondsToSelector:@selector(backingScaleFactor)]) {
-        NSArray *screens = [NSScreen screens];
-        for (int i = 0; i < [screens count]; i++) {
-            float s = [[screens objectAtIndex:i] backingScaleFactor];
-            if (s > displayScale)
-                displayScale = s;
-        }
-    }
+     //http://stackoverflow.com/questions/11067066/mac-os-x-best-way-to-do-runtime-check-for-retina-display
+     float displayScale = 1;
+     if ([[NSScreen mainScreen] respondsToSelector:@selector(backingScaleFactor)]) {
+     NSArray *screens = [NSScreen screens];
+     for (int i = 0; i < [screens count]; i++) {
+     float s = [[screens objectAtIndex:i] backingScaleFactor];
+     if (s > displayScale)
+     displayScale = s;
+     }
+     }
      */
     
     float displayScale = [[NSScreen mainScreen] backingScaleFactor];
@@ -75,7 +75,7 @@ ofxCEFRenderHandler::ofxCEFRenderHandler(){
     }
     
     texture_id_ = 0;
-
+    
     show_update_rect_ = true;
 }
 
@@ -109,14 +109,14 @@ void ofxCEFRenderHandler::init(void){
 
 //--------------------------------------------------------------
 void ofxCEFRenderHandler::reshape(int w_, int h_){
-  w = w_;
-  h = h_;
- 
+    w = w_;
+    h = h_;
+    
 }
 
 //--------------------------------------------------------------
 void ofxCEFRenderHandler::OnPopupShow(CefRefPtr<CefBrowser> browser,
-                                   bool show) {
+                                      bool show) {
     if (!show) {
         // Clear the popup rectangle.
         ClearPopupRects();
@@ -125,7 +125,7 @@ void ofxCEFRenderHandler::OnPopupShow(CefRefPtr<CefBrowser> browser,
 
 //--------------------------------------------------------------
 void ofxCEFRenderHandler::OnPopupSize(CefRefPtr<CefBrowser> browser,
-                                   const CefRect& rect) {
+                                      const CefRect& rect) {
     if (rect.width <= 0 || rect.height <= 0)
         return;
     original_popup_rect_ = rect;
@@ -161,8 +161,11 @@ void ofxCEFRenderHandler::ClearPopupRects() {
 
 //--------------------------------------------------------------
 bool ofxCEFRenderHandler::GetScreenInfo(CefRefPtr<CefBrowser> browser,
-                   CefScreenInfo& screen_info) {
-
+                                        CefScreenInfo& screen_info) {
+    
+    
+    if (bIsShuttingDown) return false;
+    
     NSWindow* mainWnd =  (NSWindow *) ((ofAppGLFWWindow *) ofGetWindowPtr())->getCocoaWindow();
     
     NSWindow* window = mainWnd;// [view_ window];
@@ -195,13 +198,16 @@ bool ofxCEFRenderHandler::GetScreenInfo(CefRefPtr<CefBrowser> browser,
 //--------------------------------------------------------------
 bool ofxCEFRenderHandler::GetViewRect(CefRefPtr<CefBrowser> browser, CefRect &rect)
 {
+    
+    if (bIsShuttingDown) return false;
+    
     if (bIsRetinaDisplay){
         rect = CefRect(0,0, ofGetWidth()*0.5, ofGetHeight()*0.5);
     } else {
         rect = CefRect(0,0, ofGetWidth(), ofGetHeight());
     }
-
-  return true;
+    
+    return true;
 }
 
 //--------------------------------------------------------------
@@ -247,13 +253,13 @@ void ofxCEFRenderHandler::render() {
     glEnd(); VERIFY_NO_ERROR;
     glPopAttrib(); VERIFY_NO_ERROR;
     
-//    // Rotate the view based on the mouse spin.
-//    if (spin_x_ != 0) {
-//        glRotatef(-spin_x_, 1.0f, 0.0f, 0.0f); VERIFY_NO_ERROR;
-//    }
-//    if (spin_y_ != 0) {
-//        glRotatef(-spin_y_, 0.0f, 1.0f, 0.0f); VERIFY_NO_ERROR;
-//    }
+    //    // Rotate the view based on the mouse spin.
+    //    if (spin_x_ != 0) {
+    //        glRotatef(-spin_x_, 1.0f, 0.0f, 0.0f); VERIFY_NO_ERROR;
+    //    }
+    //    if (spin_y_ != 0) {
+    //        glRotatef(-spin_y_, 0.0f, 1.0f, 0.0f); VERIFY_NO_ERROR;
+    //    }
     
     if (transparent_) {
         // Alpha blending style. Texture values have premultiplied alpha.
@@ -322,12 +328,12 @@ void ofxCEFRenderHandler::render() {
 
 //--------------------------------------------------------------
 void ofxCEFRenderHandler::OnPaint(CefRefPtr<CefBrowser> browser,
-                            PaintElementType type,
-                            const RectList &dirtyRects,
-                            const void* buffer,
-                            int width,
-                            int height){
-
+                                  PaintElementType type,
+                                  const RectList &dirtyRects,
+                                  const void* buffer,
+                                  int width,
+                                  int height){
+    
     if (!initialized)
         init();
     

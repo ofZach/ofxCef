@@ -40,48 +40,53 @@
 
 @end
 
+
+
 //--------------------------------------------------------------
 //--------------------------------------------------------------
 ofxCEF* initofxCEF(int argc, char** argv)
 {
+    
     CefMainArgs args(argc, argv);
     //CefExecuteProcess(args, 0, NULL);
-
+    
     CefSettings settings;
     settings.background_color = 0xFFFF00FF;
-    //settings.single_process = true;
     settings.windowless_rendering_enabled = true;
-
+    settings.command_line_args_disabled = true;
+    
     CefRefPtr<ofxCEFClientApp> app(new ofxCEFClientApp);
-
+    
     CefInitialize(args, settings, app.get(), NULL);
-
+    
     return new ofxCEF();
 }
 
-//--------------------------------------------------------------
-ofxCEF::ofxCEF()
-{
+void ofxCEF::setup(){
+    
     
     CefWindowInfo windowInfo;
     CefBrowserSettings settings;
     settings.web_security = STATE_DISABLED;
     settings.webgl = STATE_ENABLED;
-
+    
     NSWindow * cocoaWindow =  (NSWindow *) ((ofAppGLFWWindow *) ofGetWindowPtr())->getCocoaWindow();
+    [cocoaWindow setReleasedWhenClosed:NO];
+    
     NSView * view =  [ cocoaWindow contentView];
-
+    
     windowInfo.SetAsWindowless(view, true);
     windowInfo.transparent_painting_enabled = STATE_ENABLED;
+    
     //windowInfo.SetAsChild(view, 0, 0, 1000, 1000);
-
+    
     renderHandler = new ofxCEFRenderHandler();
     
     if (renderHandler->bIsRetinaDisplay) {
         ofSetWindowPosition(0, 0);
         ofSetWindowShape(ofGetWidth(), ofGetHeight());
     }
-
+    
     client = new ofxCEFBrowserClient(this, renderHandler);
     browser = CefBrowserHost::CreateBrowserSync(windowInfo, client.get(), "", settings, 0);
     
@@ -91,8 +96,13 @@ ofxCEF::ofxCEF()
     
     enableEvents();
     
-    // Listener to get a notification when the app window switches screen
-    //NSNotificationManager *nsNotificationManager = [[NSNotificationManager alloc] initWithObserver:this method:&ofxCEF::notificationHandler];
+    
+    
+}
+
+//--------------------------------------------------------------
+ofxCEF::ofxCEF()
+{
 }
 
 //--------------------------------------------------------------

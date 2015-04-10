@@ -3,9 +3,25 @@
 #include "ofAppGLFWWindow.h"
 
 //========================================================================
-int main()
-{
+int main(){
+    
+    //----------------------------------------------------- setup CEF at first (before anything)
+    // note see http://www.magpcss.org/ceforum/viewtopic.php?f=6&t=11441&p=24037&hilit=AutoreleasePoolPage#p24037
+    // or search for "AutoreleasePoolPage" in the CEF forum
+    
+    int argc = 0;
+    char** argv;
+    ofxCEF * cefgui = initofxCEF(argc, argv);
+    
+    //----------------------------------------------------- setup opengl
     ofAppGLFWWindow window;
     ofSetupOpenGL(&window, 1400, 850, OF_WINDOW);
-    ofRunApp( new ofApp());
+    
+    //----------------------------------------------------- pass CEF to the ofApp
+    ofApp * p = new ofApp();
+    p->cefgui = cefgui;
+    ofRunApp( p );
+    
 }
+
+
