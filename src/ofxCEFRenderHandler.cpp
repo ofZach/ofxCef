@@ -5,8 +5,9 @@
 #include "ofApp.h"
 #include "ofAppGLFWWindow.h"
 
+#if defined(TARGET_OSX)
 #import <Cocoa/Cocoa.h>
-
+#endif
 
 //--------------------------------------------------------------
 //--------------------------------------------------------------
@@ -37,7 +38,7 @@ DCHECK(_gl_error == GL_NO_ERROR) << \
 
 //--------------------------------------------------------------
 //--------------------------------------------------------------
-
+#if defined(TARGET_OSX)
 static CefRect convertRect(const NSRect& target, const NSRect& frame) {
     NSRect rect = target;
     rect.origin.y = NSMaxY(frame) - NSMaxY(target);
@@ -46,13 +47,14 @@ static CefRect convertRect(const NSRect& target, const NSRect& frame) {
                    rect.size.width,
                    rect.size.height);
 }
-
+#endif
 
 //--------------------------------------------------------------
 ofxCEFRenderHandler::ofxCEFRenderHandler(){
     transparent_ = true;
     initialized = false;
     bIsShuttingDown = false;
+	bIsRetinaDisplay = false;
     /*
      //http://stackoverflow.com/questions/11067066/mac-os-x-best-way-to-do-runtime-check-for-retina-display
      float displayScale = 1;
@@ -65,7 +67,7 @@ ofxCEFRenderHandler::ofxCEFRenderHandler(){
      }
      }
      */
-    
+#if defined(TARGET_OSX)    
     float displayScale = [[NSScreen mainScreen] backingScaleFactor];
     
     if (displayScale > 1.0){
@@ -73,7 +75,7 @@ ofxCEFRenderHandler::ofxCEFRenderHandler(){
     } else {
         bIsRetinaDisplay = false;
     }
-    
+#endif    
     texture_id_ = 0;
     
     show_update_rect_ = true;
@@ -97,7 +99,7 @@ void ofxCEFRenderHandler::init(void){
     
     // Create the texture.
     glGenTextures(1, &texture_id_); VERIFY_NO_ERROR;
-    DCHECK_NE(texture_id_, 0U); VERIFY_NO_ERROR;
+//    DCHECK_NE(texture_id_, 0U); VERIFY_NO_ERROR;
     
     glBindTexture(GL_TEXTURE_2D, texture_id_); VERIFY_NO_ERROR;
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER,
@@ -165,7 +167,8 @@ bool ofxCEFRenderHandler::GetScreenInfo(CefRefPtr<CefBrowser> browser,
     
     
     if (bIsShuttingDown) return false;
-    
+
+#if defined(TARGET_OSX)    
     NSWindow* mainWnd =  (NSWindow *) ((ofAppGLFWWindow *) ofGetWindowPtr())->getCocoaWindow();
     
     NSWindow* window = mainWnd;// [view_ window];
@@ -190,7 +193,7 @@ bool ofxCEFRenderHandler::GetScreenInfo(CefRefPtr<CefBrowser> browser,
     screen_info.rect = convertRect([screen frame], [screen frame]);
     screen_info.available_rect =
     convertRect([screen visibleFrame], [screen frame]);
-    
+#endif    
     
     return true;
 }
@@ -217,7 +220,7 @@ void ofxCEFRenderHandler::render() {
     if (w == 0 || h == 0)
         return;
     
-    DCHECK(initialized);
+ //   DCHECK(initialized);
     
     struct {
         float tu, tv;
@@ -272,7 +275,7 @@ void ofxCEFRenderHandler::render() {
     glEnable(GL_TEXTURE_2D); VERIFY_NO_ERROR;
     
     // Draw the facets with the texture.
-    DCHECK_NE(texture_id_, 0U); VERIFY_NO_ERROR;
+//    DCHECK_NE(texture_id_, 0U); VERIFY_NO_ERROR;
     glBindTexture(GL_TEXTURE_2D, texture_id_); VERIFY_NO_ERROR;
     glInterleavedArrays(GL_T2F_V3F, 0, vertices); VERIFY_NO_ERROR;
     glDrawArrays(GL_QUADS, 0, 4); VERIFY_NO_ERROR;
@@ -347,7 +350,7 @@ void ofxCEFRenderHandler::OnPaint(CefRefPtr<CefBrowser> browser,
     // Enable 2D textures.
     glEnable(GL_TEXTURE_2D); VERIFY_NO_ERROR;
     
-    DCHECK_NE(texture_id_, 0U);
+//    DCHECK_NE(texture_id_, 0U);
     glBindTexture(GL_TEXTURE_2D, texture_id_); VERIFY_NO_ERROR;
     
     if (type == PET_VIEW) {

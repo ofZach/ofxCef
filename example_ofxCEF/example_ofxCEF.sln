@@ -1,8 +1,15 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio Express 2012 for Windows Desktop
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example_ofxCEF", "example_ofxCEF.vcxproj", "{7FD42DF7-442E-479A-BA76-D0022F99702A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0FD57D83-9065-4DF4-888D-5E6DE5BFB65C} = {0FD57D83-9065-4DF4-888D-5E6DE5BFB65C}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "openframeworksLib", "..\..\..\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj", "{5837595D-ACA9-485C-8E76-729040CE4B0B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZERO_CHECK", "..\libs\CEF\win32\build\ZERO_CHECK.vcxproj", "{8B2CE83C-9D83-451C-853A-44DFBB7A951E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcef_dll_wrapper", "..\libs\CEF\win32\build\libcef_dll\libcef_dll_wrapper.vcxproj", "{0FD57D83-9065-4DF4-888D-5E6DE5BFB65C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +25,14 @@ Global
 		{5837595D-ACA9-485C-8E76-729040CE4B0B}.Debug|Win32.Build.0 = Debug|Win32
 		{5837595D-ACA9-485C-8E76-729040CE4B0B}.Release|Win32.ActiveCfg = Release|Win32
 		{5837595D-ACA9-485C-8E76-729040CE4B0B}.Release|Win32.Build.0 = Release|Win32
+		{8B2CE83C-9D83-451C-853A-44DFBB7A951E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8B2CE83C-9D83-451C-853A-44DFBB7A951E}.Debug|Win32.Build.0 = Debug|Win32
+		{8B2CE83C-9D83-451C-853A-44DFBB7A951E}.Release|Win32.ActiveCfg = Release|Win32
+		{8B2CE83C-9D83-451C-853A-44DFBB7A951E}.Release|Win32.Build.0 = Release|Win32
+		{0FD57D83-9065-4DF4-888D-5E6DE5BFB65C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0FD57D83-9065-4DF4-888D-5E6DE5BFB65C}.Debug|Win32.Build.0 = Debug|Win32
+		{0FD57D83-9065-4DF4-888D-5E6DE5BFB65C}.Release|Win32.ActiveCfg = Release|Win32
+		{0FD57D83-9065-4DF4-888D-5E6DE5BFB65C}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

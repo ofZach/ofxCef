@@ -92,3 +92,7 @@ Desktop.ini
 *.exe
 *.out
 *.app
+
+#CEF specific
+*.pak
+*.bin

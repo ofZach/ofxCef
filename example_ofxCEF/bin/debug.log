@@ -1,0 +1,65 @@
+[0424/155946:ERROR:renderer_main.cc(200)] Running without renderer sandbox
+[0424/160021:FATAL:cef_ref_counted.h(339)] Assert failed: ptr_ != 0. 
+
+[0424/160021:FATAL:cef_ref_counted.h(339)] Assert failed: ptr_ != 0. 
+
+[0424/160120:ERROR:renderer_main.cc(200)] Running without renderer sandbox
+[0424/160124:FATAL:cef_ref_counted.h(339)] Assert failed: ptr_ != 0. 
+
+[0424/160126:FATAL:cef_ref_counted.h(339)] Assert failed: ptr_ != 0. 
+
+[0424/160131:ERROR:renderer_main.cc(200)] Running without renderer sandbox
+[0424/160136:FATAL:cef_ref_counted.h(339)] Assert failed: ptr_ != 0. 
+
+[0424/160136:FATAL:cef_ref_counted.h(339)] Assert failed: ptr_ != 0. 
+
+[0424/160153:ERROR:renderer_main.cc(200)] Running without renderer sandbox
+[0424/160215:FATAL:cef_ref_counted.h(339)] Assert failed: ptr_ != 0. 
+
+[0424/160215:FATAL:cef_ref_counted.h(339)] Assert failed: ptr_ != 0. 
+
+[0424/161238:ERROR:icu_util.cc(152)] Couldn't mmap C:\Users\Hugues\Development\openFrameworks\addons\ofxCef\example_ofxCEF\bin\icudtl.dat
+[0424/161238:FATAL:content_main_runner.cc(697)] Check failed: base::i18n::InitializeICU(). 
+[0424/161251:ERROR:icu_util.cc(152)] Couldn't mmap C:\Users\Hugues\Development\openFrameworks\addons\ofxCef\example_ofxCEF\bin\icudtl.dat
+[0424/161251:FATAL:content_main_runner.cc(697)] Check failed: base::i18n::InitializeICU(). 
+[0424/161347:ERROR:renderer_main.cc(200)] Running without renderer sandbox
+[0424/161356:FATAL:cef_ref_counted.h(339)] Assert failed: ptr_ != 0. 
+
+[0424/161356:FATAL:cef_ref_counted.h(339)] Assert failed: ptr_ != 0. 
+
+[0424/161932:ERROR:renderer_main.cc(200)] Running without renderer sandbox
+[0424/161940:FATAL:cef_ref_counted.h(339)] Assert failed: ptr_ != 0. 
+
+[0424/161940:FATAL:cef_ref_counted.h(339)] Assert failed: ptr_ != 0. 
+
+[0424/163619:ERROR:renderer_main.cc(200)] Running without renderer sandbox
+[0424/163701:FATAL:cef_ref_counted.h(339)] Assert failed: ptr_ != 0. 
+
+[0424/163701:FATAL:cef_ref_counted.h(339)] Assert failed: ptr_ != 0. 
+
+[0424/164206:ERROR:renderer_main.cc(200)] Running without renderer sandbox
+[0424/164251:FATAL:cef_ref_counted.h(339)] Assert failed: ptr_ != 0. 
+
+[0424/164251:FATAL:cef_ref_counted.h(339)] Assert failed: ptr_ != 0. 
+
+[0424/164559:ERROR:renderer_main.cc(200)] Running without renderer sandbox
+[0424/164632:FATAL:cef_ref_counted.h(339)] Assert failed: ptr_ != 0. 
+
+[0424/164632:FATAL:cef_ref_counted.h(339)] Assert failed: ptr_ != 0. 
+
+[0424/164651:ERROR:renderer_main.cc(200)] Running without renderer sandbox
+[0424/164806:ERROR:audio_output_device.cc(261)] IO loop going away before the audio device has been stopped
+[0424/164807:FATAL:cef_ref_counted.h(339)] Assert failed: ptr_ != 0. 
+
+[0424/164807:FATAL:cef_ref_counted.h(339)] Assert failed: ptr_ != 0. 
+
+[0424/164811:ERROR:renderer_main.cc(200)] Running without renderer sandbox
+[0424/164845:ERROR:audio_output_device.cc(261)] IO loop going away before the audio device has been stopped
+[0424/164846:FATAL:cef_ref_counted.h(339)] Assert failed: ptr_ != 0. 
+
+[0424/164846:FATAL:cef_ref_counted.h(339)] Assert failed: ptr_ != 0. 
+
+[0428/160847:ERROR:renderer_main.cc(200)] Running without renderer sandbox
+[0428/160920:ERROR:audio_output_device.cc(261)] IO loop going away before the audio device has been stopped
+[0428/160951:ERROR:renderer_main.cc(200)] Running without renderer sandbox
+[0428/161241:ERROR:renderer_main.cc(200)] Running without renderer sandbox

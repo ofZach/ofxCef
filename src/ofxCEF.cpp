@@ -1,11 +1,15 @@
 #include "ofxCEF.h"
 #include "ofMain.h"
 #include "ofAppGLFWWindow.h"
+#if defined(TARGET_OSX)
 #include <Cocoa/Cocoa.h>
+#endif
 #include "ofxCEFClientApp.h"
+
 
 //--------------------------------------------------------------
 //--------------------------------------------------------------
+#if defined(TARGET_OSX)
 @interface NSNotificationManager: NSObject
 {
     ofxCEF *observer;
@@ -39,32 +43,57 @@
 }
 
 @end
-
+#endif
 
 
 //--------------------------------------------------------------
 //--------------------------------------------------------------
+#if defined(TARGET_OSX) 
 ofxCEF* initofxCEF(int argc, char** argv){
-    
-    CefMainArgs args(argc, argv);
-    //CefExecuteProcess(args, 0, NULL);
-    
-    CefSettings settings;
-    settings.background_color = 0xFFFF00FF;
-    settings.windowless_rendering_enabled = true;
-    settings.command_line_args_disabled = true;
-    
-    CefRefPtr<ofxCEFClientApp> app(new ofxCEFClientApp);
-    
-    CefInitialize(args, settings, app.get(), NULL);
-    
-    return new ofxCEF();
+	CefMainArgs args(argc, argv);
+	//CefExecuteProcess(args, 0, NULL);
+
+	CefSettings settings;
+	settings.background_color = 0xFFFF00FF;
+	settings.windowless_rendering_enabled = true;
+	settings.command_line_args_disabled = true;
+
+	CefRefPtr<ofxCEFClientApp> app(new ofxCEFClientApp);
+
+	CefInitialize(args, settings, app.get(), NULL);
+
+	return new ofxCEF();
 }
+#elif defined(TARGET_WIN32)
+HINSTANCE hInst;   // current instance
+
+//--------------------------------------------------------------
+//--------------------------------------------------------------
+int initofxCEF(int argc, char** argv)
+{
+	CefRefPtr<ofxCEFClientApp> app(new ofxCEFClientApp);
+	CefMainArgs main_args(::GetModuleHandle(NULL));
+
+
+	int exit_code = CefExecuteProcess(main_args, app.get(), NULL);
+	if (exit_code >= 0)
+		return exit_code;
+
+	CefSettings settings;
+	settings.single_process = false; 
+	settings.windowless_rendering_enabled = true;
+	//settings.multi_threaded_message_loop = true;
+
+	CefInitialize(main_args, settings, app.get(), NULL);
+
+}
+#endif
+
 
 void ofxCEF::setup(){
     
-    
-    CefWindowInfo windowInfo;
+#if defined(TARGET_OSX) 
+	CefWindowInfo windowInfo;
     CefBrowserSettings settings;
     settings.web_security = STATE_DISABLED;
     settings.webgl = STATE_ENABLED;
@@ -92,6 +121,25 @@ void ofxCEF::setup(){
     if (renderHandler->bIsRetinaDisplay) {
         reshape(ofGetWidth()*2, ofGetHeight()*2);
     }
+#elif defined(TARGET_WIN32)
+	renderHandler = new ofxCEFRenderHandler();
+    client = new ofxCEFBrowserClient(this, renderHandler);
+
+	CefWindowInfo windowInfo;
+	HWND hWnd = ofGetWin32Window();
+	//HWND hWnd = WindowFromDC(wglGetCurrentDC());
+	windowInfo.SetAsWindowless(hWnd, true);
+
+	CefBrowserSettings settings;
+    settings.web_security = STATE_DISABLED;
+	settings.webgl = STATE_ENABLED;
+	settings.windowless_frame_rate = 60;
+
+	//ICI
+	//enable DCEKC en relaese,,,,etc
+    browser = CefBrowserHost::CreateBrowserSync(windowInfo, client.get(), "", settings, NULL);
+#endif    
+
     
     enableEvents();
     
@@ -101,6 +149,7 @@ void ofxCEF::setup(){
 
 //--------------------------------------------------------------
 ofxCEF::ofxCEF(){
+	setup();
 }
 
 //--------------------------------------------------------------
@@ -234,7 +283,9 @@ void ofxCEF::gotMessageFromJS(string name, string type, string value){
 
 //--------------------------------------------------------------
 void ofxCEF::notificationHandler(){
-    float displayScale = [[NSScreen mainScreen] backingScaleFactor];
+
+#if defined(TARGET_OSX) 
+	float displayScale = [[NSScreen mainScreen] backingScaleFactor];
     
     cout << " ======= ofxCEF::notificationHandler =========" << endl;
     cout << "OF window size: " << ofGetWidth() << " - " << ofGetHeight() << endl;
@@ -263,6 +314,9 @@ void ofxCEF::notificationHandler(){
 //            reshape(ofGetWidth(), ofGetHeight());
 //        }
 //    }
+#elif defined(TARGET_WIN32)
+	
+#endif
 
     reshape(ofGetWidth(), ofGetHeight());
     renderHandler->init();

@@ -10,8 +10,12 @@ int main(){
     // or search for "AutoreleasePoolPage" in the CEF forum
     
     int argc = 0;
-    char** argv;
-    ofxCEF * cefgui = initofxCEF(argc, argv);
+    char** argv = NULL; 
+#if defined(TARGET_OSX) 
+	ofxCEF * cefgui = initofxCEF(argc, argv);
+#elif defined(TARGET_WIN32)
+	initofxCEF(argc, argv);
+#endif
     
     //----------------------------------------------------- setup opengl
     ofAppGLFWWindow window;
@@ -19,7 +23,12 @@ int main(){
     
     //----------------------------------------------------- pass CEF to the ofApp
     ofApp * p = new ofApp();
-    p->cefgui = cefgui;
+
+#if defined(TARGET_OSX) 
+	p->cefgui = cefgui;
+#elif defined(TARGET_WIN32)
+#endif
+
     ofRunApp( p );
     
 }

@@ -1,33 +1,72 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ItemGroup>
-		<ClCompile Include="src\ofApp.cpp">
-			<Filter>src</Filter>
-		</ClCompile>
-		<ClCompile Include="src\main.cpp">
-			<Filter>src</Filter>
-		</ClCompile>
-		<ClCompile Include="src\main.cpp">
-			<Filter>src</Filter>
-		</ClCompile>
-		<ClCompile Include="src\ofApp.cpp">
-			<Filter>src</Filter>
-		</ClCompile>
-	</ItemGroup>
-	<ItemGroup>
-		<Filter Include="src">
-			<UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
-		</Filter>
-	</ItemGroup>
-	<ItemGroup>
-		<ClInclude Include="src\ofApp.h">
-			<Filter>src</Filter>
-		</ClInclude>
-		<ClInclude Include="src\ofApp.h">
-			<Filter>src</Filter>
-		</ClInclude>
-	</ItemGroup>
-	<ItemGroup>
-		<ResourceCompile Include="icon.rc" />
-	</ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofxCEF.cpp">
+      <Filter>addons\ofxCef\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofxCEFBrowserClient.cpp">
+      <Filter>addons\ofxCef\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofxCEFClientApp.cpp">
+      <Filter>addons\ofxCef\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofxCEFRenderHandler.cpp">
+      <Filter>addons\ofxCef\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofxCEFV8ExtensionHandler.cpp">
+      <Filter>addons\ofxCef\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons">
+      <UniqueIdentifier>{e7be0acc-8447-4f4c-b936-7b58573f8ccf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxCef">
+      <UniqueIdentifier>{f7899a3b-9b23-490f-81d1-0035dfa69b32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxCef\src">
+      <UniqueIdentifier>{aefe909e-a608-4308-b50e-cc3c4f7a2066}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofxCEF.h">
+      <Filter>addons\ofxCef\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofxCEFBrowserClient.h">
+      <Filter>addons\ofxCef\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofxCEFClientApp.h">
+      <Filter>addons\ofxCef\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofxCEFRenderHandler.h">
+      <Filter>addons\ofxCef\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofxCEFV8ExtensionHandler.h">
+      <Filter>addons\ofxCef\src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc" />
+  </ItemGroup>
 </Project>

@@ -5,7 +5,7 @@
 //--------------------------------------------------------------
 void mouseScroll(GLFWwindow* window, double x, double y){
     
-    ((ofApp *)ofGetAppPtr())->cefgui->mouseWheel(x*10, y*10);
+//    ((ofApp *)ofGetAppPtr())->cefgui->mouseWheel(x*10, y*10);
 }
 
 //--------------------------------------------------------------
@@ -13,10 +13,14 @@ void mouseScroll(GLFWwindow* window, double x, double y){
 void ofApp::setup(){
     
     // add scrolling callback
-    glfwSetScrollCallback( ((ofAppGLFWWindow *) ofGetWindowPtr())->getGLFWWindow(), mouseScroll);
+   // glfwSetScrollCallback( ((ofAppGLFWWindow *) ofGetWindowPtr())->getGLFWWindow(), mouseScroll);
     
-    cefgui->setup();
-    
+ #if defined(TARGET_OSX) 
+	cefgui->setup();
+#elif defined(TARGET_WIN32)
+	cefgui = new ofxCEF();
+	cefgui->setup();
+#endif   
     // Register event listener
     ofAddListener(cefgui->messageFromJS, this, &ofApp::gotMessageFromJS);
     ofAddListener(cefgui->eventFromCEF, this, &ofApp::eventFromCEF);
@@ -43,7 +47,7 @@ void ofApp::update(){
 //        path = "http://haikusinteractifs.com/";
         path = "http://mrdoob.com/#/137/voxels_liquid";
 //        path = "http://threejs.org/examples/";
-        //path = "http://www.thefamilyfarmer.com";
+//        path = "http://www.thefamilyfarmer.com";
 
         cefgui->load(path.c_str());
     }
