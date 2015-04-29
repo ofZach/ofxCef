@@ -11,21 +11,18 @@ void mouseScroll(GLFWwindow* window, double x, double y){
 //--------------------------------------------------------------
 //--------------------------------------------------------------
 void ofApp::setup(){
-    
+//#if defined(TARGET_OSX)
     // add scrolling callback
    // glfwSetScrollCallback( ((ofAppGLFWWindow *) ofGetWindowPtr())->getGLFWWindow(), mouseScroll);
-    
-// #if defined(TARGET_OSX) 
-//	cefgui->setup();
-//#elif defined(TARGET_WIN32)
-	cefgui = new ofxCEF();
+//#endif 
+
 	cefgui->setup();
-//#endif   
+  
     // Register event listener
     ofAddListener(cefgui->messageFromJS, this, &ofApp::gotMessageFromJS);
     ofAddListener(cefgui->eventFromCEF, this, &ofApp::eventFromCEF);
     
-    ofSetVerticalSync(false);
+    ofSetVerticalSync(true);
     ofDrawBitmapMode mode;
     ofSetDrawBitmapMode(OF_BITMAPMODE_MODEL );
 }
@@ -67,6 +64,8 @@ void ofApp::draw(){
 //    ofScale(2,2);
 //    ofDrawBitmapStringHighlight("openframeworks !! up arrow to load new url", 0,0);
 //    ofPopMatrix();
+
+	ofSetWindowTitle(ofToString(ofGetFrameRate()));
 }
 
 //--------------------------------------------------------------

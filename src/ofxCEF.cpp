@@ -45,12 +45,13 @@
 @end
 #endif
 
-
+//--------------------------------------------------------------
+//--------------------------------------------------------------
 #if defined(TARGET_WIN32)
 HINSTANCE hInst;   // current instance
 #endif
 
-int initofxCEF(int argc, char** argv){
+ofxCEF* initofxCEF(int argc, char** argv){
 #if defined(TARGET_OSX) 
 	CefMainArgs main_args(argc, argv);
 #elif defined(TARGET_WIN32)
@@ -61,7 +62,7 @@ int initofxCEF(int argc, char** argv){
 
 	int exit_code = CefExecuteProcess(main_args, app.get(), NULL);
 	if (exit_code >= 0) {
-		return exit_code;
+		//return exit_code;
 	}
 
 	CefSettings settings;
@@ -73,114 +74,54 @@ int initofxCEF(int argc, char** argv){
 
 	CefInitialize(main_args, settings, app.get(), NULL);
 
-	//return new ofxCEF();
-}
-/*
-//--------------------------------------------------------------
-//--------------------------------------------------------------
-#if defined(TARGET_OSX) 
-ofxCEF* initofxCEF(int argc, char** argv){
-	CefMainArgs args(argc, argv);
-	//CefExecuteProcess(args, 0, NULL);
-
-	CefSettings settings;
-	settings.background_color = 0xFFFF00FF;
-	settings.windowless_rendering_enabled = true;
-	settings.command_line_args_disabled = true;
-
-	CefRefPtr<ofxCEFClientApp> app(new ofxCEFClientApp);
-
-	CefInitialize(args, settings, app.get(), NULL);
-
 	return new ofxCEF();
 }
-#elif defined(TARGET_WIN32)
-HINSTANCE hInst;   // current instance
 
 //--------------------------------------------------------------
 //--------------------------------------------------------------
-
-int initofxCEF(int argc, char** argv)
-{
-	CefRefPtr<ofxCEFClientApp> app(new ofxCEFClientApp);
-	CefMainArgs main_args(::GetModuleHandle(NULL));
-
-
-	int exit_code = CefExecuteProcess(main_args, app.get(), NULL);
-	if (exit_code >= 0)
-		return exit_code;
-
-	CefSettings settings;
-	settings.single_process = false; 
-	settings.windowless_rendering_enabled = true;
-	//settings.multi_threaded_message_loop = true;
-
-	CefInitialize(main_args, settings, app.get(), NULL);
-
-}
-#endif
-*/
-
 void ofxCEF::setup(){
     
-#if defined(TARGET_OSX) 
 	CefWindowInfo windowInfo;
-    CefBrowserSettings settings;
-    settings.web_security = STATE_DISABLED;
-    settings.webgl = STATE_ENABLED;
-    
-    NSWindow * cocoaWindow =  (NSWindow *) ((ofAppGLFWWindow *) ofGetWindowPtr())->getCocoaWindow();
+	renderHandler = new ofxCEFRenderHandler();
+
+#if defined(TARGET_OSX) 
+	NSWindow * cocoaWindow =  (NSWindow *) ((ofAppGLFWWindow *) ofGetWindowPtr())->getCocoaWindow();
     [cocoaWindow setReleasedWhenClosed:NO];
     
     NSView * view =  [ cocoaWindow contentView];
-    
     windowInfo.SetAsWindowless(view, true);
-    windowInfo.transparent_painting_enabled = STATE_ENABLED;
-    
-    //windowInfo.SetAsChild(view, 0, 0, 1000, 1000);
-    
-    renderHandler = new ofxCEFRenderHandler();
-    
-    if (renderHandler->bIsRetinaDisplay) {
+
+	if (renderHandler->bIsRetinaDisplay) {
         ofSetWindowPosition(0, 0);
         ofSetWindowShape(ofGetWidth(), ofGetHeight());
     }
-    
-    client = new ofxCEFBrowserClient(this, renderHandler);
-    browser = CefBrowserHost::CreateBrowserSync(windowInfo, client.get(), "", settings, 0);
-    
-    if (renderHandler->bIsRetinaDisplay) {
-        reshape(ofGetWidth()*2, ofGetHeight()*2);
-    }
-#elif defined(TARGET_WIN32)
-	renderHandler = new ofxCEFRenderHandler();
-    client = new ofxCEFBrowserClient(this, renderHandler);
 
-	CefWindowInfo windowInfo;
+#elif defined(TARGET_WIN32)
 	HWND hWnd = ofGetWin32Window();
-	//HWND hWnd = WindowFromDC(wglGetCurrentDC());
 	windowInfo.SetAsWindowless(hWnd, true);
+#endif
+
+	windowInfo.transparent_painting_enabled = STATE_ENABLED;
 
 	CefBrowserSettings settings;
     settings.web_security = STATE_DISABLED;
 	settings.webgl = STATE_ENABLED;
 	settings.windowless_frame_rate = 60;
 
-	//TO DO
-	//enable DCEKC en release, etc.
+	client = new ofxCEFBrowserClient(this, renderHandler);
     browser = CefBrowserHost::CreateBrowserSync(windowInfo, client.get(), "", settings, NULL);
-#endif    
-
+  
+#if defined(TARGET_OSX) 
+	if (renderHandler->bIsRetinaDisplay) {
+        reshape(ofGetWidth()*2, ofGetHeight()*2);
+    }
+#endif
     
-    enableEvents();
-    
-    
-    
+    enableEvents();    
 }
 
 //--------------------------------------------------------------
 ofxCEF::ofxCEF(){
-	setup();
 }
 
 //--------------------------------------------------------------

@@ -64,3 +64,12 @@
 [0428/160951:ERROR:renderer_main.cc(200)] Running without renderer sandbox
 [0428/161241:ERROR:renderer_main.cc(200)] Running without renderer sandbox
 [0429/112115:ERROR:renderer_main.cc(200)] Running without renderer sandbox
+[0429/142345:ERROR:renderer_main.cc(200)] Running without renderer sandbox
+[0429/142513:ERROR:renderer_main.cc(200)] Running without renderer sandbox
+[0429/142536:ERROR:renderer_main.cc(200)] Running without renderer sandbox
+[0429/142751:ERROR:renderer_main.cc(200)] Running without renderer sandbox
+[0429/142837:ERROR:audio_output_device.cc(261)] IO loop going away before the audio device has been stopped
+[0429/150905:ERROR:renderer_main.cc(200)] Running without renderer sandbox
+[0429/161036:ERROR:renderer_main.cc(200)] Running without renderer sandbox
+[0429/161104:FATAL:content_main_runner.cc(738)] Check failed: InitializeSandbox(params.sandbox_info). 
+[0429/161104:FATAL:content_main_runner.cc(738)] Check failed: InitializeSandbox(params.sandbox_info). 
