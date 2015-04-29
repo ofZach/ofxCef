@@ -46,6 +46,36 @@
 #endif
 
 
+#if defined(TARGET_WIN32)
+HINSTANCE hInst;   // current instance
+#endif
+
+int initofxCEF(int argc, char** argv){
+#if defined(TARGET_OSX) 
+	CefMainArgs main_args(argc, argv);
+#elif defined(TARGET_WIN32)
+	CefMainArgs main_args(::GetModuleHandle(NULL));
+#endif
+
+	CefRefPtr<ofxCEFClientApp> app(new ofxCEFClientApp);
+
+	int exit_code = CefExecuteProcess(main_args, app.get(), NULL);
+	if (exit_code >= 0) {
+		return exit_code;
+	}
+
+	CefSettings settings;
+	settings.background_color = 0xFFFF00FF;
+	settings.single_process = false; 
+	settings.windowless_rendering_enabled = true;
+	settings.command_line_args_disabled = true;
+	//settings.multi_threaded_message_loop = true;
+
+	CefInitialize(main_args, settings, app.get(), NULL);
+
+	//return new ofxCEF();
+}
+/*
 //--------------------------------------------------------------
 //--------------------------------------------------------------
 #if defined(TARGET_OSX) 
@@ -69,6 +99,7 @@ HINSTANCE hInst;   // current instance
 
 //--------------------------------------------------------------
 //--------------------------------------------------------------
+
 int initofxCEF(int argc, char** argv)
 {
 	CefRefPtr<ofxCEFClientApp> app(new ofxCEFClientApp);
@@ -88,7 +119,7 @@ int initofxCEF(int argc, char** argv)
 
 }
 #endif
-
+*/
 
 void ofxCEF::setup(){
     
@@ -135,8 +166,8 @@ void ofxCEF::setup(){
 	settings.webgl = STATE_ENABLED;
 	settings.windowless_frame_rate = 60;
 
-	//ICI
-	//enable DCEKC en relaese,,,,etc
+	//TO DO
+	//enable DCEKC en release, etc.
     browser = CefBrowserHost::CreateBrowserSync(windowInfo, client.get(), "", settings, NULL);
 #endif    
 

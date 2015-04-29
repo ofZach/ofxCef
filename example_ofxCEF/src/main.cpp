@@ -11,11 +11,11 @@ int main(){
     
     int argc = 0;
     char** argv = NULL; 
-#if defined(TARGET_OSX) 
-	ofxCEF * cefgui = initofxCEF(argc, argv);
-#elif defined(TARGET_WIN32)
+//#if defined(TARGET_OSX) 
+//	ofxCEF * cefgui = initofxCEF(argc, argv);
+//#elif defined(TARGET_WIN32)
 	initofxCEF(argc, argv);
-#endif
+//#endif
     
     //----------------------------------------------------- setup opengl
     ofAppGLFWWindow window;
@@ -24,10 +24,10 @@ int main(){
     //----------------------------------------------------- pass CEF to the ofApp
     ofApp * p = new ofApp();
 
-#if defined(TARGET_OSX) 
-	p->cefgui = cefgui;
-#elif defined(TARGET_WIN32)
-#endif
+//#if defined(TARGET_OSX) 
+//	p->cefgui = cefgui;
+//#elif defined(TARGET_WIN32)
+//#endif
 
     ofRunApp( p );
     

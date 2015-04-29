@@ -27,11 +27,11 @@ public:
 //--------------------------------------------------------------
 class ofxCEF;
 
-#if defined(TARGET_OSX) 
-ofxCEF* initofxCEF(int argc, char** argv);
-#elif defined(TARGET_WIN32)
+//#if defined(TARGET_OSX) 
+//ofxCEF* initofxCEF(int argc, char** argv);
+//#elif defined(TARGET_WIN32)
 int initofxCEF(int argc, char** argv);
-#endif
+//#endif
 
 
 //--------------------------------------------------------------

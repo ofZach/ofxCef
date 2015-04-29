@@ -15,12 +15,12 @@ void ofApp::setup(){
     // add scrolling callback
    // glfwSetScrollCallback( ((ofAppGLFWWindow *) ofGetWindowPtr())->getGLFWWindow(), mouseScroll);
     
- #if defined(TARGET_OSX) 
-	cefgui->setup();
-#elif defined(TARGET_WIN32)
+// #if defined(TARGET_OSX) 
+//	cefgui->setup();
+//#elif defined(TARGET_WIN32)
 	cefgui = new ofxCEF();
 	cefgui->setup();
-#endif   
+//#endif   
     // Register event listener
     ofAddListener(cefgui->messageFromJS, this, &ofApp::gotMessageFromJS);
     ofAddListener(cefgui->eventFromCEF, this, &ofApp::eventFromCEF);
