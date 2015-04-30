@@ -18,15 +18,19 @@ public:
     void OnWebKitInitialized() OVERRIDE;
 
 	virtual void OnBeforeCommandLineProcessing( const CefString& process_type, CefRefPtr<CefCommandLine> command_line) {
+#if defined(TARGET_OSX)
 
-		CefString osr(L"-off-screen-rendering-enabled");
-		command_line->AppendSwitch(osr);
-
-		CefString d3d11(L"-disable-d3d11");
-		command_line->AppendSwitch(d3d11);
-
-		CefString frameScheduling(L"-enable-begin-frame-scheduling");
-		command_line->AppendSwitch(frameScheduling);
+        
+#elif defined(TARGET_WIN32)
+        CefString osr(L"-off-screen-rendering-enabled");
+        command_line->AppendSwitch(osr);
+        
+        CefString d3d11(L"-disable-d3d11");
+        command_line->AppendSwitch(d3d11);
+        
+        CefString frameScheduling(L"-enable-begin-frame-scheduling");
+        command_line->AppendSwitch(frameScheduling);
+#endif
 
 		//CefString singleProcess(L"-single-process");
 		//command_line->AppendSwitch(singleProcess);
