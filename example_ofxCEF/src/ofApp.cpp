@@ -3,18 +3,17 @@
 #include "ofAppGLFWWindow.h"
 
 //--------------------------------------------------------------
-void mouseScroll(GLFWwindow* window, double x, double y){
-    
-//    ((ofApp *)ofGetAppPtr())->cefgui->mouseWheel(x*10, y*10);
+void mouseScroll(GLFWwindow* window, double x, double y){    
+    ((ofApp *)ofGetAppPtr())->cefgui->mouseWheel(x*10, y*10);
 }
 
 //--------------------------------------------------------------
 //--------------------------------------------------------------
 void ofApp::setup(){
-//#if defined(TARGET_OSX)
+#if defined(TARGET_OSX)
     // add scrolling callback
-   // glfwSetScrollCallback( ((ofAppGLFWWindow *) ofGetWindowPtr())->getGLFWWindow(), mouseScroll);
-//#endif 
+    glfwSetScrollCallback( ((ofAppGLFWWindow *) ofGetWindowPtr())->getGLFWWindow(), mouseScroll);
+#endif 
 
 	cefgui->setup();
   
