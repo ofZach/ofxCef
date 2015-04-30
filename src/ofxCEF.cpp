@@ -133,7 +133,9 @@ void ofxCEF::exit() {
 	disableEvents();
 	renderHandler->bIsShuttingDown = true;
     browser->GetHost()->CloseBrowser(false);
-	CefShutdown();
+    
+    // The following call to CefShutdown make the app crash on OS X. Still not working on Windows neither.
+	//CefShutdown();
 }
 
 
