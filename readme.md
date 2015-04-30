@@ -19,7 +19,7 @@ then compile the demo app itself
 
 ### Windows and Visual Studio
 
-* Copy the content the Chromium Embedded Framework 3 Build package in this folder in the folder libs/CEF/win32. For details, see the ofxCEF-README.txt included in the folder libs/CEF/win32.
+* Copy the content of the Chromium Embedded Framework 3 Build package in the folder libs/CEF/win32. For details, see the ofxCEF-README.txt included in the folder libs/CEF/win32.
 * Add libcef_dll_wrapper.vcxproj and the ZERO_CHECK.vcxproj to your existing Visaul Studio solution.
 * Link against libcef.lib.
 * Make sure the addon files in src/, libs/CEF/win32/include and libs/CEF/win32 are in your include path.
