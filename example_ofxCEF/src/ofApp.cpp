@@ -28,9 +28,9 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::exit(){
-    cefgui->renderHandler->bIsShuttingDown = true;
-    cefgui->disableEvents();
-    cefgui->browser->GetHost()->CloseBrowser(false);
+	cefgui->exit();
+    delete cefgui;
+    cefgui = NULL;
 }
 
 //--------------------------------------------------------------

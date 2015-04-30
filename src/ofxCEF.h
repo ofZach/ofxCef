@@ -36,6 +36,8 @@ public:
     ofxCEF();
     ~ofxCEF();
     
+	void exit();
+
     void load(const char*);
     void update();
     void draw(void);

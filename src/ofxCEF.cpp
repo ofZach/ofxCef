@@ -128,6 +128,15 @@ ofxCEF::ofxCEF(){
 ofxCEF::~ofxCEF(){
 }
 
+void ofxCEF::exit() {
+	//TODO Check if we need to do some calls to OnBeforeClose 
+	disableEvents();
+	renderHandler->bIsShuttingDown = true;
+    browser->GetHost()->CloseBrowser(false);
+	CefShutdown();
+}
+
+
 //--------------------------------------------------------------
 void ofxCEF::enableEvents(){
     ofAddListener(ofEvents().mousePressed, this, &ofxCEF::mousePressed);
