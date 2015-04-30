@@ -396,11 +396,13 @@ void ofxCEF::keyPressed(ofKeyEventArgs &e){
     if (e.key == OF_KEY_LEFT || e.key == OF_KEY_UP
         || e.key == OF_KEY_RIGHT || e.key == OF_KEY_DOWN
         || e.key == OF_KEY_BACKSPACE || e.key == OF_KEY_DEL) {
-        
+
+		event.windows_key_code = e.key;
         event.native_key_code = e.scancode;
         event.type = KEYEVENT_KEYDOWN;
         
     } else {
+		event.windows_key_code = e.key;
         event.native_key_code = e.scancode;
         event.character = (char)e.key;
         event.type = KEYEVENT_CHAR;
@@ -419,12 +421,14 @@ void ofxCEF::keyReleased(ofKeyEventArgs &e){
         || e.key == OF_KEY_BACKSPACE || e.key == OF_KEY_DEL) {
         
         // Hack - Need to do this otherwise we loose an event.
+		event.windows_key_code = e.key;
         event.native_key_code = e.scancode;
         event.character = (char)e.key;
         event.type = KEYEVENT_CHAR;
         browser->GetHost()->SendKeyEvent(event);
         
     } else {
+		event.windows_key_code = e.key;
         event.native_key_code = e.scancode;
         event.type = KEYEVENT_KEYUP;
         browser->GetHost()->SendKeyEvent(event);
